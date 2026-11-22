@@ -1,0 +1,14 @@
+{
+  "app": {
+    "title": "Niên",
+    "headerColor": "#16381F",
+    "textColor": "white",
+    "statusBar": "transparent",
+    "actionBarHidden": true,
+    "hideIOSSafeAreaBottom": true,
+    "hideAndroidBottomNavigationBar": true
+  },
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": []
+}
