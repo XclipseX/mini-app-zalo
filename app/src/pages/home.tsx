@@ -12,7 +12,7 @@ export default function HomePage() {
     <Page className="page">
       <div className="hero-pattern" />
       <div className="hero">
-        <img className="hero-logo" src="/logo-white.png" alt="Niên" />
+        <img className="hero-logo" src="./logo-white.png" alt="Niên" />
         <div className="hero-row">
           {user?.avatar ? <img className="avatar" src={user.avatar} alt="" /> : <div className="avatar" />}
           <div className="grow">

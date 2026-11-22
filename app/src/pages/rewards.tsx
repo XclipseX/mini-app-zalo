@@ -17,7 +17,7 @@ export default function RewardsPage() {
 
   return (
     <Page className="page">
-      <div className="topbar"><img src="/logo-dark.png" alt="Niên" style={{ height: 22 }} /><h2>Rewards</h2></div>
+      <div className="topbar"><img src="./logo-dark.png" alt="Niên" style={{ height: 22 }} /><h2>Rewards</h2></div>
       <div className="card" style={{ textAlign: "center" }}>
         <h3 style={{ fontSize: 17 }}>Mã thành viên</h3>
         <div className="muted">Đưa nhân viên quét để tích tem</div>

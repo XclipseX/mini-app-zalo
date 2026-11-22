@@ -16,7 +16,7 @@ export default function MyApp() {
       <SnackbarProvider>
         <MemberProvider>
           <CartProvider>
-            <ZMPRouter>
+            <ZMPRouter memoryRouter={import.meta.env.VITE_WEB_DEMO === "true"}>
               <AnimationRoutes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/menu" element={<MenuPage />} />

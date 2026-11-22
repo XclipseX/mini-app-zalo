@@ -17,7 +17,7 @@ button { font: inherit; cursor: pointer; }
 .hero-pattern { height: calc(env(safe-area-inset-top) + 14px); background: var(--dark) var(--pattern); background-size: 22px; opacity: .9; }
 .hero-logo { height: 22px; margin: 12px 0 14px; display: block; }
 .hero-row { display: flex; align-items: center; gap: 12px; }
-.avatar { width: 46px; height: 46px; border-radius: 50%; border: 2px solid #fff; background: var(--vanilla) url(/mark-orange.png) center/60% no-repeat; object-fit: cover; }
+.avatar { width: 46px; height: 46px; border-radius: 50%; border: 2px solid #fff; background: var(--vanilla) url(./mark-orange.png) center/60% no-repeat; object-fit: cover; }
 .hero-row .grow { flex: 1; }
 .hero-row b { font-size: 17px; display: block; }
 .hero-row small { opacity: .8; }
@@ -96,3 +96,13 @@ textarea { width: 100%; border: 1px solid #ddd6c6; border-radius: 12px; padding:
 .nav button.on { color: var(--terra); font-weight: 700; }
 .nav svg { width: 24px; height: 24px; }
 .demo-note { margin: 0 14px 14px; font-size: 12px; color: var(--muted); text-align: center; }
+
+/* Bản demo web: hiển thị khung điện thoại giữa màn hình máy tính */
+@media (min-width: 600px) {
+  html.webdemo body { background: #e9e4d6; }
+  html.webdemo #app { max-width: 420px; margin: 0 auto; position: relative; min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,.15); background: var(--bg); }
+  html.webdemo .nav, html.webdemo .cta { max-width: 420px; margin: 0 auto; }
+  html.webdemo .cart-fab { right: calc(50% - 194px); }
+}
+/* Bản demo web không tải được font icon của Zalo → ẩn icon trong thông báo */
+html.webdemo .zaui-snackbar-prefix-icon { display: none; }
