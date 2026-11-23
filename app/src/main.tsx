@@ -12,6 +12,7 @@ import "./theme.css";
 import "./lucian/lucian.css";
 import React from "react";
 import { createRoot } from "react-dom/client";
+import "./components/product-art"; // chốt gốc app trước khi router chạy
 import MyApp from "./app";
 
 if (import.meta.env.VITE_WEB_DEMO === "true") document.documentElement.classList.add("webdemo");

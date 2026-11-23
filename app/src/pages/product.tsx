@@ -1,5 +1,6 @@
 import LucianQuantityStepper from "../lucian/quantity-stepper";
 import { flyToCart } from "../lucian/fly-to-cart";
+import ProductArt, { productImage } from "../components/product-art";
 import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Page, useNavigate } from "zmp-ui";
@@ -27,7 +28,7 @@ export default function ProductPage() {
   return (
     <Page className="page">
       <div className="topbar"><button className="back" aria-label="Quay lại" onClick={() => navigate(-1)}>‹</button><h2>Chi tiết món</h2></div>
-      <div className="detail-img"><span ref={art} style={{ background: p.color }} /></div>
+      <div className="detail-img"><ProductArt p={p} eager artRef={art} /></div>
       <div style={{ padding: 16 }}>
         <h2 style={{ fontSize: 22 }}>{p.name}</h2>
         {p.enName && <div className="muted">{p.enName}</div>}
@@ -59,7 +60,7 @@ export default function ProductPage() {
         </button>
         <button className="btn" disabled={adding} onClick={() => {
           setAdding(true);
-          flyToCart(art.current, cartBtn.current, `<span style="display:block;width:40px;height:40px;border-radius:50%;background:${p.color}"></span>`, () => {
+          flyToCart(art.current, cartBtn.current, `<img src="${productImage(p)}" alt="" style="width:44px;height:44px;border-radius:12px;object-fit:cover" onerror="this.outerHTML='<span style=&quot;display:block;width:40px;height:40px;border-radius:50%;background:${p.color}&quot;></span>'">`, () => {
             add(p, opts, note.trim(), qty);
             openSnackbar({ text: "Đã thêm vào giỏ", type: "success" });
             setTimeout(() => navigate(-1), 650);
