@@ -1,0 +1,14 @@
+rules_version = '2';
+// Người dùng Zalo không dùng Firebase Auth -> client chỉ đọc dữ liệu công khai.
+// Mọi ghi/đọc dữ liệu riêng tư đi qua Cloud Functions (Admin SDK bỏ qua rules).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Dữ liệu công khai: menu, danh mục, cửa hàng
+    match /products/{id}   { allow read: if true; allow write: if false; }
+    match /categories/{id} { allow read: if true; allow write: if false; }
+    match /stores/{id}     { allow read: if true; allow write: if false; }
+
+    // Còn lại (members + vouchers/history, orders, staff...): chặn hoàn toàn
+    match /{document=**} { allow read, write: if false; }
+  }
+}

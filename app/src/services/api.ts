@@ -5,7 +5,7 @@ import { CartItem, Voucher } from "../data/types";
 
 const API = import.meta.env.VITE_API_BASE as string | undefined;
 
-export interface Member { stamps: number; vouchers: Voucher[]; history: { text: string; date: string }[] }
+export interface Member { stamps: number; vouchers: Voucher[]; history: { text: string; date: string }[]; qr?: string }
 
 const KEY = "nien-demo-member";
 const defaultMember: Member = {
@@ -31,7 +31,7 @@ async function post<T>(path: string, body: unknown): Promise<T> {
 
 export async function getMember(accessToken = "mock"): Promise<Member> {
   if (MOCK) return readMock();
-  return post<Member>("/member", { accessToken });
+  return post<Member>("/getMember", { accessToken });
 }
 
 export interface OrderInput { storeId: string; items: CartItem[]; total: number; phoneToken: string; accessToken: string }
@@ -41,8 +41,16 @@ export async function createOrder(input: OrderInput): Promise<{ orderId: string 
     await new Promise((r) => setTimeout(r, 500));
     return { orderId: "NIEN-" + Math.floor(1000 + Math.random() * 9000) };
   }
-  // Server: xác thực accessToken (appsecret_proof), đổi phoneToken ra SĐT, tạo đơn Checkout SDK (mac), lưu Firestore
-  return post("/orders", input);
+  // Server tự tính lại giá từ Firestore (không tin total từ client)
+  return post("/createOrder", {
+    accessToken: input.accessToken,
+    phoneToken: input.phoneToken,
+    storeId: input.storeId,
+    items: input.items.map((i) => ({
+      productId: i.product.id, qty: i.qty, note: i.note,
+      options: Object.fromEntries(Object.entries(i.options).map(([g, o]) => [g, o.id])),
+    })),
+  });
 }
 
 /** Demo: mô phỏng nhân viên quét QR cộng 1 tem. Bản thật chỉ tài khoản nhân viên mới gọi được. */
@@ -56,4 +64,9 @@ export async function mockAddStamp(): Promise<Member> {
   }
   writeMock(m);
   return m;
+}
+
+/** Nhân viên quét QR thành viên để cộng tem (Cloud Function addStamp kiểm tra quyền staff). */
+export async function addStamp(accessToken: string, qr: string, count = 1): Promise<{ stamps: number }> {
+  return post("/addStamp", { accessToken, qr, count });
 }
