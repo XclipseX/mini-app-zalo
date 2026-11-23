@@ -1,12 +1,12 @@
 ---
 source_file: "src/services/api.ts"
 type: "code"
-community: "Community 9"
+community: "Community 1"
 location: "L93"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_1
 ---
 
 # isStaff()
@@ -16,4 +16,4 @@ tags:
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[rewards.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_1

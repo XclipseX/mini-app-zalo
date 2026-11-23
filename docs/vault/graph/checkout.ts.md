@@ -12,7 +12,7 @@ tags:
 # checkout.ts
 
 ## Connections
-- [[PayMethod_1]] - `contains` [EXTRACTED]
+- [[PayMethod]] - `contains` [EXTRACTED]
 - [[buildCheckout()]] - `contains` [EXTRACTED]
 - [[enc()]] - `contains` [EXTRACTED]
 - [[hmac()]] - `contains` [EXTRACTED]

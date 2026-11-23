@@ -1,12 +1,12 @@
 ---
 source_file: "src/services/api.ts"
 type: "code"
-community: "Community 1"
+community: "Community 0"
 location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # OrderInput
@@ -15,4 +15,4 @@ tags:
 - [[CartItem]] - `references` [EXTRACTED]
 - [[api.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_0

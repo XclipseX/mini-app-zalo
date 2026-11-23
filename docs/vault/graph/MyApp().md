@@ -1,12 +1,12 @@
 ---
 source_file: "src/app.tsx"
 type: "code"
-community: "Community 9"
+community: "Community 0"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_0
 ---
 
 # MyApp()
@@ -26,4 +26,4 @@ tags:
 - [[ToastProvider()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_0

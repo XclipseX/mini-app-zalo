@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 4"
+community: "Community 0"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_4
+  - community/Community_0
 ---
 
 # src_lucian_lucian
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_4
+#graphify/concept #graphify/EXTRACTED #community/Community_0

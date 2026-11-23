@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[CartPage()]] - `contains` [EXTRACTED]
-- [[PayMethod]] - `imports` [EXTRACTED]
+- [[PayMethod_1]] - `imports` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[createOrder()]] - `imports` [EXTRACTED]

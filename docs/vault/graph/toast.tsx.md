@@ -1,12 +1,12 @@
 ---
 source_file: "src/lucian/toast.tsx"
 type: "code"
-community: "Community 9"
+community: "Community 2"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_2
 ---
 
 # toast.tsx
@@ -26,4 +26,4 @@ tags:
 - [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[useToast()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_2

@@ -1,18 +1,18 @@
 ---
-source_file: "functions/src/checkout.ts"
+source_file: "src/services/api.ts"
 type: "code"
-community: "Community 5"
-location: "L6"
+community: "Community 9"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_9
 ---
 
 # PayMethod
 
 ## Connections
-- [[checkout.ts]] - `contains` [EXTRACTED]
-- [[index.ts]] - `imports` [EXTRACTED]
+- [[api.ts]] - `contains` [EXTRACTED]
+- [[pagescart.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_9

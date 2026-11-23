@@ -1,6 +1,7 @@
 // Nhân viên xem đơn của chi nhánh: đang pha → sẵn sàng → đã giao, xác nhận đã nhận tiền chuyển khoản.
 // Server (listOrders/updateOrderStatus) kiểm tra quyền staff + chi nhánh. MOCK: đơn lưu localStorage.
 import LucianPillTabs from "../lucian/pill-tabs";
+import LucianSkeleton from "../lucian/skeleton";
 import React, { useEffect, useState } from "react";
 import { Page, useNavigate } from "zmp-ui";
 import { useToast } from "../lucian/toast";
@@ -53,7 +54,7 @@ export default function StaffOrdersPage() {
       <LucianPillTabs label="Lọc đơn" value={filter} onChange={(id) => setFilter(id as "active" | OrderStatus)}
         items={FILTERS.map((f) => ({ id: f.id, label: f.label + (f.id === "active" ? ` (${orders.filter((o) => NEXT_STATUS[o.status]).length})` : "") }))} />
 
-      {loading && <p className="demo-note">Đang tải…</p>}
+      {loading && shown.length === 0 && [0, 1].map((k) => <LucianSkeleton key={k} label="Đang tải đơn" rows={[["40%", 16], ["60%", 12], ["90%", 12], ["70%", 12], ["100%", 44]]} />)}
       {!loading && shown.length === 0 && <p className="demo-note">Không có đơn.</p>}
 
       {shown.map((o) => {

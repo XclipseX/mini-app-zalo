@@ -1,17 +1,19 @@
 ---
 source_file: "src/pages/rewards.tsx"
 type: "code"
-community: "Community 9"
-location: "L10"
+community: "Community 1"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_1
 ---
 
 # RewardsPage()
 
 ## Connections
+- [[LucianMemberCard()]] - `calls` [EXTRACTED]
+- [[LucianSkeleton()]] - `calls` [EXTRACTED]
 - [[LucianStampCard()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `imports` [EXTRACTED]
@@ -21,4 +23,4 @@ tags:
 - [[useMember()]] - `calls` [EXTRACTED]
 - [[useToast()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_1

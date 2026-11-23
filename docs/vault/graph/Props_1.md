@@ -1,17 +1,17 @@
 ---
-source_file: "src/lucian/stamp-card.tsx"
+source_file: "src/lucian/member-card.tsx"
 type: "code"
-community: "Community 9"
-location: "L8"
+community: "Community 1"
+location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_9
+  - community/Community_1
 ---
 
 # Props
 
 ## Connections
-- [[lucianstamp-card.tsx]] - `contains` [EXTRACTED]
+- [[member-card.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_9
+#graphify/code #graphify/EXTRACTED #community/Community_1
