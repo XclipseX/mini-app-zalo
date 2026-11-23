@@ -1,0 +1,31 @@
+---
+source_file: "package.json"
+type: "concept"
+community: "Community 1"
+location: "L15"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Community_1
+---
+
+# react
+
+## Connections
+- [[app.tsx]] - `imports_from` [EXTRACTED]
+- [[bottom-nav.tsx]] - `imports_from` [EXTRACTED]
+- [[home.tsx]] - `imports_from` [EXTRACTED]
+- [[main.tsx]] - `imports_from` [EXTRACTED]
+- [[member.tsx]] - `imports_from` [EXTRACTED]
+- [[menu.tsx]] - `imports_from` [EXTRACTED]
+- [[package.json]] - `imports` [EXTRACTED]
+- [[pagescart.tsx]] - `imports_from` [EXTRACTED]
+- [[privacy.tsx]] - `imports_from` [EXTRACTED]
+- [[product-card.tsx]] - `imports_from` [EXTRACTED]
+- [[product.tsx]] - `imports_from` [EXTRACTED]
+- [[react@18.3.1]] - `declares` [EXTRACTED]
+- [[rewards.tsx]] - `imports_from` [EXTRACTED]
+- [[stamp-card.tsx]] - `imports_from` [EXTRACTED]
+- [[statecart.tsx]] - `imports_from` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Community_1

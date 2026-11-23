@@ -11,6 +11,7 @@ Zalo Mini App cho quán cà phê **Niên** (358 Lê Lai, Thanh Hóa). Khách hà
 
 ## Architecture
 - [[architecture/app-structure]]
+- Bản đồ code: `app/graphify-out/GRAPH_REPORT.md`, note từng hàm trong [[graph/graph.canvas|graph/]] (graphify export). Hub: `useCart`, `vnd`, `zalo.ts`, `api.ts` → sửa cẩn thận.
 
 ## Decisions
 - [[decisions/2026-11-23-firebase-backend]]
