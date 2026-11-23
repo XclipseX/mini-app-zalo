@@ -139,7 +139,7 @@ export interface StaffOrder {
 /** Bước tiếp theo hợp lệ (khớp NEXT_STATUS ở server). */
 export const NEXT_STATUS: Partial<Record<OrderStatus, OrderStatus>> = { pending: "making", making: "ready", ready: "done" };
 
-const ORDERS_KEY = "nien-demo-orders";
+const ORDERS_KEY = "nien-demo-orders-v2";
 function readMockOrders(): StaffOrder[] {
   try { const v = JSON.parse(localStorage.getItem(ORDERS_KEY) || ""); if (Array.isArray(v)) return v; } catch { /* ignore */ }
   const now = Date.now();
