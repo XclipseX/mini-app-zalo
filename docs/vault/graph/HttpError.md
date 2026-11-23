@@ -18,6 +18,7 @@ tags:
 - [[getPhoneNumber()]] - `calls` [EXTRACTED]
 - [[http.ts]] - `contains` [EXTRACTED]
 - [[index.ts]] - `imports` [EXTRACTED]
+- [[lookupMember]] - `calls` [EXTRACTED]
 - [[qr.ts]] - `imports` [EXTRACTED]
 - [[redeemVoucher]] - `calls` [EXTRACTED]
 - [[requireStaff()]] - `calls` [EXTRACTED]

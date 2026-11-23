@@ -14,5 +14,6 @@ tags:
 ## Connections
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[mockAddStamp()]] - `calls` [EXTRACTED]
+- [[redeemVoucher()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

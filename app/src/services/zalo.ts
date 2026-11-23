@@ -1,6 +1,6 @@
 // Lớp bọc zmp-sdk. Khi VITE_MOCK=true (chạy trên trình duyệt) trả dữ liệu giả,
 // vì getPhoneNumber / getAccessToken chỉ chạy trong app Zalo thật.
-import { getUserInfo, getSetting, authorize, getPhoneNumber, getAccessToken } from "zmp-sdk/apis";
+import { getUserInfo, getSetting, authorize, getPhoneNumber, getAccessToken, scanQRCode } from "zmp-sdk/apis";
 
 export const MOCK = import.meta.env.VITE_MOCK !== "false";
 
@@ -26,4 +26,17 @@ export async function requestPhoneToken(): Promise<{ phoneToken: string; accessT
   const { token } = await getPhoneNumber({});
   const accessToken = await getAccessToken({});
   return token ? { phoneToken: token, accessToken } : null;
+}
+
+/** Access token để server xác thực người gọi (getMember, addStamp...). */
+export async function getToken(): Promise<string> {
+  if (MOCK) return "mock-access-token";
+  return getAccessToken({});
+}
+
+/** Mở camera Zalo quét QR. Ở MOCK trả null để trang tự dùng QR giả. */
+export async function scanQr(): Promise<string | null> {
+  if (MOCK) return null;
+  const { content } = await scanQRCode({});
+  return content || null;
 }

@@ -12,6 +12,7 @@ tags:
 # Voucher
 
 ## Connections
+- [[LookupResult]] - `references` [EXTRACTED]
 - [[Member]] - `references` [EXTRACTED]
 - [[api.ts]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]

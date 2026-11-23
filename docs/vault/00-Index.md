@@ -10,7 +10,7 @@ updated: 2026-11-23
 Zalo Mini App cho quán cà phê **Niên** (358 Lê Lai, Thanh Hóa). Khách hàng: cô Bích Ngọc. Gói 4 – 3.000.000đ: menu, đặt món nhận tại quán, voucher, tích 10 tem đổi 1 ly. Mục tiêu ~1 tuần code.
 
 ## Trạng thái
-Demo mock xong. Đang chờ cô (cọc, Mini App ID, giấy tờ). Firebase backend đã viết (chưa deploy) – xem [[architecture/firestore-schema]]. Việc tiếp: màn hình nhân viên. Chi tiết: [[sessions/2026-11-23]].
+Demo mock xong. Đang chờ cô (cọc, Mini App ID, giấy tờ). Firebase backend đã viết (chưa deploy) – xem [[architecture/firestore-schema]]. Màn hình nhân viên `/staff` xong (mock chạy). Việc tiếp: deploy Firebase thật, Checkout SDK. Chi tiết: [[sessions/2026-11-23]].
 Nhánh làm việc: `ccr-9c0f1ce5-f6i58o`.
 
 ## Architecture

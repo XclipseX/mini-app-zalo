@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/seed.mjs"
 type: "code"
-community: "Community 7"
+community: "Community 6"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_6
 ---
 
 # seed.mjs
@@ -25,4 +25,4 @@ tags:
 - [[require]] - `contains` [EXTRACTED]
 - [[writeAll()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_6

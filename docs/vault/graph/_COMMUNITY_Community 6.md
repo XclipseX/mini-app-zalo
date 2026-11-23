@@ -1,14 +1,17 @@
 ---
 type: community
-members: 16
+members: 28
 ---
 
 # Community 6
 
-**Members:** 16 nodes
+**Members:** 28 nodes
 
 ## Members
+- [[admin]] - code - scripts/seed.mjs
 - [[build_1]] - code - functions/package.json
+- [[data]] - code - scripts/seed.mjs
+- [[db_1]] - code - scripts/seed.mjs
 - [[dependencies_1]] - code - functions/package.json
 - [[deploy_1]] - code - functions/package.json
 - [[devDependencies_1]] - code - functions/package.json
@@ -17,13 +20,22 @@ members: 16
 - [[firebase-admin@12.7.0]] - code - functions/package.json
 - [[firebase-functions@6.1.0]] - code - functions/package.json
 - [[functionspackage.json]] - code - functions/package.json
+- [[here]] - code - scripts/seed.mjs
 - [[main]] - code - functions/package.json
 - [[name_1]] - code - functions/package.json
 - [[node]] - code - functions/package.json
 - [[private_1]] - code - functions/package.json
+- [[rc]] - code - scripts/seed.mjs
+- [[ref_node_fs]] - concept
+- [[ref_node_module]] - concept
+- [[ref_node_path]] - concept
+- [[ref_node_url]] - concept
+- [[require]] - code - scripts/seed.mjs
 - [[scripts_1]] - code - functions/package.json
+- [[seed.mjs]] - code - scripts/seed.mjs
 - [[typescript_1]] - concept - functions/package.json
 - [[typescript@5.6.3]] - code - functions/package.json
+- [[writeAll()]] - code - scripts/seed.mjs
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,9 +46,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Community 5]]
-- 1 edge to [[_COMMUNITY_Community 7]]
 
 ## Top bridge nodes
-- [[firebase-admin]] - degree 4, connects to 2 communities
 - [[functionspackage.json]] - degree 10, connects to 1 community
+- [[firebase-admin]] - degree 4, connects to 1 community
 - [[firebase-functions@6.1.0]] - degree 2, connects to 1 community

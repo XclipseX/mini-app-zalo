@@ -15,7 +15,6 @@ tags:
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[ProductCard()]] - `calls` [EXTRACTED]
 - [[StampCard()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[home.tsx]] - `contains` [EXTRACTED]
 - [[useMember()]] - `calls` [EXTRACTED]
 

@@ -25,6 +25,7 @@ tags:
 - [[product.tsx]] - `imports_from` [EXTRACTED]
 - [[react@18.3.1]] - `declares` [EXTRACTED]
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
+- [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[stamp-card.tsx]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 

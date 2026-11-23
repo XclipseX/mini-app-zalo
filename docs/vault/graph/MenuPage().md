@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[ProductCard()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[menu.tsx]] - `contains` [EXTRACTED]
 - [[useCart()]] - `calls` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 33
+members: 35
 ---
 
 # Community 5
 
-**Members:** 33 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[dot-constructor()]] - code - functions/src/http.ts
@@ -25,10 +25,12 @@ members: 33
 - [[handle()]] - code - functions/src/http.ts
 - [[http.ts]] - code - functions/src/http.ts
 - [[index.ts]] - code - functions/src/index.ts
+- [[lookupMember]] - code - functions/src/index.ts
 - [[makeMemberQr()]] - code - functions/src/qr.ts
 - [[opts]] - code - functions/src/index.ts
 - [[pad()]] - code - functions/src/index.ts
 - [[qr.ts]] - code - functions/src/qr.ts
+- [[readMember()]] - code - functions/src/index.ts
 - [[redeemVoucher]] - code - functions/src/index.ts
 - [[ref_crypto]] - concept
 - [[ref_express]] - concept
@@ -53,5 +55,5 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Community 6]]
 
 ## Top bridge nodes
-- [[index.ts]] - degree 29, connects to 1 community
+- [[index.ts]] - degree 31, connects to 1 community
 - [[firebase-functions]] - degree 4, connects to 1 community

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 17
+members: 16
 ---
 
 # Community 0
 
-**Members:** 17 nodes
+**Members:** 16 nodes
 
 ## Members
 - [[CartCtx]] - code - src/state/cart.tsx
@@ -14,12 +14,11 @@ members: 17
 - [[Ctx]] - code - src/state/cart.tsx
 - [[Option]] - code - src/data/types.ts
 - [[OptionGroup]] - code - src/data/types.ts
+- [[OrderInput]] - code - src/services/api.ts
 - [[Product]] - code - src/data/types.ts
 - [[Store]] - code - src/data/types.ts
-- [[categories]] - code - src/data/menu.ts
 - [[ice]] - code - src/data/menu.ts
 - [[menu.ts]] - code - src/data/menu.ts
-- [[products]] - code - src/data/menu.ts
 - [[shot]] - code - src/data/menu.ts
 - [[statecart.tsx]] - code - src/state/cart.tsx
 - [[stores]] - code - src/data/menu.ts
@@ -34,7 +33,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_Community 1]]
+- 19 edges to [[_COMMUNITY_Community 1]]
 - 4 edges to [[_COMMUNITY_Community 2]]
 
 ## Top bridge nodes

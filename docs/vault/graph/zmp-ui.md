@@ -23,6 +23,7 @@ tags:
 - [[product-card.tsx]] - `imports_from` [EXTRACTED]
 - [[product.tsx]] - `imports_from` [EXTRACTED]
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
+- [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[zmp-ui@1.11.15-2]] - `declares` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_1

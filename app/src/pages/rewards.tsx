@@ -6,14 +6,20 @@ import { MOCK } from "../services/zalo";
 import StampCard from "../components/stamp-card";
 
 export default function RewardsPage() {
-  const { user, member, addStampDemo } = useMember();
+  const { member, refresh, addStampDemo } = useMember();
   const [qr, setQr] = useState("");
   const navigate = useNavigate();
   const { openSnackbar } = useSnackbar();
+  // QR do server ký (getMember → member.qr), hạn 5 phút → tự làm mới mỗi 4 phút khi đang mở trang
   useEffect(() => {
-    // Bản thật: server cấp mã ngắn hạn có chữ ký để chống chụp màn hình dùng lại
-    QRCode.toDataURL(`NIEN:${user?.id ?? "guest"}`, { margin: 1, width: 360, color: { dark: "#16381F", light: "#ffffff" } }).then(setQr);
-  }, [user?.id]);
+    refresh();
+    const t = setInterval(refresh, 4 * 60 * 1000);
+    return () => clearInterval(t);
+  }, [refresh]);
+  useEffect(() => {
+    if (!member?.qr) { setQr(""); return; }
+    QRCode.toDataURL(member.qr, { margin: 1, width: 360, color: { dark: "#16381F", light: "#ffffff" } }).then(setQr);
+  }, [member?.qr]);
 
   return (
     <Page className="page">
@@ -21,7 +27,8 @@ export default function RewardsPage() {
       <div className="card" style={{ textAlign: "center" }}>
         <h3 style={{ fontSize: 17 }}>Mã thành viên</h3>
         <div className="muted">Đưa nhân viên quét để tích tem</div>
-        {qr && <img className="qr" src={qr} alt="QR thành viên" />}
+        {qr ? <img className="qr" src={qr} alt="QR thành viên" /> : <p className="muted">Đang tải mã…</p>}
+        <button className="link" onClick={refresh}>Làm mới mã</button>
         {MOCK && <button className="btn ghost" onClick={async () => { await addStampDemo(); openSnackbar({ text: "+1 tem (giả lập nhân viên quét)", type: "success" }); }}>Demo: giả lập quét +1 tem</button>}
       </div>
       <StampCard stamps={member?.stamps ?? 0} />
@@ -35,7 +42,7 @@ export default function RewardsPage() {
         <h3 style={{ fontSize: 17 }}>Lịch sử tem</h3>
         {member?.history.slice(0, 5).map((h, i) => <div key={i} className="line"><span>{h.text}</span><span className="muted">{h.date}</span></div>)}
       </div>
-      <p className="demo-note"><button className="link" onClick={() => navigate("/privacy")}>Chính sách bảo mật</button></p>
+      <p className="demo-note"><button className="link" onClick={() => navigate("/privacy")}>Chính sách bảo mật</button> · <button className="link" onClick={() => navigate("/staff")}>Dành cho nhân viên</button></p>
     </Page>
   );
 }

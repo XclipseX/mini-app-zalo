@@ -2,7 +2,7 @@
 source_file: "src/state/member.tsx"
 type: "code"
 community: "Community 2"
-location: "L6"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED

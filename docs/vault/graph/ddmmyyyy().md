@@ -12,9 +12,9 @@ tags:
 # ddmmyyyy()
 
 ## Connections
-- [[getMember]] - `calls` [EXTRACTED]
 - [[index.ts]] - `contains` [EXTRACTED]
 - [[pad()]] - `calls` [EXTRACTED]
+- [[readMember()]] - `calls` [EXTRACTED]
 - [[vn()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

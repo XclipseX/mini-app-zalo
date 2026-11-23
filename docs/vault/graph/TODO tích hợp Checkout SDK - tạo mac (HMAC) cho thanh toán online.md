@@ -2,7 +2,7 @@
 source_file: "functions/src/index.ts"
 type: "rationale"
 community: "Community 5"
-location: "L127"
+location: "L133"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

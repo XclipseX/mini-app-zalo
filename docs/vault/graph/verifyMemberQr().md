@@ -15,6 +15,7 @@ tags:
 - [[HttpError]] - `calls` [EXTRACTED]
 - [[addStamp]] - `calls` [EXTRACTED]
 - [[index.ts]] - `imports` [EXTRACTED]
+- [[lookupMember]] - `calls` [EXTRACTED]
 - [[qr.ts]] - `contains` [EXTRACTED]
 - [[redeemVoucher]] - `calls` [EXTRACTED]
 - [[sign()]] - `calls` [EXTRACTED]

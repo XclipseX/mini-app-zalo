@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[MOCK]] - `imports` [EXTRACTED]
 - [[RewardsPage()]] - `contains` [EXTRACTED]
-- [[StampCard()]] - `imports` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[member.tsx]] - `imports_from` [EXTRACTED]
 - [[qrcode]] - `imports_from` [EXTRACTED]

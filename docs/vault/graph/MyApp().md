@@ -2,7 +2,7 @@
 source_file: "src/app.tsx"
 type: "code"
 community: "Community 1"
-location: "L13"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -21,6 +21,7 @@ tags:
 - [[PrivacyPage()]] - `calls` [EXTRACTED]
 - [[ProductPage()]] - `calls` [EXTRACTED]
 - [[RewardsPage()]] - `calls` [EXTRACTED]
+- [[StaffPage()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `contains` [EXTRACTED]
 - [[main.tsx]] - `imports` [EXTRACTED]
 

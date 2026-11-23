@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[MyApp()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[checkout()]] - `contains` [EXTRACTED]
 - [[createOrder()]] - `calls` [EXTRACTED]
 - [[itemPrice()]] - `calls` [EXTRACTED]

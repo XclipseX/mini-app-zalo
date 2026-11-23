@@ -15,7 +15,6 @@ tags:
 - [[HomePage()]] - `calls` [EXTRACTED]
 - [[RewardsPage()]] - `calls` [EXTRACTED]
 - [[home.tsx]] - `imports` [EXTRACTED]
-- [[rewards.tsx]] - `imports` [EXTRACTED]
 - [[stamp-card.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_1

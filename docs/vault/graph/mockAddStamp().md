@@ -2,7 +2,7 @@
 source_file: "src/services/api.ts"
 type: "code"
 community: "Community 2"
-location: "L57"
+location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[MemberProvider()]] - `calls` [EXTRACTED]
+- [[addStamp()]] - `calls` [EXTRACTED]
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[member.tsx]] - `imports` [EXTRACTED]
 - [[readMock()]] - `calls` [EXTRACTED]

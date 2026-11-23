@@ -2,7 +2,7 @@
 source_file: "functions/src/index.ts"
 type: "code"
 community: "Community 5"
-location: "L58"
+location: "L76"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,9 +13,8 @@ tags:
 
 ## Connections
 - [[auth()]] - `calls` [EXTRACTED]
-- [[ddmm()]] - `calls` [EXTRACTED]
-- [[ddmmyyyy()]] - `calls` [EXTRACTED]
 - [[index.ts]] - `contains` [EXTRACTED]
 - [[makeMemberQr()]] - `calls` [EXTRACTED]
+- [[readMember()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

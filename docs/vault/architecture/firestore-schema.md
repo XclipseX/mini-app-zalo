@@ -24,7 +24,7 @@ Index composite (`app/firestore.indexes.json`): `orders` (zaloId ↑, createdAt 
 
 ## Functions
 
-`verifyUser`, `resolvePhone`, `getMember`, `createOrder`, `addStamp`, `redeemVoucher` — region `asia-southeast1`.
+`verifyUser`, `resolvePhone`, `getMember`, `createOrder`, `lookupMember`, `addStamp`, `redeemVoucher` (3 hàm cuối chỉ staff) — region `asia-southeast1`.
 Secrets: `ZALO_APP_SECRET`, `QR_SECRET`.
 
 QR tích điểm: `NIEN1.<zaloId>.<exp>.<hmac16>` — HMAC (QR_SECRET) cắt 16 ký tự, hiệu lực 5 phút. Nhân viên (`staff/{zaloId}` active) quét → `addStamp`.

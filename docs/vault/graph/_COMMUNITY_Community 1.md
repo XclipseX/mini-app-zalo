@@ -1,11 +1,11 @@
 ---
 type: community
-members: 35
+members: 37
 ---
 
 # Community 1
 
-**Members:** 35 nodes
+**Members:** 37 nodes
 
 ## Members
 - [[BottomNav()]] - code - src/components/bottom-nav.tsx
@@ -22,6 +22,7 @@ members: 35
 - [[TODO điền tên Hộ kinh doanhCông ty theo GPKD và nội dung đầy đủ theo Luật…]] - rationale - src/pages/privacy.tsx
 - [[app.tsx]] - code - src/app.tsx
 - [[bottom-nav.tsx]] - code - src/components/bottom-nav.tsx
+- [[categories]] - code - src/data/menu.ts
 - [[checkout()]] - code - src/pages/cart.tsx
 - [[createOrder()]] - code - src/services/api.ts
 - [[home.tsx]] - code - src/pages/home.tsx
@@ -32,6 +33,7 @@ members: 35
 - [[privacy.tsx]] - code - src/pages/privacy.tsx
 - [[product-card.tsx]] - code - src/components/product-card.tsx
 - [[product.tsx]] - code - src/pages/product.tsx
+- [[products]] - code - src/data/menu.ts
 - [[react]] - concept - package.json
 - [[react-router-dom]] - concept - package.json
 - [[requestPhoneToken()]] - code - src/services/zalo.ts
@@ -52,13 +54,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_Community 0]]
-- 14 edges to [[_COMMUNITY_Community 2]]
+- 21 edges to [[_COMMUNITY_Community 2]]
+- 19 edges to [[_COMMUNITY_Community 0]]
 - 8 edges to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[react]] - degree 15, connects to 3 communities
-- [[app.tsx]] - degree 22, connects to 2 communities
+- [[react]] - degree 16, connects to 3 communities
+- [[app.tsx]] - degree 18, connects to 2 communities
+- [[zmp-ui]] - degree 13, connects to 2 communities
 - [[pagescart.tsx]] - degree 12, connects to 2 communities
 - [[home.tsx]] - degree 12, connects to 2 communities
-- [[rewards.tsx]] - degree 11, connects to 2 communities

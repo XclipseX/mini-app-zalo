@@ -12,16 +12,11 @@ tags:
 # app.tsx
 
 ## Connections
-- [[BottomNav()]] - `imports` [EXTRACTED]
-- [[CartPage()]] - `imports` [EXTRACTED]
 - [[CartProvider()]] - `imports` [EXTRACTED]
-- [[HomePage()]] - `imports` [EXTRACTED]
 - [[MemberProvider()]] - `imports` [EXTRACTED]
-- [[MenuPage()]] - `imports` [EXTRACTED]
 - [[MyApp()]] - `contains` [EXTRACTED]
-- [[PrivacyPage()]] - `imports` [EXTRACTED]
-- [[ProductPage()]] - `imports` [EXTRACTED]
 - [[RewardsPage()]] - `imports` [EXTRACTED]
+- [[StaffPage()]] - `imports` [EXTRACTED]
 - [[bottom-nav.tsx]] - `imports_from` [EXTRACTED]
 - [[home.tsx]] - `imports_from` [EXTRACTED]
 - [[main.tsx]] - `imports_from` [EXTRACTED]
@@ -32,6 +27,7 @@ tags:
 - [[product.tsx]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
+- [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 

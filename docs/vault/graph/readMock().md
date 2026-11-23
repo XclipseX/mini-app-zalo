@@ -12,8 +12,11 @@ tags:
 # readMock()
 
 ## Connections
+- [[addStamp()]] - `calls` [EXTRACTED]
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[getMember()]] - `calls` [EXTRACTED]
+- [[lookupMember()]] - `calls` [EXTRACTED]
 - [[mockAddStamp()]] - `calls` [EXTRACTED]
+- [[redeemVoucher()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

@@ -2,7 +2,7 @@
 source_file: "src/services/api.ts"
 type: "code"
 community: "Community 2"
-location: "L32"
+location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,6 +15,7 @@ tags:
 - [[MemberProvider()]] - `calls` [EXTRACTED]
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[member.tsx]] - `imports` [EXTRACTED]
+- [[mockQr()]] - `calls` [EXTRACTED]
 - [[post()]] - `calls` [EXTRACTED]
 - [[readMock()]] - `calls` [EXTRACTED]
 

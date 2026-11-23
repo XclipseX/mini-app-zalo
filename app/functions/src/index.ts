@@ -33,6 +33,24 @@ async function requireStaff(body: any) {
   return { id: u.id, storeId: String(s.get("storeId") || ""), name: String(s.get("name") || "") };
 }
 
+// Đọc tem + voucher còn hạn + lịch sử của một thành viên
+async function readMember(memberId: string) {
+  const ref = db.doc(`members/${memberId}`);
+  const [m, vs, hs] = await Promise.all([
+    ref.get(),
+    ref.collection("vouchers").where("used", "==", false).get(),
+    ref.collection("history").orderBy("at", "desc").limit(20).get(),
+  ]);
+  const now = Date.now();
+  const vouchers = vs.docs
+    .map((d) => ({ id: d.id, ...d.data() } as any))
+    .filter((v) => v.expiresAt && v.expiresAt.toMillis() > now)
+    .sort((a, b) => a.expiresAt.toMillis() - b.expiresAt.toMillis())
+    .map((v) => ({ id: v.id, title: v.title, badge: v.badge, expires: ddmmyyyy(v.expiresAt.toDate()) }));
+  const history = hs.docs.map((d) => ({ text: d.get("text"), date: d.get("at") ? ddmm(d.get("at").toDate()) : "" }));
+  return { exists: m.exists, name: (m.get("name") as string) || "", stamps: m.exists ? m.get("stamps") || 0 : 0, vouchers, history };
+}
+
 // 1. Xác thực + tạo/cập nhật thành viên
 export const verifyUser = onRequest(opts, handle(async (body) => {
   const u = await auth(body);
@@ -57,20 +75,8 @@ export const resolvePhone = onRequest(opts, handle(async (body) => {
 // 3. Thông tin thành viên
 export const getMember = onRequest(opts, handle(async (body) => {
   const u = await auth(body);
-  const ref = db.doc(`members/${u.id}`);
-  const [m, vs, hs] = await Promise.all([
-    ref.get(),
-    ref.collection("vouchers").where("used", "==", false).get(),
-    ref.collection("history").orderBy("at", "desc").limit(20).get(),
-  ]);
-  const now = Date.now();
-  const vouchers = vs.docs
-    .map((d) => ({ id: d.id, ...d.data() } as any))
-    .filter((v) => v.expiresAt && v.expiresAt.toMillis() > now)
-    .sort((a, b) => a.expiresAt.toMillis() - b.expiresAt.toMillis())
-    .map((v) => ({ id: v.id, title: v.title, badge: v.badge, expires: ddmmyyyy(v.expiresAt.toDate()) }));
-  const history = hs.docs.map((d) => ({ text: d.get("text"), date: d.get("at") ? ddmm(d.get("at").toDate()) : "" }));
-  return { stamps: m.exists ? m.get("stamps") || 0 : 0, vouchers, history, qr: makeMemberQr(u.id, QR_SECRET.value()) };
+  const { stamps, vouchers, history } = await readMember(u.id);
+  return { stamps, vouchers, history, qr: makeMemberQr(u.id, QR_SECRET.value()) };
 }));
 
 // 4. Tạo đơn hàng (giá tính lại ở server)
@@ -161,6 +167,15 @@ export const addStamp = onRequest(opts, handle(async (body) => {
     tx.update(ref, { stamps, totalStamps: FieldValue.increment(count), updatedAt: now });
     return { stamps, newVouchers };
   });
+}));
+
+// Nhân viên quét QR → xem tem + voucher của khách (chưa thay đổi gì)
+export const lookupMember = onRequest(opts, handle(async (body) => {
+  const staff = await requireStaff(body);
+  const memberId = verifyMemberQr(str(body.qr, "qr"), QR_SECRET.value());
+  const m = await readMember(memberId);
+  if (!m.exists) throw new HttpError(400, "Thành viên không tồn tại");
+  return { name: m.name, stamps: m.stamps, vouchers: m.vouchers, staff: { name: staff.name, storeId: staff.storeId } };
 }));
 
 // 6. Nhân viên dùng voucher cho khách

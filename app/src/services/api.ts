@@ -25,12 +25,26 @@ function writeMock(m: Member) { try { localStorage.setItem(KEY, JSON.stringify(m
 
 async function post<T>(path: string, body: unknown): Promise<T> {
   const res = await fetch(`${API}${path}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
-  if (!res.ok) throw new Error(`API ${path} lỗi ${res.status}`);
+  if (!res.ok) {
+    let msg = `API ${path} lỗi ${res.status}`;
+    try { const j = await res.json(); if (j?.error) msg = String(j.error); } catch { /* ignore */ }
+    throw new Error(msg);
+  }
   return res.json() as Promise<T>;
 }
 
+/** QR giả cùng định dạng server (NIEN1.<id>.<exp>.<mac>), hạn 5 phút. */
+export function mockQr(id = "mock-user-1") {
+  return `NIEN1.${id}.${Math.floor(Date.now() / 1000) + 300}.mock`;
+}
+function checkMockQr(qr: string) {
+  const p = qr.trim().split(".");
+  if (p.length !== 4 || p[0] !== "NIEN1") throw new Error("QR không hợp lệ");
+  if (Number(p[2]) < Date.now() / 1000) throw new Error("QR đã hết hạn");
+}
+
 export async function getMember(accessToken = "mock"): Promise<Member> {
-  if (MOCK) return readMock();
+  if (MOCK) return { ...readMock(), qr: mockQr() };
   return post<Member>("/getMember", { accessToken });
 }
 
@@ -66,7 +80,36 @@ export async function mockAddStamp(): Promise<Member> {
   return m;
 }
 
+// ===== Nhân viên (server kiểm tra quyền staff; MOCK thao tác trên member demo) =====
+export interface LookupResult { name: string; stamps: number; vouchers: Voucher[] }
+
+export async function lookupMember(accessToken: string, qr: string): Promise<LookupResult> {
+  if (MOCK) { checkMockQr(qr); const m = readMock(); return { name: "Minh Anh (demo)", stamps: m.stamps, vouchers: m.vouchers }; }
+  return post("/lookupMember", { accessToken, qr });
+}
+
 /** Nhân viên quét QR thành viên để cộng tem (Cloud Function addStamp kiểm tra quyền staff). */
-export async function addStamp(accessToken: string, qr: string, count = 1): Promise<{ stamps: number }> {
+export async function addStamp(accessToken: string, qr: string, count = 1): Promise<{ stamps: number; newVouchers: number }> {
+  if (MOCK) {
+    checkMockQr(qr);
+    const before = readMock().vouchers.length;
+    let m = readMock();
+    for (let k = 0; k < count; k++) m = await mockAddStamp();
+    return { stamps: m.stamps, newVouchers: m.vouchers.length - before };
+  }
   return post("/addStamp", { accessToken, qr, count });
+}
+
+export async function redeemVoucher(accessToken: string, qr: string, voucherId: string): Promise<{ ok: boolean; voucherId: string }> {
+  if (MOCK) {
+    checkMockQr(qr);
+    const m = readMock();
+    const v = m.vouchers.find((x) => x.id === voucherId);
+    if (!v) throw new Error("Voucher không tồn tại");
+    m.vouchers = m.vouchers.filter((x) => x.id !== voucherId);
+    m.history.unshift({ text: `Dùng voucher: ${v.title}`, date: new Date().toLocaleDateString("vi-VN").slice(0, 5) });
+    writeMock(m);
+    return { ok: true, voucherId };
+  }
+  return post("/redeemVoucher", { accessToken, qr, voucherId });
 }

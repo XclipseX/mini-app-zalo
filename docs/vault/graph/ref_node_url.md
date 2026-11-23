@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "concept"
-community: "Community 7"
+community: "Community 6"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_6
 ---
 
 # ref_node_url
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[seed.mjs]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_7
+#graphify/concept #graphify/EXTRACTED #community/Community_6

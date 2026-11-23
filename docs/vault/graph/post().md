@@ -16,5 +16,7 @@ tags:
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[createOrder()]] - `calls` [EXTRACTED]
 - [[getMember()]] - `calls` [EXTRACTED]
+- [[lookupMember()]] - `calls` [EXTRACTED]
+- [[redeemVoucher()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2
