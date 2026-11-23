@@ -1,0 +1,25 @@
+---
+type: index
+updated: 2026-11-23
+---
+# Niên Zalo Mini App – Index
+
+> AI agents: đọc note này trước, rồi file mới nhất trong [[sessions]].
+
+## Dự án
+Zalo Mini App cho quán cà phê **Niên** (358 Lê Lai, Thanh Hóa). Khách hàng: cô Bích Ngọc. Gói 4 – 3.000.000đ: menu, đặt món nhận tại quán, voucher, tích 10 tem đổi 1 ly. Mục tiêu ~1 tuần code.
+
+## Architecture
+- [[architecture/app-structure]]
+
+## Decisions
+- [[decisions/2026-11-23-firebase-backend]]
+- [[decisions/2026-11-22-checkout-sdk-required]]
+- [[decisions/2026-11-22-proposal-workflow]]
+
+## Known bugs / gotchas
+- zmp-ui icon font tải từ h5.zadn.vn → bị chặn trên claude.ai artifact (đã ẩn icon snackbar ở chế độ webdemo).
+- `zmp login` hỏi Mini App ID ngay → chưa login được tới khi cô tạo ID.
+
+## Recent sessions
+- [[sessions/2026-11-23]]
