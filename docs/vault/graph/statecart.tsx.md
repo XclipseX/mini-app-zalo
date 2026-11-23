@@ -26,6 +26,7 @@ tags:
 - [[pagescart.tsx]] - `imports_from` [EXTRACTED]
 - [[product-card.tsx]] - `imports_from` [EXTRACTED]
 - [[product.tsx]] - `imports_from` [EXTRACTED]
+- [[quantity-stepper.tsx]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[staff-orders.tsx]] - `imports_from` [EXTRACTED]
 - [[stores]] - `imports` [EXTRACTED]

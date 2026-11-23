@@ -1,3 +1,4 @@
+import LucianQuantityStepper from "../lucian/quantity-stepper";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Page, useNavigate, useSnackbar } from "zmp-ui";
@@ -42,10 +43,8 @@ export default function ProductPage() {
         <div className="opt-title">Ghi chú</div>
         <textarea rows={2} maxLength={120} placeholder="Ví dụ: ít ngọt, mang về..." value={note} onChange={(e) => setNote(e.target.value)} aria-label="Ghi chú cho món" />
         <div className="counter">{note.length}/120</div>
-        <div className="row" style={{ marginTop: 16 }}>
-          <span className="opt-title" style={{ margin: 0 }}>Số lượng</span>
-          <div className="qty"><button aria-label="Giảm số lượng" onClick={() => setQty(Math.max(1, qty - 1))}>−</button><b>{qty}</b><button aria-label="Tăng số lượng" onClick={() => setQty(qty + 1)}>+</button></div>
-        </div>
+        <div className="opt-title">Số lượng</div>
+        <LucianQuantityStepper value={qty} onChange={setQty} unitPrice={unit} />
       </div>
       <div className="cta">
         <button className="btn" onClick={() => { add(p, opts, note.trim(), qty); openSnackbar({ text: "Đã thêm vào giỏ", type: "success" }); navigate(-1); }}>

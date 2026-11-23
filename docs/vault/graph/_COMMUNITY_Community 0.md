@@ -1,24 +1,26 @@
 ---
 type: community
-members: 26
+members: 29
 ---
 
 # Community 0
 
-**Members:** 26 nodes
+**Members:** 29 nodes
 
 ## Members
 - [[CartCtx]] - code - src/state/cart.tsx
 - [[CartItem]] - code - src/data/types.ts
 - [[Category]] - code - src/data/types.ts
 - [[Ctx]] - code - src/state/cart.tsx
+- [[DIGITS]] - code - src/lucian/quantity-stepper.tsx
+- [[LucianQuantityStepper()]] - code - src/lucian/quantity-stepper.tsx
 - [[MenuPage()]] - code - src/pages/menu.tsx
 - [[Option]] - code - src/data/types.ts
 - [[OptionGroup]] - code - src/data/types.ts
-- [[OrderInput]] - code - src/services/api.ts
 - [[Product]] - code - src/data/types.ts
 - [[ProductCard()]] - code - src/components/product-card.tsx
 - [[ProductPage()]] - code - src/pages/product.tsx
+- [[Props]] - code - src/lucian/quantity-stepper.tsx
 - [[Store]] - code - src/data/types.ts
 - [[categories]] - code - src/data/menu.ts
 - [[ice]] - code - src/data/menu.ts
@@ -27,6 +29,7 @@ members: 26
 - [[product-card.tsx]] - code - src/components/product-card.tsx
 - [[product.tsx]] - code - src/pages/product.tsx
 - [[products]] - code - src/data/menu.ts
+- [[quantity-stepper.tsx]] - code - src/lucian/quantity-stepper.tsx
 - [[shot]] - code - src/data/menu.ts
 - [[statecart.tsx]] - code - src/state/cart.tsx
 - [[stores]] - code - src/data/menu.ts
@@ -43,14 +46,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_Community 2]]
+- 21 edges to [[_COMMUNITY_Community 2]]
 - 7 edges to [[_COMMUNITY_Community 1]]
 - 6 edges to [[_COMMUNITY_Community 9]]
 - 1 edge to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[statecart.tsx]] - degree 20, connects to 3 communities
-- [[product.tsx]] - degree 12, connects to 2 communities
-- [[vnd()]] - degree 11, connects to 2 communities
+- [[statecart.tsx]] - degree 21, connects to 3 communities
+- [[product.tsx]] - degree 14, connects to 2 communities
+- [[vnd()]] - degree 13, connects to 2 communities
 - [[menu.ts]] - degree 15, connects to 1 community
 - [[types.ts]] - degree 12, connects to 1 community

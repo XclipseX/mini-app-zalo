@@ -60,7 +60,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_Community 2]]
 - 1 edge to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 9]]
 
 ## Top bridge nodes
 - [[react-router-dom]] - degree 4, connects to 2 communities

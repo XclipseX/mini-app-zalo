@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[CartPage()]] - `calls` [EXTRACTED]
+- [[LucianQuantityStepper()]] - `calls` [EXTRACTED]
 - [[MenuPage()]] - `calls` [EXTRACTED]
 - [[ProductCard()]] - `calls` [EXTRACTED]
 - [[ProductPage()]] - `calls` [EXTRACTED]
@@ -21,6 +22,7 @@ tags:
 - [[pagescart.tsx]] - `imports` [EXTRACTED]
 - [[product-card.tsx]] - `imports` [EXTRACTED]
 - [[product.tsx]] - `imports` [EXTRACTED]
+- [[quantity-stepper.tsx]] - `imports` [EXTRACTED]
 - [[staff-orders.tsx]] - `imports` [EXTRACTED]
 - [[statecart.tsx]] - `contains` [EXTRACTED]
 

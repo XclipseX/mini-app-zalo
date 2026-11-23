@@ -15,13 +15,14 @@ members: 48
 - [[FILTERS]] - code - src/pages/staff-orders.tsx
 - [[LABEL]] - code - src/pages/staff-orders.tsx
 - [[LookupResult]] - code - src/services/api.ts
-- [[MOCK]] - code - src/services/zalo.ts
 - [[Member]] - code - src/services/api.ts
 - [[MemberCtx]] - code - src/state/member.tsx
 - [[MemberProvider()]] - code - src/state/member.tsx
 - [[NEXT_STATUS]] - code - src/services/api.ts
+- [[OrderInput]] - code - src/services/api.ts
 - [[OrderResult]] - code - src/services/api.ts
 - [[OrderStatus]] - code - src/services/api.ts
+- [[PayMethod]] - code - src/services/api.ts
 - [[StaffOrder]] - code - src/services/api.ts
 - [[StaffOrdersPage()]] - code - src/pages/staff-orders.tsx
 - [[StaffPage()]] - code - src/pages/staff.tsx
@@ -49,7 +50,6 @@ members: 48
 - [[run()]] - code - src/pages/staff.tsx
 - [[saveMockOrder()]] - code - src/services/api.ts
 - [[scanQr()]] - code - src/services/zalo.ts
-- [[serviceszalo.ts]] - code - src/services/zalo.ts
 - [[staff-orders.tsx]] - code - src/pages/staff-orders.tsx
 - [[staff.tsx]] - code - src/pages/staff.tsx
 - [[time()]] - code - src/pages/staff-orders.tsx
@@ -66,13 +66,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 25 edges to [[_COMMUNITY_Community 2]]
-- 8 edges to [[_COMMUNITY_Community 9]]
+- 14 edges to [[_COMMUNITY_Community 9]]
 - 7 edges to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
 - [[api.ts]] - degree 38, connects to 3 communities
-- [[serviceszalo.ts]] - degree 15, connects to 3 communities
-- [[staff-orders.tsx]] - degree 19, connects to 2 communities
+- [[staff-orders.tsx]] - degree 19, connects to 3 communities
+- [[member.tsx]] - degree 17, connects to 2 communities
+- [[staff.tsx]] - degree 16, connects to 2 communities
 - [[StaffOrdersPage()]] - degree 11, connects to 2 communities
-- [[member.tsx]] - degree 17, connects to 1 community

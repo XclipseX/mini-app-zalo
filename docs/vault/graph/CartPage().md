@@ -2,7 +2,7 @@
 source_file: "src/pages/cart.tsx"
 type: "code"
 community: "Community 9"
-location: "L7"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # CartPage()
 
 ## Connections
+- [[LucianPaymentOptions()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `imports` [EXTRACTED]
 - [[checkout()]] - `contains` [EXTRACTED]

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 50
+members: 53
 ---
 
 # Community 5
 
-**Members:** 50 nodes
+**Members:** 53 nodes
 
 ## Members
 - [[dot-constructor()]] - code - functions/src/http.ts
@@ -13,21 +13,25 @@ members: 50
 - [[HttpError]] - code - functions/src/http.ts
 - [[NEXT_STATUS_1]] - code - functions/src/index.ts
 - [[ORDER_STATUSES]] - code - functions/src/index.ts
+- [[PayMethod_1]] - code - functions/src/checkout.ts
 - [[QR_SECRET]] - code - functions/src/index.ts
-- [[TODO OA access token hết hạn ~25h → cần luồng refresh_token…]] - rationale - functions/src/zbs.ts
 - [[ZALO_APP_SECRET]] - code - functions/src/index.ts
 - [[ZBS_ACCESS_TOKEN]] - code - functions/src/index.ts
 - [[ZBS_TEMPLATE_READY]] - code - functions/src/index.ts
 - [[addStamp]] - code - functions/src/index.ts
 - [[auth()]] - code - functions/src/index.ts
+- [[buildCheckout()]] - code - functions/src/checkout.ts
+- [[checkout.ts]] - code - functions/src/checkout.ts
+- [[checkoutCallback]] - code - functions/src/index.ts
 - [[createOrder]] - code - functions/src/index.ts
 - [[db]] - code - functions/src/index.ts
 - [[ddmm()]] - code - functions/src/index.ts
 - [[ddmmyyyy()]] - code - functions/src/index.ts
-- [[firebase-functions]] - concept - functions/package.json
+- [[enc()]] - code - functions/src/checkout.ts
 - [[getMember]] - code - functions/src/index.ts
 - [[getPhoneNumber()]] - code - functions/src/zalo.ts
 - [[handle()]] - code - functions/src/http.ts
+- [[hmac()]] - code - functions/src/checkout.ts
 - [[http.ts]] - code - functions/src/http.ts
 - [[index.ts]] - code - functions/src/index.ts
 - [[isStaff]] - code - functions/src/index.ts
@@ -35,6 +39,7 @@ members: 50
 - [[lookupMember]] - code - functions/src/index.ts
 - [[makeMemberQr()]] - code - functions/src/qr.ts
 - [[opts]] - code - functions/src/index.ts
+- [[orderMacData()]] - code - functions/src/checkout.ts
 - [[orderOpts]] - code - functions/src/index.ts
 - [[orderView()]] - code - functions/src/index.ts
 - [[pad()]] - code - functions/src/index.ts
@@ -45,19 +50,17 @@ members: 50
 - [[ref_express]] - concept
 - [[requireStaff()]] - code - functions/src/index.ts
 - [[resolvePhone]] - code - functions/src/index.ts
-- [[sendZbsTemplate()]] - code - functions/src/zbs.ts
+- [[sameMac()]] - code - functions/src/checkout.ts
 - [[sign()]] - code - functions/src/qr.ts
 - [[srczalo.ts]] - code - functions/src/zalo.ts
 - [[str()]] - code - functions/src/http.ts
-- [[toZaloPhone()]] - code - functions/src/zbs.ts
-- [[unset()]] - code - functions/src/zbs.ts
 - [[updateOpts]] - code - functions/src/index.ts
 - [[updateOrderStatus]] - code - functions/src/index.ts
 - [[verifyAccessToken()]] - code - functions/src/zalo.ts
+- [[verifyCallback()]] - code - functions/src/checkout.ts
 - [[verifyMemberQr()]] - code - functions/src/qr.ts
 - [[verifyUser]] - code - functions/src/index.ts
 - [[vn()]] - code - functions/src/index.ts
-- [[zbs.ts]] - code - functions/src/zbs.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -67,11 +70,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 7]]
-- 3 edges to [[_COMMUNITY_Community 6]]
+- 6 edges to [[_COMMUNITY_Community 6]]
 
 ## Top bridge nodes
-- [[index.ts]] - degree 48, connects to 2 communities
-- [[createOrder]] - degree 7, connects to 1 community
-- [[firebase-functions]] - degree 5, connects to 1 community
-- [[ref_crypto]] - degree 3, connects to 1 community
+- [[index.ts]] - degree 48, connects to 1 community
+- [[http.ts]] - degree 8, connects to 1 community
+- [[updateOrderStatus]] - degree 5, connects to 1 community

@@ -16,12 +16,12 @@ tags:
 - [[ProductCard()]] - `imports` [EXTRACTED]
 - [[StampCard()]] - `imports` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
+- [[componentsstamp-card.tsx]] - `imports_from` [EXTRACTED]
 - [[member.tsx]] - `imports_from` [EXTRACTED]
 - [[menu.ts]] - `imports_from` [EXTRACTED]
 - [[product-card.tsx]] - `imports_from` [EXTRACTED]
 - [[products]] - `imports` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
-- [[stamp-card.tsx]] - `imports_from` [EXTRACTED]
 - [[useMember()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 

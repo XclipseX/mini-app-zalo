@@ -24,6 +24,5 @@ tags:
 - [[StaffOrdersPage()]] - `calls` [EXTRACTED]
 - [[StaffPage()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `contains` [EXTRACTED]
-- [[main.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

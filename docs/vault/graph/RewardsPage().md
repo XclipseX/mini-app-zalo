@@ -12,8 +12,8 @@ tags:
 # RewardsPage()
 
 ## Connections
+- [[LucianStampCard()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
-- [[StampCard()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `imports` [EXTRACTED]
 - [[getToken()]] - `calls` [EXTRACTED]
 - [[isStaff()]] - `indirect_call` [INFERRED]

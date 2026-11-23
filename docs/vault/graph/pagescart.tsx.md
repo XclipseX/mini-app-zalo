@@ -13,12 +13,14 @@ tags:
 
 ## Connections
 - [[CartPage()]] - `contains` [EXTRACTED]
-- [[PayMethod_1]] - `imports` [EXTRACTED]
+- [[LucianPaymentOptions()]] - `imports` [EXTRACTED]
+- [[PayMethod]] - `imports` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[createOrder()]] - `imports` [EXTRACTED]
 - [[itemPrice()]] - `imports` [EXTRACTED]
 - [[payCheckout()]] - `imports` [EXTRACTED]
+- [[payment-options.tsx]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[requestPhoneToken()]] - `imports` [EXTRACTED]
 - [[serviceszalo.ts]] - `imports_from` [EXTRACTED]

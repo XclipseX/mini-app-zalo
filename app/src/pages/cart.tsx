@@ -1,3 +1,4 @@
+import LucianPaymentOptions from "../lucian/payment-options";
 import React, { useState } from "react";
 import { Page, useNavigate, useSnackbar } from "zmp-ui";
 import { itemPrice, useCart, vnd } from "../state/cart";
@@ -68,12 +69,12 @@ export default function CartPage() {
         <div className="card">
           <div className="line"><span>Tạm tính</span><b>{vnd(total)}</b></div>
           <div className="label" style={{ marginTop: 8 }}>THANH TOÁN</div>
-          {([["COD", "Trả tại quầy khi nhận đồ"], ["BANK", "Chuyển khoản ngân hàng"]] as const).map(([id, label]) => (
-            <label key={id} className="line" style={{ cursor: "pointer" }}>
-              <span>{label}</span>
-              <input type="radio" name="pay" checked={method === id} onChange={() => setMethod(id)} />
-            </label>
-          ))}
+          <div style={{ marginTop: 8 }}>
+            <LucianPaymentOptions value={method} onChange={(id) => setMethod(id as PayMethod)} options={[
+              { id: "COD", title: "Trả tại quầy", note: "Tiền mặt hoặc quẹt thẻ khi nhận đồ", badge: "Phổ biến", icon: "store", color: "linear-gradient(140deg,#16381F,#0A6836)" },
+              { id: "BANK", title: "Chuyển khoản", note: "Quán xác nhận khi nhận được tiền", icon: "bank", color: "linear-gradient(140deg,#E76433,#F08C00)" },
+            ]} />
+          </div>
           <div className="muted" style={{ marginTop: 8 }}>🎟️ Voucher được áp dụng tại quầy khi nhân viên quét mã thành viên của bạn.</div>
           <div className="muted" style={{ marginTop: 8 }}>Khi bấm đặt món, Zalo sẽ hỏi bạn chia sẻ số điện thoại để quán xác nhận đơn.</div>
         </div>

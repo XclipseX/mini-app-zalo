@@ -4,7 +4,7 @@ import { Page, useNavigate, useSnackbar } from "zmp-ui";
 import { useMember } from "../state/member";
 import { MOCK, getToken } from "../services/zalo";
 import { isStaff } from "../services/api";
-import StampCard from "../components/stamp-card";
+import LucianStampCard from "../lucian/stamp-card";
 
 export default function RewardsPage() {
   const { member, refresh, addStampDemo } = useMember();
@@ -32,9 +32,9 @@ export default function RewardsPage() {
         <div className="muted">Đưa nhân viên quét để tích tem</div>
         {qr ? <img className="qr" src={qr} alt="QR thành viên" /> : <p className="muted">Đang tải mã…</p>}
         <button className="link" onClick={refresh}>Làm mới mã</button>
-        {MOCK && <button className="btn ghost" onClick={async () => { await addStampDemo(); openSnackbar({ text: "+1 tem (giả lập nhân viên quét)", type: "success" }); }}>Demo: giả lập quét +1 tem</button>}
       </div>
-      <StampCard stamps={member?.stamps ?? 0} />
+      <LucianStampCard stamps={member?.stamps ?? 0}
+        onDemoStamp={MOCK ? async () => { await addStampDemo(); openSnackbar({ text: "+1 tem (giả lập nhân viên quét)", type: "success" }); } : undefined} />
       <div className="card">
         <h3 style={{ fontSize: 17 }}>Voucher của tôi</h3>
         {member?.vouchers.map((v) => (

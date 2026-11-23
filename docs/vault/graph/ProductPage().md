@@ -2,7 +2,7 @@
 source_file: "src/pages/product.tsx"
 type: "code"
 community: "Community 0"
-location: "L8"
+location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # ProductPage()
 
 ## Connections
+- [[LucianQuantityStepper()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `imports` [EXTRACTED]
 - [[product.tsx]] - `contains` [EXTRACTED]

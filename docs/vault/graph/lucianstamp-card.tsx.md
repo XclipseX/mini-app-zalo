@@ -1,5 +1,5 @@
 ---
-source_file: "src/components/stamp-card.tsx"
+source_file: "src/lucian/stamp-card.tsx"
 type: "code"
 community: "Community 2"
 location: "L1"
@@ -9,11 +9,11 @@ tags:
   - community/Community_2
 ---
 
-# stamp-card.tsx
+# lucian/stamp-card.tsx
 
 ## Connections
-- [[StampCard()]] - `contains` [EXTRACTED]
-- [[home.tsx]] - `imports_from` [EXTRACTED]
+- [[LucianStampCard()]] - `contains` [EXTRACTED]
+- [[Props_1]] - `contains` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
 

@@ -13,9 +13,7 @@ tags:
 
 ## Connections
 - [[HomePage()]] - `calls` [EXTRACTED]
-- [[RewardsPage()]] - `calls` [EXTRACTED]
+- [[componentsstamp-card.tsx]] - `contains` [EXTRACTED]
 - [[home.tsx]] - `imports` [EXTRACTED]
-- [[rewards.tsx]] - `imports` [EXTRACTED]
-- [[stamp-card.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

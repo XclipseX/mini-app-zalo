@@ -14,10 +14,10 @@ tags:
 ## Connections
 - [[@fontsourcebaloo-2]] - `imports_from` [EXTRACTED]
 - [[@fontsourcebe-vietnam-pro]] - `imports_from` [EXTRACTED]
-- [[MyApp()]] - `imports` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[react-dom]] - `imports_from` [EXTRACTED]
+- [[src_lucian_lucian]] - `imports_from` [EXTRACTED]
 - [[src_theme]] - `imports_from` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 

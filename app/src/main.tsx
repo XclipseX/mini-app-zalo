@@ -9,6 +9,7 @@ import "@fontsource/be-vietnam-pro/vietnamese-700.css";
 import "@fontsource/baloo-2/latin-800.css";
 import "@fontsource/baloo-2/vietnamese-800.css";
 import "./theme.css";
+import "./lucian/lucian.css";
 import React from "react";
 import { createRoot } from "react-dom/client";
 import MyApp from "./app";
