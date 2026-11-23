@@ -9,6 +9,10 @@ updated: 2026-11-23
 ## Dự án
 Zalo Mini App cho quán cà phê **Niên** (358 Lê Lai, Thanh Hóa). Khách hàng: cô Bích Ngọc. Gói 4 – 3.000.000đ: menu, đặt món nhận tại quán, voucher, tích 10 tem đổi 1 ly. Mục tiêu ~1 tuần code.
 
+## Trạng thái
+Demo mock xong. Đang chờ cô (cọc, Mini App ID, giấy tờ). Việc tiếp: Firebase backend. Chi tiết: [[sessions/2026-11-23]].
+Nhánh làm việc: `ccr-9c0f1ce5-f6i58o`.
+
 ## Architecture
 - [[architecture/app-structure]]
 - Bản đồ code: `app/graphify-out/GRAPH_REPORT.md`, note từng hàm trong [[graph/graph.canvas|graph/]] (graphify export). Hub: `useCart`, `vnd`, `zalo.ts`, `api.ts` → sửa cẩn thận.
