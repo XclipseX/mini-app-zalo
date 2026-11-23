@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "concept"
-community: "Community 7"
+community: "Community 4"
 location: "L26"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_4
 ---
 
 # vite
@@ -16,4 +16,4 @@ tags:
 - [[vite.config.ts]] - `imports_from` [EXTRACTED]
 - [[vite@5.4.2]] - `declares` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_7
+#graphify/concept #graphify/EXTRACTED #community/Community_4

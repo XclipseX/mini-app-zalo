@@ -9,7 +9,7 @@ tags:
   - community/Community_2
 ---
 
-# zalo.ts
+# services/zalo.ts
 
 ## Connections
 - [[MOCK]] - `contains` [EXTRACTED]

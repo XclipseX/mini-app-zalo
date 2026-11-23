@@ -1,20 +1,29 @@
 ---
 type: community
-members: 7
+members: 16
 ---
 
 # Community 6
 
-**Members:** 7 nodes
+**Members:** 16 nodes
 
 ## Members
-- [[@typesreact]] - concept - package.json
-- [[@typesreact-dom]] - concept - package.json
-- [[@typesreact-dom@18.3.0]] - code - package.json
-- [[@typesreact@18.3.3]] - code - package.json
-- [[devDependencies]] - code - package.json
-- [[typescript]] - concept - package.json
-- [[typescript@5.5.4]] - code - package.json
+- [[build_1]] - code - functions/package.json
+- [[dependencies_1]] - code - functions/package.json
+- [[deploy_1]] - code - functions/package.json
+- [[devDependencies_1]] - code - functions/package.json
+- [[engines]] - code - functions/package.json
+- [[firebase-admin]] - concept - functions/package.json
+- [[firebase-admin@12.7.0]] - code - functions/package.json
+- [[firebase-functions@6.1.0]] - code - functions/package.json
+- [[functionspackage.json]] - code - functions/package.json
+- [[main]] - code - functions/package.json
+- [[name_1]] - code - functions/package.json
+- [[node]] - code - functions/package.json
+- [[private_1]] - code - functions/package.json
+- [[scripts_1]] - code - functions/package.json
+- [[typescript_1]] - concept - functions/package.json
+- [[typescript@5.6.3]] - code - functions/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,11 +33,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Community 5]]
-- 3 edges to [[_COMMUNITY_Community 7]]
+- 3 edges to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 7]]
 
 ## Top bridge nodes
-- [[devDependencies]] - degree 7, connects to 2 communities
-- [[@typesreact]] - degree 2, connects to 1 community
-- [[@typesreact-dom]] - degree 2, connects to 1 community
-- [[typescript]] - degree 2, connects to 1 community
+- [[firebase-admin]] - degree 4, connects to 2 communities
+- [[functionspackage.json]] - degree 10, connects to 1 community
+- [[firebase-functions@6.1.0]] - degree 2, connects to 1 community

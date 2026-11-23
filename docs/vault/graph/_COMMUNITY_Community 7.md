@@ -1,20 +1,25 @@
 ---
 type: community
-members: 7
+members: 12
 ---
 
 # Community 7
 
-**Members:** 7 nodes
+**Members:** 12 nodes
 
 ## Members
-- [[@vitejsplugin-react]] - concept - package.json
-- [[@vitejsplugin-react@4.3.1]] - code - package.json
-- [[vite]] - concept - package.json
-- [[vite.config.ts]] - code - vite.config.ts
-- [[vite@5.4.2]] - code - package.json
-- [[zmp-vite-plugin]] - concept - package.json
-- [[zmp-vite-plugin@1.1.6]] - code - package.json
+- [[admin]] - code - scripts/seed.mjs
+- [[data]] - code - scripts/seed.mjs
+- [[db_1]] - code - scripts/seed.mjs
+- [[here]] - code - scripts/seed.mjs
+- [[rc]] - code - scripts/seed.mjs
+- [[ref_node_fs]] - concept
+- [[ref_node_module]] - concept
+- [[ref_node_path]] - concept
+- [[ref_node_url]] - concept
+- [[require]] - code - scripts/seed.mjs
+- [[seed.mjs]] - code - scripts/seed.mjs
+- [[writeAll()]] - code - scripts/seed.mjs
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,12 +29,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Community 5]]
-- 3 edges to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 6]]
 
 ## Top bridge nodes
-- [[vite]] - degree 3, connects to 1 community
-- [[@vitejsplugin-react]] - degree 3, connects to 1 community
-- [[zmp-vite-plugin]] - degree 3, connects to 1 community
-- [[vite@5.4.2]] - degree 2, connects to 1 community
-- [[@vitejsplugin-react@4.3.1]] - degree 2, connects to 1 community
+- [[seed.mjs]] - degree 12, connects to 1 community

@@ -19,9 +19,9 @@ tags:
 - [[member.tsx]] - `imports_from` [EXTRACTED]
 - [[qrcode]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
+- [[serviceszalo.ts]] - `imports_from` [EXTRACTED]
 - [[stamp-card.tsx]] - `imports_from` [EXTRACTED]
 - [[useMember()]] - `imports` [EXTRACTED]
-- [[zalo.ts]] - `imports_from` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_1

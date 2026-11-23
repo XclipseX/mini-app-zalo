@@ -1,12 +1,12 @@
 ---
 source_file: "vite.config.ts"
 type: "code"
-community: "Community 7"
+community: "Community 4"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_4
 ---
 
 # vite.config.ts
@@ -16,4 +16,4 @@ tags:
 - [[vite]] - `imports_from` [EXTRACTED]
 - [[zmp-vite-plugin]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_4

@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "concept"
-community: "Community 7"
+community: "Community 4"
 location: "L27"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_4
 ---
 
 # zmp-vite-plugin
@@ -16,4 +16,4 @@ tags:
 - [[vite.config.ts]] - `imports_from` [EXTRACTED]
 - [[zmp-vite-plugin@1.1.6]] - `declares` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_7
+#graphify/concept #graphify/EXTRACTED #community/Community_4

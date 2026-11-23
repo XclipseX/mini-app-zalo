@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[api.ts]] - `imports` [EXTRACTED]
 - [[rewards.tsx]] - `imports` [EXTRACTED]
-- [[zalo.ts]] - `contains` [EXTRACTED]
+- [[serviceszalo.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

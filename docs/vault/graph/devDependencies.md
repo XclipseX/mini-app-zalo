@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "code"
-community: "Community 6"
+community: "Community 4"
 location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_4
 ---
 
 # devDependencies
@@ -20,4 +20,4 @@ tags:
 - [[vite@5.4.2]] - `contains` [EXTRACTED]
 - [[zmp-vite-plugin@1.1.6]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_6
+#graphify/code #graphify/EXTRACTED #community/Community_4

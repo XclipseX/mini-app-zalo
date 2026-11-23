@@ -18,6 +18,7 @@ tags:
 - [[Member]] - `contains` [EXTRACTED]
 - [[OrderInput]] - `contains` [EXTRACTED]
 - [[Voucher]] - `imports` [EXTRACTED]
+- [[addStamp()]] - `contains` [EXTRACTED]
 - [[createOrder()]] - `contains` [EXTRACTED]
 - [[defaultMember]] - `contains` [EXTRACTED]
 - [[getMember()]] - `contains` [EXTRACTED]
@@ -26,8 +27,8 @@ tags:
 - [[pagescart.tsx]] - `imports_from` [EXTRACTED]
 - [[post()]] - `contains` [EXTRACTED]
 - [[readMock()]] - `contains` [EXTRACTED]
+- [[serviceszalo.ts]] - `imports_from` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]
 - [[writeMock()]] - `contains` [EXTRACTED]
-- [[zalo.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

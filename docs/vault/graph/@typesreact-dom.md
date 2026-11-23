@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "concept"
-community: "Community 6"
+community: "Community 4"
 location: "L23"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_6
+  - community/Community_4
 ---
 
 # @types/react-dom
@@ -15,4 +15,4 @@ tags:
 - [[@typesreact-dom@18.3.0]] - `declares` [EXTRACTED]
 - [[package.json]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_6
+#graphify/concept #graphify/EXTRACTED #community/Community_4

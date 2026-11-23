@@ -25,7 +25,7 @@ tags:
 - [[mockAddStamp()]] - `imports` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
+- [[serviceszalo.ts]] - `imports_from` [EXTRACTED]
 - [[useMember()]] - `contains` [EXTRACTED]
-- [[zalo.ts]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_2

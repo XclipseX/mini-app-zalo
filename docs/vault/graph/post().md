@@ -12,6 +12,7 @@ tags:
 # post()
 
 ## Connections
+- [[addStamp()]] - `calls` [EXTRACTED]
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[createOrder()]] - `calls` [EXTRACTED]
 - [[getMember()]] - `calls` [EXTRACTED]
