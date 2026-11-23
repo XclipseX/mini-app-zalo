@@ -22,3 +22,12 @@ Cửa hàng: Vinhomes Star City, 358 Lê Lai, Thanh Hóa · Hotline 19001068
 
 ## Pattern
 Họa tiết đồng hồ cát (tam giác cam) + lá xanh, dùng cho header/banner.
+
+## Logo vector (cắt từ guideline trang 10, 23/11/2026)
+- `logo-nien.svg` (Dark Green), `logo-nien-white.svg` (trắng), `mark-nien.svg` (biểu tượng, Terracotta).
+- Cắt bằng `pdftocairo -svg` rồi đặt viewBox; nét vector gốc, phóng to không vỡ.
+
+## Font: không trích từ PDF
+- Font trong PDF đều là **bản cắt (subset)**: chỉ có các chữ đã dùng trong guideline → thiếu ký tự, gõ tiếng Việt bất kỳ sẽ lỗi.
+- SVN-Arlen-Chunky, SVN-Gilroy là font **thương mại**; dùng trong app cần giấy phép (brand tự mua / gửi file có license).
+- Tạm thời dùng font Google miễn phí, hỗ trợ tiếng Việt (chọn cùng cô).
