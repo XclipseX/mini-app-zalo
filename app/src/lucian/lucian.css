@@ -234,3 +234,8 @@
 .u444-dot{cursor:default}
 .u444-s span{font-size:11.5px}
 @media (min-width:600px){html.webdemo .lx-nav{max-width:420px;margin:0 auto}}
+/* #041 thấp hơn cho màn điện thoại: bong bóng 52px nhô 18px (gốc 62px nhô 35px); khấc + icon dời theo */
+.lx-nav .u041{height:104px}
+.lx-nav .u041-bar{-webkit-mask:radial-gradient(circle 34px at var(--x) 8px,transparent 96%,#000 100%);mask:radial-gradient(circle 34px at var(--x) 8px,transparent 96%,#000 100%)}
+.lx-nav .u041-bub{width:52px;height:52px;margin-left:-26px;top:calc(100% - 84px - 18px)}
+.lx-nav .u041-tab[aria-selected="true"] .u041-ic{transform:translateY(-27px)}
