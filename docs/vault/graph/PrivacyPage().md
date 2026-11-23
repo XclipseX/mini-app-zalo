@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/privacy.tsx"
 type: "code"
-community: "Community 0"
+community: "Community 7"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_7
 ---
 
 # PrivacyPage()
@@ -16,4 +16,4 @@ tags:
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[privacy.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_7

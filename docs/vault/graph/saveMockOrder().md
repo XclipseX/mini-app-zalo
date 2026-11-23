@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[createOrder()]] - `calls` [EXTRACTED]
+- [[mockIncomingOrder()]] - `calls` [EXTRACTED]
 - [[readMockOrders()]] - `calls` [EXTRACTED]
 - [[writeMockOrders()]] - `calls` [EXTRACTED]
 

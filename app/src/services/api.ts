@@ -150,6 +150,13 @@ function readMockOrders(): StaffOrder[] {
 }
 function writeMockOrders(o: StaffOrder[]) { try { localStorage.setItem(ORDERS_KEY, JSON.stringify(o.slice(0, 50))); } catch { /* ignore */ } }
 function saveMockOrder(o: StaffOrder) { writeMockOrders([o, ...readMockOrders()]); }
+/** Demo: giả lập một khách vừa đặt đơn (để thử âm báo ở màn nhân viên). */
+export function mockIncomingOrder() {
+  const n = Math.floor(2100 + Math.random() * 800);
+  saveMockOrder({ id: "NIEN-" + n, name: "Khách demo", phone: "0900000" + String(n).slice(-3), storeId: "starcity", total: 39000,
+    items: [{ name: "Latte", qty: 1, options: { "Espresso": "1 shot", "Đường": "Vừa" }, note: "" }],
+    status: "pending", paymentMethod: "COD", paymentStatus: "unpaid", createdAt: Date.now() } as StaffOrder);
+}
 
 export async function listOrders(accessToken: string, status?: OrderStatus): Promise<StaffOrder[]> {
   if (MOCK) return readMockOrders().filter((o) => !status || o.status === status);

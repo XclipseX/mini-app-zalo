@@ -31,12 +31,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Community 0]]
-- 10 edges to [[_COMMUNITY_Community 1]]
+- 9 edges to [[_COMMUNITY_Community 0]]
+- 8 edges to [[_COMMUNITY_Community 1]]
+- 6 edges to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[pagescart.tsx]] - degree 18, connects to 2 communities
+- [[pagescart.tsx]] - degree 18, connects to 4 communities
 - [[CartPage()]] - degree 12, connects to 2 communities
+- [[itemPrice()]] - degree 4, connects to 2 communities
 - [[createOrder()]] - degree 6, connects to 1 community
 - [[payment-options.tsx]] - degree 5, connects to 1 community
-- [[payCheckout()]] - degree 4, connects to 1 community

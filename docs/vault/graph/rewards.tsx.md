@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/rewards.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 7"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_7
 ---
 
 # rewards.tsx
@@ -29,4 +29,4 @@ tags:
 - [[useToast()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_7

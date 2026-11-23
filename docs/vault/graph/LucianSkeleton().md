@@ -15,6 +15,5 @@ tags:
 - [[RewardsPage()]] - `calls` [EXTRACTED]
 - [[StaffOrdersPage()]] - `calls` [EXTRACTED]
 - [[skeleton.tsx]] - `contains` [EXTRACTED]
-- [[staff-orders.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_1

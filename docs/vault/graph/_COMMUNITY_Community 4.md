@@ -1,11 +1,11 @@
 ---
 type: community
-members: 41
+members: 43
 ---
 
 # Community 4
 
-**Members:** 41 nodes
+**Members:** 43 nodes
 
 ## Members
 - [[@fontsourcebaloo-2]] - concept - package.json
@@ -25,6 +25,7 @@ members: 41
 - [[deploy]] - code - package.json
 - [[dev]] - code - package.json
 - [[devDependencies]] - code - package.json
+- [[main.tsx]] - code - src/main.tsx
 - [[name]] - code - package.json
 - [[package.json]] - code - package.json
 - [[private]] - code - package.json
@@ -32,10 +33,10 @@ members: 41
 - [[qrcode@1.5.4]] - code - package.json
 - [[react-dom]] - concept - package.json
 - [[react-dom@18.3.1]] - code - package.json
-- [[react-router-dom]] - concept - package.json
-- [[react-router-dom@7.18.6]] - code - package.json
 - [[react@18.3.1]] - code - package.json
 - [[scripts]] - code - package.json
+- [[src_lucian_lucian]] - concept
+- [[src_theme]] - concept
 - [[start]] - code - package.json
 - [[type]] - code - package.json
 - [[typescript]] - concept - package.json
@@ -46,6 +47,7 @@ members: 41
 - [[vite@5.4.2]] - code - package.json
 - [[zmp-sdk]] - concept - package.json
 - [[zmp-sdk@2.54.0]] - code - package.json
+- [[zmp-ui]] - concept - package.json
 - [[zmp-ui@1.11.15-2]] - code - package.json
 - [[zmp-vite-plugin]] - concept - package.json
 - [[zmp-vite-plugin@1.1.6]] - code - package.json
@@ -58,12 +60,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 1]]
+- 10 edges to [[_COMMUNITY_Community 0]]
+- 6 edges to [[_COMMUNITY_Community 7]]
+- 3 edges to [[_COMMUNITY_Community 1]]
+- 1 edge to [[_COMMUNITY_Community 9]]
 
 ## Top bridge nodes
+- [[zmp-ui]] - degree 14, connects to 4 communities
+- [[main.tsx]] - degree 9, connects to 2 communities
 - [[package.json]] - degree 22, connects to 1 community
-- [[react-router-dom]] - degree 4, connects to 1 community
-- [[@fontsourcebaloo-2]] - degree 3, connects to 1 community
-- [[@fontsourcebe-vietnam-pro]] - degree 3, connects to 1 community
+- [[dependencies]] - degree 10, connects to 1 community
 - [[qrcode]] - degree 3, connects to 1 community

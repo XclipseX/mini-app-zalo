@@ -2,11 +2,12 @@
 // Server (listOrders/updateOrderStatus) kiểm tra quyền staff + chi nhánh. MOCK: đơn lưu localStorage.
 import LucianPillTabs from "../lucian/pill-tabs";
 import LucianSkeleton from "../lucian/skeleton";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { enableChime, playChime } from "../services/chime";
 import { Page, useNavigate } from "zmp-ui";
 import { useToast } from "../lucian/toast";
-import { listOrders, NEXT_STATUS, OrderStatus, StaffOrder, updateOrderStatus } from "../services/api";
-import { getToken } from "../services/zalo";
+import { listOrders, mockIncomingOrder, NEXT_STATUS, OrderStatus, StaffOrder, updateOrderStatus } from "../services/api";
+import { getToken, MOCK } from "../services/zalo";
 import { vnd } from "../state/cart";
 
 const LABEL: Record<OrderStatus, string> = { pending: "Mới", making: "Đang pha", ready: "Sẵn sàng", done: "Đã giao", cancelled: "Đã huỷ" };
@@ -28,13 +29,43 @@ export default function StaffOrdersPage() {
   const [busy, setBusy] = useState<string | null>(null);
   const [confirm, setConfirm] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  // Âm báo: bật theo từng máy (nhớ lựa chọn); kêu khi có đơn mới và nhắc lại mỗi 15 giây tới khi đơn được "Bắt đầu pha"
+  const [alertOn, setAlertOn] = useState(() => { try { return localStorage.getItem("nien-staff-alert") === "1"; } catch { return false; } });
+  const [armed, setArmed] = useState(false); // đã chạm để mở khoá âm thanh trong phiên này chưa
+  const seen = useRef<Set<string> | null>(null);
+  const pendingCount = orders.filter((o) => o.status === "pending").length;
 
   const fail = (e: unknown) => openSnackbar({ text: e instanceof Error ? e.message : "Có lỗi, thử lại", type: "error" });
 
   async function load() {
-    try { setOrders(await listOrders(await getToken())); } catch (e) { fail(e); } finally { setLoading(false); }
+    try {
+      const list = await listOrders(await getToken());
+      const fresh = list.filter((o) => o.status === "pending" && seen.current && !seen.current.has(o.id));
+      seen.current = new Set(list.map((o) => o.id));
+      setOrders(list);
+      if (fresh.length) {
+        playChime();
+        openSnackbar({ text: fresh.length === 1 ? `Đơn mới ${fresh[0].id}` : `${fresh.length} đơn mới`, type: "success" });
+      }
+    } catch (e) { fail(e); } finally { setLoading(false); }
   }
-  useEffect(() => { load(); const t = setInterval(load, 20000); return () => clearInterval(t); }, []);
+  useEffect(() => { load(); const t = setInterval(load, 10000); return () => clearInterval(t); }, []);
+  // Nhắc lại khi vẫn còn đơn "Mới" chưa ai nhận
+  useEffect(() => {
+    if (!alertOn || !armed || pendingCount === 0) return;
+    const t = setInterval(playChime, 15000);
+    return () => clearInterval(t);
+  }, [alertOn, armed, pendingCount]);
+  useEffect(() => { document.title = pendingCount ? `(${pendingCount}) Đơn mới – Niên` : "Niên"; return () => { document.title = "Niên"; }; }, [pendingCount]);
+
+  const toggleAlert = () => {
+    if (alertOn && armed) { setAlertOn(false); try { localStorage.setItem("nien-staff-alert", "0"); } catch { /* */ } return; }
+    const ok = enableChime();
+    setArmed(ok); setAlertOn(true);
+    try { localStorage.setItem("nien-staff-alert", "1"); } catch { /* */ }
+    if (ok) { playChime(); openSnackbar({ text: "Đã bật âm báo đơn mới", type: "success" }); }
+    else openSnackbar({ text: "Máy này không phát được âm thanh", type: "warning" });
+  };
 
   async function change(o: StaffOrder, c: { status?: OrderStatus; paid?: boolean }, key: string) {
     if (confirm !== key) { setConfirm(key); return; }
@@ -53,6 +84,7 @@ export default function StaffOrdersPage() {
       <div className="topbar"><img src="./logo-dark.png" alt="Niên" style={{ height: 22 }} /><h2>Đơn hàng</h2></div>
       <LucianPillTabs label="Lọc đơn" value={filter} onChange={(id) => setFilter(id as "active" | OrderStatus)}
         items={FILTERS.map((f) => ({ id: f.id, label: f.label + (f.id === "active" ? ` (${orders.filter((o) => NEXT_STATUS[o.status]).length})` : "") }))} />
+      {pendingCount > 0 && <div className="alert-strip" role="status">🔔 {pendingCount} đơn mới đang chờ – bấm "Bắt đầu pha" để nhận đơn</div>}
 
       {loading && shown.length === 0 && [0, 1].map((k) => <LucianSkeleton key={k} label="Đang tải đơn" rows={[["40%", 16], ["60%", 12], ["90%", 12], ["70%", 12], ["100%", 44]]} />)}
       {!loading && shown.length === 0 && <p className="demo-note">Không có đơn.</p>}
@@ -89,6 +121,13 @@ export default function StaffOrdersPage() {
           </div>
         );
       })}
+      {/* Nút âm báo ở góc dưới bên trái: dễ chạm bằng ngón cái */}
+      <div className="alert-dock">
+        <button type="button" className={"alert-btn" + (alertOn && armed ? " on" : "")} onClick={toggleAlert} aria-pressed={alertOn && armed}>
+          {alertOn && armed ? "🔔 Âm báo: Bật" : alertOn ? "🔔 Chạm để bật âm báo" : "🔕 Âm báo: Tắt"}
+        </button>
+        {MOCK && <button type="button" className="alert-btn ghost" onClick={() => { mockIncomingOrder(); load(); }}>Demo: có đơn mới</button>}
+      </div>
       <p className="demo-note"><button className="link" onClick={load}>Tải lại</button> · <button className="link" onClick={() => navigate("/staff")}>← Quét QR</button></p>
     </Page>
   );

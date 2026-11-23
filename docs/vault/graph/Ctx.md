@@ -1,8 +1,8 @@
 ---
-source_file: "src/lucian/toast.tsx"
+source_file: "src/state/cart.tsx"
 type: "code"
 community: "Community 0"
-location: "L8"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # Ctx
 
 ## Connections
-- [[toast.tsx]] - `contains` [EXTRACTED]
+- [[statecart.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_0

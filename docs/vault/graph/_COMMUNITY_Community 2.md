@@ -25,7 +25,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 7]]
 
 ## Top bridge nodes
 - [[createHost()]] - degree 9, connects to 1 community

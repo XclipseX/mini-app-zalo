@@ -1,12 +1,12 @@
 ---
 source_file: "src/lucian/accordion.tsx"
 type: "code"
-community: "Community 0"
+community: "Community 7"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_7
 ---
 
 # LucianAccordion()
@@ -16,4 +16,4 @@ tags:
 - [[accordion.tsx]] - `contains` [EXTRACTED]
 - [[privacy.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_7
