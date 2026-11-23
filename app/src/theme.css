@@ -129,7 +129,7 @@ input[type="radio"] { accent-color: var(--dark); width: 20px; height: 20px; }
 .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 16px; }
 @media (min-width: 600px) {
   html.webdemo #app { overflow: hidden; }
-  html.webdemo .zaui-snackbar, html.webdemo [class*="zaui-snackbar"] { max-width: 400px; left: 50% !important; transform: translateX(-50%); }
+  html.webdemo .zaui-snackbar { left: 50% !important; right: auto !important; width: 400px !important; max-width: 400px; transform: translateX(-50%); }
   html.webdemo ::-webkit-scrollbar { display: none; }
   html.webdemo * { scrollbar-width: none; }
 }
