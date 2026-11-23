@@ -142,3 +142,6 @@ input[type="radio"] { accent-color: var(--dark); width: 20px; height: 20px; }
 .pimg, .detail-img { overflow: hidden; }
 .pimg .has-img, .detail-img .has-img { display: block; width: 100%; height: 100%; border-radius: 0; box-shadow: none; background: none; }
 .pimg .has-img img, .detail-img .has-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Ảnh món tỉ lệ 1:1 (ảnh gốc vuông 800×800, hiện trọn không bị cắt) */
+.pimg, .grid2 .pimg { height: auto; aspect-ratio: 1 / 1; }
+.detail-img { height: auto; aspect-ratio: 1 / 1; max-height: 70vh; }
