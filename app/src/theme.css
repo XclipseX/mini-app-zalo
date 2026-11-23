@@ -1,12 +1,15 @@
 :root {
+  --font-body: "Be Vietnam Pro", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Baloo 2", "Be Vietnam Pro", sans-serif;
   --dark: #16381F; --emerald: #0A6836; --reseda: #879466; --terra: #E76433; --vanilla: #FFEFC6;
   --bg: #FFF8E6; --card: #fff; --muted: #7d806f; --line: #eee6d3;
   --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cpath d='M4 4h12l-6 10z M4 24h12l-6-10z' fill='%23E76433'/%3E%3Cpath d='M18 22q2-12 8-16q-1 12-8 16z' fill='%230A6836'/%3E%3C/svg%3E");
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--dark); font-family: "Gilroy", "SVN-Gilroy", -apple-system, "Segoe UI", Roboto, sans-serif; }
+body { margin: 0; background: var(--bg); color: var(--dark); font-family: var(--font-body); }
 .zaui-page, .page { background: var(--bg); min-height: 100vh; padding-bottom: 90px; }
-h1, h2, h3, .chunky { font-family: "SVN-Arlen-Chunky", "Gilroy", sans-serif; font-weight: 800; margin: 0; }
+h1, h2, h3, .chunky { font-family: var(--font-display); font-weight: 800; margin: 0; letter-spacing: -.2px; }
+button, input, textarea { font-family: inherit; }
 button { font: inherit; cursor: pointer; }
 
 .topbar { display: flex; align-items: center; gap: 10px; padding: calc(env(safe-area-inset-top) + 12px) 16px 12px; background: var(--bg); position: sticky; top: 0; z-index: 5; }

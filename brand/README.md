@@ -30,4 +30,7 @@ Họa tiết đồng hồ cát (tam giác cam) + lá xanh, dùng cho header/bann
 ## Font: không trích từ PDF
 - Font trong PDF đều là **bản cắt (subset)**: chỉ có các chữ đã dùng trong guideline → thiếu ký tự, gõ tiếng Việt bất kỳ sẽ lỗi.
 - SVN-Arlen-Chunky, SVN-Gilroy là font **thương mại**; dùng trong app cần giấy phép (brand tự mua / gửi file có license).
-- Tạm thời dùng font Google miễn phí, hỗ trợ tiếng Việt (chọn cùng cô).
+- Brand đã mất file gốc → dùng font thay thế miễn phí (OFL), tự host qua @fontsource:
+  - **Baloo 2 ExtraBold (800)** thay SVN-Arlen-Chunky (tiêu đề).
+  - **Be Vietnam Pro 400/600/700** thay SVN-Gilroy (nội dung).
+  - Khai báo ở `app/src/main.tsx` + biến `--font-display`, `--font-body` trong `app/src/theme.css`.
