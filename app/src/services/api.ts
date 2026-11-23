@@ -56,6 +56,11 @@ export async function createOrder(input: OrderInput): Promise<OrderResult> {
   if (MOCK) {
     await new Promise((r) => setTimeout(r, 500));
     const orderId = "NIEN-" + Math.floor(1000 + Math.random() * 9000);
+    saveMockOrder({
+      id: orderId, name: "Minh Anh (demo)", phone: "0900000000", storeId: input.storeId, total: input.total,
+      items: input.items.map((i) => ({ name: i.product.name, qty: i.qty, options: Object.fromEntries(Object.entries(i.options).map(([g, o]) => [g, o.label])), note: i.note })),
+      status: "pending", paymentMethod: input.method, paymentStatus: "unpaid", createdAt: Date.now(),
+    });
     return { orderId, total: input.total, checkout: { amount: input.total, desc: `Niên - đơn ${orderId}`, item: [], extradata: JSON.stringify({ orderId }), method: JSON.stringify({ id: input.method, isCustom: false }), mac: "mock" } };
   }
   // Server tự tính lại giá từ Firestore (không tin total từ client)
@@ -122,4 +127,48 @@ export async function redeemVoucher(accessToken: string, qr: string, voucherId: 
     return { ok: true, voucherId };
   }
   return post("/redeemVoucher", { accessToken, qr, voucherId });
+}
+
+// ===== Đơn hàng cho nhân viên (server chỉ trả đơn của chi nhánh nhân viên) =====
+export type OrderStatus = "pending" | "making" | "ready" | "done" | "cancelled";
+export interface StaffOrder {
+  id: string; name: string; phone: string | null; storeId: string; total: number;
+  items: { name: string; qty: number; options: Record<string, string>; note: string }[];
+  status: OrderStatus; paymentMethod: PayMethod; paymentStatus: string; createdAt: number;
+}
+/** Bước tiếp theo hợp lệ (khớp NEXT_STATUS ở server). */
+export const NEXT_STATUS: Partial<Record<OrderStatus, OrderStatus>> = { pending: "making", making: "ready", ready: "done" };
+
+const ORDERS_KEY = "nien-demo-orders";
+function readMockOrders(): StaffOrder[] {
+  try { const v = JSON.parse(localStorage.getItem(ORDERS_KEY) || ""); if (Array.isArray(v)) return v; } catch { /* ignore */ }
+  const now = Date.now();
+  return [
+    { id: "NIEN-2041", name: "Lan", phone: "0912345678", storeId: "starcity", total: 45000, items: [{ name: "Cà phê muối", qty: 1, options: { "Size": "L" }, note: "" }], status: "pending", paymentMethod: "BANK", paymentStatus: "unpaid", createdAt: now - 3 * 60000 },
+    { id: "NIEN-2040", name: "Hùng", phone: "0987654321", storeId: "starcity", total: 64000, items: [{ name: "Bạc xỉu", qty: 2, options: {}, note: "ít đá" }], status: "making", paymentMethod: "COD", paymentStatus: "unpaid", createdAt: now - 9 * 60000 },
+  ];
+}
+function writeMockOrders(o: StaffOrder[]) { try { localStorage.setItem(ORDERS_KEY, JSON.stringify(o.slice(0, 50))); } catch { /* ignore */ } }
+function saveMockOrder(o: StaffOrder) { writeMockOrders([o, ...readMockOrders()]); }
+
+export async function listOrders(accessToken: string, status?: OrderStatus): Promise<StaffOrder[]> {
+  if (MOCK) return readMockOrders().filter((o) => !status || o.status === status);
+  return (await post<{ orders: StaffOrder[] }>("/listOrders", { accessToken, status })).orders;
+}
+
+/** Đổi trạng thái (status) và/hoặc xác nhận đã nhận tiền chuyển khoản (paid=true). */
+export async function updateOrderStatus(accessToken: string, orderId: string, change: { status?: OrderStatus; paid?: boolean }): Promise<StaffOrder> {
+  if (MOCK) {
+    const all = readMockOrders();
+    const o = all.find((x) => x.id === orderId);
+    if (!o) throw new Error("Đơn không tồn tại");
+    if (change.status) {
+      if (NEXT_STATUS[o.status] !== change.status && !(change.status === "cancelled" && NEXT_STATUS[o.status])) throw new Error(`Không thể chuyển ${o.status} → ${change.status}`);
+      o.status = change.status;
+    }
+    if (change.paid) { if (o.paymentStatus === "paid") throw new Error("Đơn đã thanh toán"); o.paymentStatus = "paid"; }
+    writeMockOrders(all);
+    return o;
+  }
+  return post("/updateOrderStatus", { accessToken, orderId, ...change });
 }

@@ -14,5 +14,6 @@ tags:
 ## Connections
 - [[checkout.ts]] - `contains` [EXTRACTED]
 - [[orderMacData()]] - `calls` [EXTRACTED]
+- [[verifyCallback()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

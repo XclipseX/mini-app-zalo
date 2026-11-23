@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/bottom-nav.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 0"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # BottomNav()
@@ -15,4 +15,4 @@ tags:
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[bottom-nav.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_0

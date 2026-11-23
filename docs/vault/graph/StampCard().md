@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/stamp-card.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 0"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # StampCard()
@@ -17,4 +17,4 @@ tags:
 - [[home.tsx]] - `imports` [EXTRACTED]
 - [[stamp-card.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_0

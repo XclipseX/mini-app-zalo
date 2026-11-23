@@ -10,6 +10,7 @@ import CartPage from "./pages/cart";
 import RewardsPage from "./pages/rewards";
 import PrivacyPage from "./pages/privacy";
 import StaffPage from "./pages/staff";
+import StaffOrdersPage from "./pages/staff-orders";
 
 export default function MyApp() {
   return (
@@ -26,6 +27,7 @@ export default function MyApp() {
                 <Route path="/rewards" element={<RewardsPage />} />
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/staff" element={<StaffPage />} />
+                <Route path="/staff/orders" element={<StaffOrdersPage />} />
               </AnimationRoutes>
               <BottomNav />
             </ZMPRouter>

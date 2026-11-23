@@ -1,16 +1,18 @@
 ---
 type: community
-members: 45
+members: 51
 ---
 
 # Community 5
 
-**Members:** 45 nodes
+**Members:** 51 nodes
 
 ## Members
 - [[dot-constructor()]] - code - functions/src/http.ts
 - [[CHECKOUT_PRIVATE_KEY]] - code - functions/src/index.ts
 - [[HttpError]] - code - functions/src/http.ts
+- [[NEXT_STATUS_1]] - code - functions/src/index.ts
+- [[ORDER_STATUSES]] - code - functions/src/index.ts
 - [[PayMethod]] - code - functions/src/checkout.ts
 - [[QR_SECRET]] - code - functions/src/index.ts
 - [[ZALO_APP_SECRET]] - code - functions/src/index.ts
@@ -24,6 +26,7 @@ members: 45
 - [[ddmm()]] - code - functions/src/index.ts
 - [[ddmmyyyy()]] - code - functions/src/index.ts
 - [[enc()]] - code - functions/src/checkout.ts
+- [[firebase-functions]] - concept - functions/package.json
 - [[getMember]] - code - functions/src/index.ts
 - [[getPhoneNumber()]] - code - functions/src/zalo.ts
 - [[handle()]] - code - functions/src/http.ts
@@ -31,11 +34,13 @@ members: 45
 - [[http.ts]] - code - functions/src/http.ts
 - [[index.ts]] - code - functions/src/index.ts
 - [[isStaff]] - code - functions/src/index.ts
+- [[listOrders]] - code - functions/src/index.ts
 - [[lookupMember]] - code - functions/src/index.ts
 - [[makeMemberQr()]] - code - functions/src/qr.ts
 - [[opts]] - code - functions/src/index.ts
 - [[orderMacData()]] - code - functions/src/checkout.ts
 - [[orderOpts]] - code - functions/src/index.ts
+- [[orderView()]] - code - functions/src/index.ts
 - [[pad()]] - code - functions/src/index.ts
 - [[qr.ts]] - code - functions/src/qr.ts
 - [[readMember()]] - code - functions/src/index.ts
@@ -48,6 +53,7 @@ members: 45
 - [[sign()]] - code - functions/src/qr.ts
 - [[srczalo.ts]] - code - functions/src/zalo.ts
 - [[str()]] - code - functions/src/http.ts
+- [[updateOrderStatus]] - code - functions/src/index.ts
 - [[verifyAccessToken()]] - code - functions/src/zalo.ts
 - [[verifyCallback()]] - code - functions/src/checkout.ts
 - [[verifyMemberQr()]] - code - functions/src/qr.ts
@@ -65,5 +71,5 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Community 6]]
 
 ## Top bridge nodes
-- [[index.ts]] - degree 38, connects to 1 community
-- [[http.ts]] - degree 8, connects to 1 community
+- [[index.ts]] - degree 43, connects to 1 community
+- [[firebase-functions]] - degree 4, connects to 1 community

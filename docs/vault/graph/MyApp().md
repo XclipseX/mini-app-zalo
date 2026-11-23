@@ -1,12 +1,12 @@
 ---
 source_file: "src/app.tsx"
 type: "code"
-community: "Community 1"
-location: "L14"
+community: "Community 0"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # MyApp()
@@ -21,8 +21,9 @@ tags:
 - [[PrivacyPage()]] - `calls` [EXTRACTED]
 - [[ProductPage()]] - `calls` [EXTRACTED]
 - [[RewardsPage()]] - `calls` [EXTRACTED]
+- [[StaffOrdersPage()]] - `calls` [EXTRACTED]
 - [[StaffPage()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `contains` [EXTRACTED]
 - [[main.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_0

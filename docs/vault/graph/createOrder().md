@@ -17,5 +17,6 @@ tags:
 - [[checkout()]] - `calls` [EXTRACTED]
 - [[pagescart.tsx]] - `imports` [EXTRACTED]
 - [[post()]] - `calls` [EXTRACTED]
+- [[saveMockOrder()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_7

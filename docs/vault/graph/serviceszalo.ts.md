@@ -24,6 +24,7 @@ tags:
 - [[requestPhoneToken()]] - `contains` [EXTRACTED]
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
 - [[scanQr()]] - `contains` [EXTRACTED]
+- [[staff-orders.tsx]] - `imports_from` [EXTRACTED]
 - [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[zmp-sdk]] - `imports_from` [EXTRACTED]
 

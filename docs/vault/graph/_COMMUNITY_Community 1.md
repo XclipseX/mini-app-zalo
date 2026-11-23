@@ -1,48 +1,64 @@
 ---
 type: community
-members: 35
+members: 51
 ---
 
 # Community 1
 
-**Members:** 35 nodes
+**Members:** 51 nodes
 
 ## Members
-- [[BottomNav()]] - code - src/components/bottom-nav.tsx
-- [[CartProvider()]] - code - src/state/cart.tsx
+- [[ACTION]] - code - src/pages/staff-orders.tsx
+- [[API]] - code - src/services/api.ts
+- [[CheckoutParams]] - code - src/services/zalo.ts
 - [[Ctx_1]] - code - src/state/member.tsx
-- [[HomePage()]] - code - src/pages/home.tsx
+- [[FILTERS]] - code - src/pages/staff-orders.tsx
+- [[LABEL]] - code - src/pages/staff-orders.tsx
+- [[LookupResult]] - code - src/services/api.ts
 - [[MOCK]] - code - src/services/zalo.ts
 - [[Member]] - code - src/services/api.ts
 - [[MemberCtx]] - code - src/state/member.tsx
 - [[MemberProvider()]] - code - src/state/member.tsx
-- [[MyApp()]] - code - src/app.tsx
-- [[PrivacyPage()]] - code - src/pages/privacy.tsx
+- [[NEXT_STATUS]] - code - src/services/api.ts
+- [[OrderResult]] - code - src/services/api.ts
+- [[OrderStatus]] - code - src/services/api.ts
 - [[RewardsPage()]] - code - src/pages/rewards.tsx
+- [[StaffOrder]] - code - src/services/api.ts
+- [[StaffOrdersPage()]] - code - src/pages/staff-orders.tsx
 - [[StaffPage()]] - code - src/pages/staff.tsx
-- [[StampCard()]] - code - src/components/stamp-card.tsx
-- [[TODO điền tên Hộ kinh doanhCông ty theo GPKD và nội dung đầy đủ theo Luật…]] - rationale - src/pages/privacy.tsx
+- [[Voucher]] - code - src/data/types.ts
 - [[ZaloUser]] - code - src/services/zalo.ts
-- [[app.tsx]] - code - src/app.tsx
-- [[bottom-nav.tsx]] - code - src/components/bottom-nav.tsx
+- [[addStamp()]] - code - src/services/api.ts
+- [[api.ts]] - code - src/services/api.ts
+- [[change()]] - code - src/pages/staff-orders.tsx
+- [[checkMockQr()]] - code - src/services/api.ts
+- [[defaultMember]] - code - src/services/api.ts
+- [[getMember()]] - code - src/services/api.ts
 - [[getToken()]] - code - src/services/zalo.ts
-- [[home.tsx]] - code - src/pages/home.tsx
 - [[isStaff()]] - code - src/services/api.ts
+- [[listOrders()]] - code - src/services/api.ts
+- [[load()]] - code - src/pages/staff-orders.tsx
 - [[loadUser()]] - code - src/services/zalo.ts
-- [[main.tsx]] - code - src/main.tsx
+- [[lookupMember()]] - code - src/services/api.ts
 - [[member.tsx]] - code - src/state/member.tsx
-- [[privacy.tsx]] - code - src/pages/privacy.tsx
-- [[react]] - concept - package.json
+- [[mockAddStamp()]] - code - src/services/api.ts
+- [[mockQr()]] - code - src/services/api.ts
+- [[post()]] - code - src/services/api.ts
+- [[readMock()]] - code - src/services/api.ts
+- [[readMockOrders()]] - code - src/services/api.ts
+- [[redeemVoucher()]] - code - src/services/api.ts
 - [[rewards.tsx]] - code - src/pages/rewards.tsx
 - [[run()]] - code - src/pages/staff.tsx
+- [[saveMockOrder()]] - code - src/services/api.ts
 - [[scanQr()]] - code - src/services/zalo.ts
 - [[serviceszalo.ts]] - code - src/services/zalo.ts
-- [[src_theme]] - concept
+- [[staff-orders.tsx]] - code - src/pages/staff-orders.tsx
 - [[staff.tsx]] - code - src/pages/staff.tsx
-- [[stamp-card.tsx]] - code - src/components/stamp-card.tsx
-- [[tabs]] - code - src/components/bottom-nav.tsx
+- [[time()]] - code - src/pages/staff-orders.tsx
+- [[updateOrderStatus()]] - code - src/services/api.ts
 - [[useMember()]] - code - src/state/member.tsx
-- [[zmp-ui]] - concept - package.json
+- [[writeMock()]] - code - src/services/api.ts
+- [[writeMockOrders()]] - code - src/services/api.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -52,14 +68,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Community 2]]
-- 18 edges to [[_COMMUNITY_Community 0]]
+- 30 edges to [[_COMMUNITY_Community 0]]
 - 8 edges to [[_COMMUNITY_Community 7]]
-- 8 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[react]] - degree 16, connects to 3 communities
-- [[serviceszalo.ts]] - degree 14, connects to 3 communities
-- [[zmp-ui]] - degree 13, connects to 3 communities
-- [[app.tsx]] - degree 18, connects to 2 communities
+- [[api.ts]] - degree 38, connects to 2 communities
+- [[serviceszalo.ts]] - degree 15, connects to 2 communities
 - [[rewards.tsx]] - degree 13, connects to 2 communities
+- [[staff-orders.tsx]] - degree 18, connects to 1 community
+- [[member.tsx]] - degree 17, connects to 1 community

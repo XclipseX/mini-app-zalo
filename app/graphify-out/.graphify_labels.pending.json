@@ -1,7 +1,6 @@
 {
   "0": "state/cart.tsx",
-  "1": "app.tsx",
-  "2": "api.ts",
+  "1": "api.ts",
   "3": "compilerOptions",
   "4": "package.json",
   "5": "index.ts",

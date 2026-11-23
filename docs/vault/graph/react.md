@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "concept"
-community: "Community 1"
+community: "Community 0"
 location: "L15"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # react
@@ -25,8 +25,9 @@ tags:
 - [[product.tsx]] - `imports_from` [EXTRACTED]
 - [[react@18.3.1]] - `declares` [EXTRACTED]
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
+- [[staff-orders.tsx]] - `imports_from` [EXTRACTED]
 - [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[stamp-card.tsx]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_1
+#graphify/concept #graphify/EXTRACTED #community/Community_0

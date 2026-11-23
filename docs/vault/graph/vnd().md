@@ -16,10 +16,12 @@ tags:
 - [[MenuPage()]] - `calls` [EXTRACTED]
 - [[ProductCard()]] - `calls` [EXTRACTED]
 - [[ProductPage()]] - `calls` [EXTRACTED]
+- [[StaffOrdersPage()]] - `calls` [EXTRACTED]
 - [[menu.tsx]] - `imports` [EXTRACTED]
 - [[pagescart.tsx]] - `imports` [EXTRACTED]
 - [[product-card.tsx]] - `imports` [EXTRACTED]
 - [[product.tsx]] - `imports` [EXTRACTED]
+- [[staff-orders.tsx]] - `imports` [EXTRACTED]
 - [[statecart.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_0

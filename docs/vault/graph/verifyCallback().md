@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[checkout.ts]] - `contains` [EXTRACTED]
 - [[checkoutCallback]] - `calls` [EXTRACTED]
+- [[enc()]] - `calls` [EXTRACTED]
 - [[hmac()]] - `calls` [EXTRACTED]
 - [[index.ts]] - `imports` [EXTRACTED]
 - [[sameMac()]] - `calls` [EXTRACTED]

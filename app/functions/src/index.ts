@@ -235,3 +235,63 @@ export const redeemVoucher = onRequest(opts, handle(async (body) => {
     return { ok: true, voucherId: v.id };
   });
 }));
+
+// ===== Đơn hàng cho nhân viên =====
+// Luồng trạng thái: pending (mới) → making (đang pha) → ready (sẵn sàng) → done (đã giao). Có thể huỷ (cancelled) khi chưa giao.
+const NEXT_STATUS: Record<string, string[]> = {
+  pending: ["making", "cancelled"],
+  making: ["ready", "cancelled"],
+  ready: ["done", "cancelled"],
+};
+const ORDER_STATUSES = ["pending", "making", "ready", "done", "cancelled"];
+
+function orderView(d: FirebaseFirestore.DocumentSnapshot) {
+  const at = d.get("createdAt") as Timestamp | undefined;
+  return {
+    id: d.id, name: d.get("name") || "", phone: d.get("phone") || null, storeId: d.get("storeId"),
+    items: (d.get("items") || []).map((i: any) => ({ name: i.name, qty: i.qty, options: i.options || {}, note: i.note || "" })),
+    total: d.get("total") || 0, status: d.get("status"), paymentMethod: d.get("paymentMethod") || "COD",
+    paymentStatus: d.get("paymentStatus") || "unpaid", createdAt: at ? at.toMillis() : 0,
+  };
+}
+
+// 7. Danh sách đơn của chi nhánh nhân viên (mới nhất trước). body.status: lọc 1 trạng thái (tuỳ chọn).
+export const listOrders = onRequest(opts, handle(async (body) => {
+  const staff = await requireStaff(body);
+  if (!staff.storeId) throw new HttpError(400, "Nhân viên chưa gán chi nhánh");
+  let q = db.collection("orders").where("storeId", "==", staff.storeId);
+  if (body.status !== undefined) {
+    if (!ORDER_STATUSES.includes(body.status)) throw new HttpError(400, "Trạng thái không hợp lệ");
+    q = q.where("status", "==", body.status);
+  }
+  const snap = await q.orderBy("createdAt", "desc").limit(50).get();
+  return { orders: snap.docs.map(orderView) };
+}));
+
+// 8. Đổi trạng thái đơn / xác nhận đã nhận tiền chuyển khoản (body.paid=true). Chỉ đơn cùng chi nhánh.
+export const updateOrderStatus = onRequest(opts, handle(async (body) => {
+  const staff = await requireStaff(body);
+  const ref = db.doc(`orders/${str(body.orderId, "orderId")}`);
+  return db.runTransaction(async (tx) => {
+    const o = await tx.get(ref);
+    if (!o.exists) throw new HttpError(404, "Đơn không tồn tại");
+    if (o.get("storeId") !== staff.storeId) throw new HttpError(403, "Đơn của chi nhánh khác");
+    const now = Timestamp.now();
+    const update: Record<string, unknown> = { updatedAt: now };
+    if (body.status !== undefined) {
+      const cur = String(o.get("status"));
+      if (!(NEXT_STATUS[cur] || []).includes(body.status)) throw new HttpError(400, `Không thể chuyển ${cur} → ${body.status}`);
+      update.status = body.status;
+      update[`statusLog.${body.status}`] = { at: now, by: staff.id };
+    }
+    if (body.paid === true) {
+      if (o.get("paymentStatus") === "paid") throw new HttpError(400, "Đơn đã thanh toán");
+      update.paymentStatus = "paid";
+      update.paidConfirmedBy = staff.id;
+      update.paidConfirmedAt = now;
+    }
+    if (Object.keys(update).length === 1) throw new HttpError(400, "Thiếu status hoặc paid");
+    tx.update(ref, update);
+    return { ...orderView(o), ...(update.status ? { status: update.status } : {}), ...(update.paymentStatus ? { paymentStatus: "paid" } : {}) };
+  });
+}));

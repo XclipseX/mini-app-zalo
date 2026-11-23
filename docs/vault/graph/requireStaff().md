@@ -16,7 +16,9 @@ tags:
 - [[addStamp]] - `calls` [EXTRACTED]
 - [[auth()]] - `calls` [EXTRACTED]
 - [[index.ts]] - `contains` [EXTRACTED]
+- [[listOrders]] - `calls` [EXTRACTED]
 - [[lookupMember]] - `calls` [EXTRACTED]
 - [[redeemVoucher]] - `calls` [EXTRACTED]
+- [[updateOrderStatus]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_5

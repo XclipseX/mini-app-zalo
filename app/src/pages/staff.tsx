@@ -55,6 +55,8 @@ export default function StaffPage() {
     <Page className="page">
       <div className="topbar"><img src="./logo-dark.png" alt="Niên" style={{ height: 22 }} /><h2>Nhân viên</h2></div>
 
+      <div style={{ padding: "0 14px" }}><button className="btn ghost" onClick={() => navigate("/staff/orders")}>Đơn hàng chi nhánh →</button></div>
+
       <div className="card" style={{ textAlign: "center" }}>
         <h3 style={{ fontSize: 17 }}>Quét mã thành viên</h3>
         <div className="muted">Khách mở tab Rewards → đưa mã QR</div>
