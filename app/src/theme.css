@@ -93,7 +93,7 @@ textarea { width: 100%; border: 1px solid #ddd6c6; border-radius: 12px; padding:
 .line { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f2eee4; font-size: 14px; }
 .line:last-child { border: 0; }
 
-.qr { width: 180px; height: 180px; margin: 12px auto; }
+.qr { display: block; width: 180px; height: 180px; margin: 12px auto 4px; }
 .voucher { display: flex; border: 1px dashed var(--terra); border-radius: 12px; margin-top: 10px; overflow: hidden; font-size: 13px; }
 .voucher .tag { background: var(--terra); color: #fff; font-weight: 800; padding: 16px 10px; min-width: 64px; text-align: center; }
 .voucher .body { padding: 10px 12px; }
