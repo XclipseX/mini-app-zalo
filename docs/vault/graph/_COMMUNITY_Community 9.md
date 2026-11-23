@@ -32,8 +32,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 14 edges to [[_COMMUNITY_Community 0]]
-- 10 edges to [[_COMMUNITY_Community 1]]
-- 1 edge to [[_COMMUNITY_Community 2]]
+- 8 edges to [[_COMMUNITY_Community 1]]
+- 3 edges to [[_COMMUNITY_Community 7]]
 
 ## Top bridge nodes
 - [[pagescart.tsx]] - degree 18, connects to 3 communities

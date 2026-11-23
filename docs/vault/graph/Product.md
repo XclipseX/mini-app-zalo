@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[CartCtx]] - `references` [EXTRACTED]
 - [[menu.ts]] - `imports` [EXTRACTED]
+- [[product-art.tsx]] - `imports` [EXTRACTED]
 - [[product-card.tsx]] - `imports` [EXTRACTED]
 - [[statecart.tsx]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]

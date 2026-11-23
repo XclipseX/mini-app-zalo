@@ -2,7 +2,7 @@
 source_file: "src/components/product-card.tsx"
 type: "code"
 community: "Community 0"
-location: "L6"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[HomePage()]] - `calls` [EXTRACTED]
 - [[MenuPage()]] - `calls` [EXTRACTED]
+- [[ProductArt()]] - `calls` [EXTRACTED]
 - [[product-card.tsx]] - `contains` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 

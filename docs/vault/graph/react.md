@@ -29,6 +29,7 @@ tags:
 - [[payment-options.tsx]] - `imports_from` [EXTRACTED]
 - [[pill-tabs.tsx]] - `imports_from` [EXTRACTED]
 - [[privacy.tsx]] - `imports_from` [EXTRACTED]
+- [[product-art.tsx]] - `imports_from` [EXTRACTED]
 - [[product-card.tsx]] - `imports_from` [EXTRACTED]
 - [[product.tsx]] - `imports_from` [EXTRACTED]
 - [[quantity-stepper.tsx]] - `imports_from` [EXTRACTED]

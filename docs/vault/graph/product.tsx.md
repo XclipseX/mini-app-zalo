@@ -13,11 +13,14 @@ tags:
 
 ## Connections
 - [[Option]] - `imports` [EXTRACTED]
+- [[ProductArt()]] - `imports` [EXTRACTED]
 - [[ProductPage()]] - `contains` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[fly-to-cart.ts]] - `imports_from` [EXTRACTED]
 - [[flyToCart()]] - `imports` [EXTRACTED]
 - [[menu.ts]] - `imports_from` [EXTRACTED]
+- [[product-art.tsx]] - `imports_from` [EXTRACTED]
+- [[productImage()]] - `imports` [EXTRACTED]
 - [[products]] - `imports` [EXTRACTED]
 - [[quantity-stepper.tsx]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]

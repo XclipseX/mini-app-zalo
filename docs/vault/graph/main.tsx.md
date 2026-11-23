@@ -15,6 +15,7 @@ tags:
 - [[@fontsourcebaloo-2]] - `imports_from` [EXTRACTED]
 - [[@fontsourcebe-vietnam-pro]] - `imports_from` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
+- [[product-art.tsx]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[react-dom]] - `imports_from` [EXTRACTED]
 - [[src_lucian_lucian]] - `imports_from` [EXTRACTED]

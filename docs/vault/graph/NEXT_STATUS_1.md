@@ -1,17 +1,18 @@
 ---
-source_file: "functions/src/index.ts"
+source_file: "src/services/api.ts"
 type: "code"
-community: "Community 5"
-location: "L245"
+community: "Community 7"
+location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_7
 ---
 
 # NEXT_STATUS
 
 ## Connections
-- [[index.ts]] - `contains` [EXTRACTED]
+- [[api.ts]] - `contains` [EXTRACTED]
+- [[staff-orders.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_7

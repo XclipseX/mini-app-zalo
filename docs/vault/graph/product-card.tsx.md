@@ -13,9 +13,11 @@ tags:
 
 ## Connections
 - [[Product]] - `imports` [EXTRACTED]
+- [[ProductArt()]] - `imports` [EXTRACTED]
 - [[ProductCard()]] - `contains` [EXTRACTED]
 - [[home.tsx]] - `imports_from` [EXTRACTED]
 - [[menu.tsx]] - `imports_from` [EXTRACTED]
+- [[product-art.tsx]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]

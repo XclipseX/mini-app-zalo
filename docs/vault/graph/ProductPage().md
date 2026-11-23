@@ -2,7 +2,7 @@
 source_file: "src/pages/product.tsx"
 type: "code"
 community: "Community 0"
-location: "L11"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,9 +14,11 @@ tags:
 ## Connections
 - [[LucianQuantityStepper()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
+- [[ProductArt()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `imports` [EXTRACTED]
 - [[flyToCart()]] - `calls` [EXTRACTED]
 - [[product.tsx]] - `contains` [EXTRACTED]
+- [[productImage()]] - `calls` [EXTRACTED]
 - [[useCart()]] - `calls` [EXTRACTED]
 - [[useToast()]] - `calls` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]

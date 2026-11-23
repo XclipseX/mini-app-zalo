@@ -1,11 +1,11 @@
 ---
 type: community
-members: 59
+members: 64
 ---
 
 # Community 0
 
-**Members:** 59 nodes
+**Members:** 64 nodes
 
 ## Members
 - [[BottomNav()]] - code - src/components/bottom-nav.tsx
@@ -24,9 +24,9 @@ members: 59
 - [[MyApp()]] - code - src/app.tsx
 - [[Option]] - code - src/data/types.ts
 - [[OptionGroup]] - code - src/data/types.ts
-- [[OrderInput]] - code - src/services/api.ts
 - [[PrivacyPage()]] - code - src/pages/privacy.tsx
 - [[Product]] - code - src/data/types.ts
+- [[ProductArt()]] - code - src/components/product-art.tsx
 - [[ProductCard()]] - code - src/components/product-card.tsx
 - [[ProductPage()]] - code - src/pages/product.tsx
 - [[Props]] - code - src/lucian/quantity-stepper.tsx
@@ -39,6 +39,7 @@ members: 59
 - [[accordion.tsx]] - code - src/lucian/accordion.tsx
 - [[announcement.tsx]] - code - src/lucian/announcement.tsx
 - [[app.tsx]] - code - src/app.tsx
+- [[asset()]] - code - src/components/product-art.tsx
 - [[bottom-nav.tsx]] - code - src/components/bottom-nav.tsx
 - [[categories]] - code - src/data/menu.ts
 - [[componentsstamp-card.tsx]] - code - src/components/stamp-card.tsx
@@ -51,11 +52,14 @@ members: 59
 - [[menu.tsx]] - code - src/pages/menu.tsx
 - [[pill-tabs.tsx]] - code - src/lucian/pill-tabs.tsx
 - [[privacy.tsx]] - code - src/pages/privacy.tsx
+- [[product-art.tsx]] - code - src/components/product-art.tsx
 - [[product-card.tsx]] - code - src/components/product-card.tsx
 - [[product.tsx]] - code - src/pages/product.tsx
+- [[productImage()]] - code - src/components/product-art.tsx
 - [[products]] - code - src/data/menu.ts
 - [[quantity-stepper.tsx]] - code - src/lucian/quantity-stepper.tsx
 - [[react]] - concept - package.json
+- [[react-router-dom]] - concept - package.json
 - [[shot]] - code - src/data/menu.ts
 - [[slideIn()]] - code - src/lucian/pill-tabs.tsx
 - [[src_lucian_lucian]] - concept
@@ -65,6 +69,7 @@ members: 59
 - [[sugar]] - code - src/data/menu.ts
 - [[types.ts]] - code - src/data/types.ts
 - [[useCart()]] - code - src/state/cart.tsx
+- [[useMember()]] - code - src/state/member.tsx
 - [[vnd()]] - code - src/state/cart.tsx
 - [[zmp-ui]] - concept - package.json
 
@@ -76,14 +81,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 36 edges to [[_COMMUNITY_Community 1]]
+- 26 edges to [[_COMMUNITY_Community 7]]
+- 17 edges to [[_COMMUNITY_Community 1]]
 - 14 edges to [[_COMMUNITY_Community 9]]
 - 9 edges to [[_COMMUNITY_Community 4]]
-- 5 edges to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 2]]
 
 ## Top bridge nodes
-- [[react]] - degree 27, connects to 4 communities
+- [[react]] - degree 28, connects to 4 communities
+- [[zmp-ui]] - degree 14, connects to 4 communities
 - [[app.tsx]] - degree 26, connects to 3 communities
-- [[product.tsx]] - degree 17, connects to 3 communities
-- [[zmp-ui]] - degree 14, connects to 3 communities
+- [[MyApp()]] - degree 13, connects to 3 communities
 - [[statecart.tsx]] - degree 22, connects to 2 communities

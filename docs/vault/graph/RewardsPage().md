@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/rewards.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 7"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_7
 ---
 
 # RewardsPage()
@@ -23,4 +23,4 @@ tags:
 - [[useMember()]] - `calls` [EXTRACTED]
 - [[useToast()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_7

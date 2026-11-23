@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/staff-orders.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 7"
 location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_7
 ---
 
 # load()
@@ -16,4 +16,4 @@ tags:
 - [[getToken()]] - `calls` [EXTRACTED]
 - [[listOrders()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_7

@@ -21,6 +21,7 @@ tags:
 - [[Voucher]] - `contains` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
 - [[menu.ts]] - `imports_from` [EXTRACTED]
+- [[product-art.tsx]] - `imports_from` [EXTRACTED]
 - [[product-card.tsx]] - `imports_from` [EXTRACTED]
 - [[product.tsx]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]

@@ -1,17 +1,17 @@
 # Graph Report - app  (2026-11-23)
 
 ## Corpus Check
-- 48 files · ~15,900 words
+- 49 files · ~16,066 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .css 2, .example 1)
+- Unclassified: 8 file(s) not represented in the graph (top: (none) 4, .css 2, .example 1)
 
 ## Summary
-- 302 nodes · 671 edges · 10 communities
+- 306 nodes · 688 edges · 11 communities
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3ca907fd`
+- Built from commit: `edf551f1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,12 +23,13 @@
 - package.json
 - index.ts
 - functions/package.json
+- staff-orders.tsx
 - compilerOptions
 - pages/cart.tsx
 - Niên – Zalo Mini App (demo)
 
 ## God Nodes (most connected - your core abstractions)
-1. `react` - 27 edges
+1. `react` - 28 edges
 2. `HttpError` - 16 edges
 3. `StaffOrdersPage()` - 14 edges
 4. `zmp-ui` - 14 edges
@@ -40,10 +41,10 @@
 10. `getToken()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `ProductPage()` --calls--> `useToast()`  [EXTRACTED]
-  src/pages/product.tsx → src/lucian/toast.tsx
 - `OrderInput` --references--> `CartItem`  [EXTRACTED]
   src/services/api.ts → src/data/types.ts
+- `ProductPage()` --calls--> `useToast()`  [EXTRACTED]
+  src/pages/product.tsx → src/lucian/toast.tsx
 - `MyApp()` --calls--> `CartPage()`  [EXTRACTED]
   src/app.tsx → src/pages/cart.tsx
 - `MyApp()` --calls--> `RewardsPage()`  [EXTRACTED]
@@ -54,19 +55,19 @@
 ## Import Cycles
 - None detected.
 
-## Communities (10 total, 0 thin omitted)
+## Communities (11 total, 0 thin omitted)
 
 ### Community 0 - "state/cart.tsx"
-Cohesion: 0.09
-Nodes (39): react, zmp-ui, MyApp(), BottomNav(), TABS, ProductCard(), StampCard(), categories (+31 more)
+Cohesion: 0.08
+Nodes (43): react, react-router-dom, zmp-ui, MyApp(), BottomNav(), TABS, asset(), ProductArt() (+35 more)
 
 ### Community 1 - "api.ts"
-Cohesion: 0.09
-Nodes (51): Voucher, LucianMemberCard(), Props, LucianSkeleton(), LucianStampCard(), Props, useToast(), RewardsPage() (+43 more)
+Cohesion: 0.14
+Nodes (30): Voucher, StaffPage(), addStamp(), API, checkMockQr(), defaultMember, getMember(), lookupMember() (+22 more)
 
 ### Community 2 - "createHost"
-Cohesion: 0.32
-Nodes (11): createHost(), bar(), dismiss(), layout(), setOpen(), show(), swipe(), timer() (+3 more)
+Cohesion: 0.61
+Nodes (8): createHost(), bar(), dismiss(), layout(), setOpen(), show(), swipe(), timer()
 
 ### Community 3 - "compilerOptions"
 Cohesion: 0.17
@@ -74,7 +75,7 @@ Nodes (11): compilerOptions, jsx, lib, module, moduleResolution, noEmit, skipLib
 
 ### Community 4 - "package.json"
 Cohesion: 0.07
-Nodes (39): dependencies, @fontsource/baloo-2@^5.2.5, @fontsource/be-vietnam-pro@^5.2.5, qrcode@^1.5.4, react@^18.3.1, react-dom@^18.3.1, react-router-dom@^7.18.6, @types/qrcode@^1.5.5 (+31 more)
+Nodes (38): dependencies, @fontsource/baloo-2@^5.2.5, @fontsource/be-vietnam-pro@^5.2.5, qrcode@^1.5.4, react@^18.3.1, react-dom@^18.3.1, react-router-dom@^7.18.6, @types/qrcode@^1.5.5 (+30 more)
 
 ### Community 5 - "index.ts"
 Cohesion: 0.09
@@ -83,6 +84,10 @@ Nodes (45): buildCheckout(), enc(), hmac(), orderMacData(), PayMethod, sameMac()
 ### Community 6 - "functions/package.json"
 Cohesion: 0.07
 Nodes (25): dependencies, firebase-admin@^12.7.0, firebase-functions@^6.1.0, devDependencies, typescript@^5.6.3, engines, node, typescript (+17 more)
+
+### Community 7 - "staff-orders.tsx"
+Cohesion: 0.12
+Nodes (24): LucianMemberCard(), Props, LucianSkeleton(), LucianStampCard(), Props, Ctx, Show, ToastType (+16 more)
 
 ### Community 8 - "compilerOptions"
 Cohesion: 0.18
@@ -99,17 +104,17 @@ Nodes (4): Chạy thử trên máy (không cần Zalo, không cần Firebase), C
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `state/cart.tsx` to `api.ts`, `createHost`, `package.json`, `pages/cart.tsx`?**
-  _High betweenness centrality (0.114) - this node is a cross-community bridge._
+- **Why does `react` connect `state/cart.tsx` to `pages/cart.tsx`, `package.json`, `api.ts`, `staff-orders.tsx`?**
+  _High betweenness centrality (0.117) - this node is a cross-community bridge._
 - **Should `state/cart.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.08591466978375219 - nodes in this community are weakly interconnected._
-- **Why does `zmp-ui` connect `state/cart.tsx` to `pages/cart.tsx`, `package.json`, `api.ts`?**
+  _Cohesion score 0.08283730158730158 - nodes in this community are weakly interconnected._
+- **Why does `zmp-ui` connect `state/cart.tsx` to `pages/cart.tsx`, `package.json`, `api.ts`, `staff-orders.tsx`?**
   _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Should `api.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.08524590163934426 - nodes in this community are weakly interconnected._
-- **Why does `firebase-admin` connect `functions/package.json` to `index.ts`?**
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
+- **Why does `createHost()` connect `createHost` to `state/cart.tsx`, `staff-orders.tsx`?**
   _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.06707317073170732 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06794871794871794 - nodes in this community are weakly interconnected._
 - **Should `index.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.08708272859216255 - nodes in this community are weakly interconnected._
