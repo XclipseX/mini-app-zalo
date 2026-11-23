@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[LucianAccordion()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[privacy.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_0

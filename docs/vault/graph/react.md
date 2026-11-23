@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "concept"
-community: "Community 0"
+community: "Community 7"
 location: "L17"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_7
 ---
 
 # react
@@ -41,4 +41,4 @@ tags:
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 - [[toast.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_0
+#graphify/concept #graphify/EXTRACTED #community/Community_7

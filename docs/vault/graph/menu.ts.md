@@ -16,6 +16,7 @@ tags:
 - [[OptionGroup]] - `imports` [EXTRACTED]
 - [[Product]] - `imports` [EXTRACTED]
 - [[Store]] - `imports` [EXTRACTED]
+- [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[categories]] - `contains` [EXTRACTED]
 - [[home.tsx]] - `imports_from` [EXTRACTED]
 - [[ice]] - `contains` [EXTRACTED]

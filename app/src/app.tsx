@@ -1,5 +1,7 @@
 import { ToastProvider } from "./lucian/toast";
-import React from "react";
+import { preloadProductImages } from "./components/product-art";
+import { products } from "./data/menu";
+import React, { useEffect } from "react";
 import { App, ZMPRouter, AnimationRoutes, Route, SnackbarProvider } from "zmp-ui";
 import { CartProvider } from "./state/cart";
 import { MemberProvider } from "./state/member";
@@ -14,6 +16,7 @@ import StaffPage from "./pages/staff";
 import StaffOrdersPage from "./pages/staff-orders";
 
 export default function MyApp() {
+  useEffect(() => { preloadProductImages(products); }, []);
   return (
     <App>
       <SnackbarProvider>

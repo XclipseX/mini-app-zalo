@@ -1,18 +1,18 @@
 ---
 source_file: "src/lucian/toast.tsx"
 type: "code"
-community: "Community 7"
+community: "Community 0"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_0
 ---
 
 # toast.tsx
 
 ## Connections
-- [[Ctx_2]] - `contains` [EXTRACTED]
+- [[Ctx]] - `contains` [EXTRACTED]
 - [[Show]] - `contains` [EXTRACTED]
 - [[ToastProvider()]] - `contains` [EXTRACTED]
 - [[ToastType]] - `contains` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[useToast()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_0

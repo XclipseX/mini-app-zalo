@@ -12,7 +12,7 @@ tags:
 # member.tsx
 
 ## Connections
-- [[Ctx_1]] - `contains` [EXTRACTED]
+- [[Ctx_2]] - `contains` [EXTRACTED]
 - [[Member]] - `imports` [EXTRACTED]
 - [[MemberCtx]] - `contains` [EXTRACTED]
 - [[MemberProvider()]] - `contains` [EXTRACTED]

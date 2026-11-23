@@ -12,6 +12,7 @@ tags:
 # products
 
 ## Connections
+- [[app.tsx]] - `imports` [EXTRACTED]
 - [[home.tsx]] - `imports` [EXTRACTED]
 - [[menu.ts]] - `contains` [EXTRACTED]
 - [[menu.tsx]] - `imports` [EXTRACTED]

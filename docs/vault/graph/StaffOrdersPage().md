@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/staff-orders.tsx"
 type: "code"
-community: "Community 7"
+community: "Community 1"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_1
 ---
 
 # StaffOrdersPage()
@@ -15,7 +15,6 @@ tags:
 - [[LucianPillTabs()]] - `calls` [EXTRACTED]
 - [[LucianSkeleton()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[change()]] - `contains` [EXTRACTED]
 - [[getToken()]] - `calls` [EXTRACTED]
 - [[listOrders()]] - `calls` [EXTRACTED]
@@ -27,4 +26,4 @@ tags:
 - [[useToast()]] - `calls` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_1

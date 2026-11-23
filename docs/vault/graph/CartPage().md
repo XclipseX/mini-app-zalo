@@ -15,7 +15,6 @@ tags:
 - [[LucianOrderSteps()]] - `calls` [EXTRACTED]
 - [[LucianPaymentOptions()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[checkout()]] - `contains` [EXTRACTED]
 - [[createOrder()]] - `calls` [EXTRACTED]
 - [[itemPrice()]] - `calls` [EXTRACTED]

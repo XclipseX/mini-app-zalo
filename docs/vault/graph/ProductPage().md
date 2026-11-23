@@ -15,7 +15,6 @@ tags:
 - [[LucianQuantityStepper()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[ProductArt()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[flyToCart()]] - `calls` [EXTRACTED]
 - [[product.tsx]] - `contains` [EXTRACTED]
 - [[productImage()]] - `calls` [EXTRACTED]

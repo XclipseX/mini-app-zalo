@@ -1,12 +1,12 @@
 ---
 source_file: "src/services/api.ts"
 type: "code"
-community: "Community 7"
+community: "Community 1"
 location: "L154"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_1
 ---
 
 # listOrders()
@@ -18,4 +18,4 @@ tags:
 - [[readMockOrders()]] - `calls` [EXTRACTED]
 - [[staff-orders.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_1

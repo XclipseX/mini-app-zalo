@@ -16,7 +16,6 @@ tags:
 - [[LucianSkeleton()]] - `calls` [EXTRACTED]
 - [[LucianStampCard()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[getToken()]] - `calls` [EXTRACTED]
 - [[isStaff()]] - `indirect_call` [INFERRED]
 - [[rewards.tsx]] - `contains` [EXTRACTED]

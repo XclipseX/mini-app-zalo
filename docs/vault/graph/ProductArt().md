@@ -2,7 +2,7 @@
 source_file: "src/components/product-art.tsx"
 type: "code"
 community: "Community 0"
-location: "L10"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED

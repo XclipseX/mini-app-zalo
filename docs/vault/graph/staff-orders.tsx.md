@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/staff-orders.tsx"
 type: "code"
-community: "Community 7"
+community: "Community 1"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_1
 ---
 
 # staff-orders.tsx
@@ -16,7 +16,7 @@ tags:
 - [[FILTERS]] - `contains` [EXTRACTED]
 - [[LABEL]] - `contains` [EXTRACTED]
 - [[LucianSkeleton()]] - `imports` [EXTRACTED]
-- [[NEXT_STATUS_1]] - `imports` [EXTRACTED]
+- [[NEXT_STATUS]] - `imports` [EXTRACTED]
 - [[OrderStatus]] - `imports` [EXTRACTED]
 - [[StaffOrder]] - `imports` [EXTRACTED]
 - [[StaffOrdersPage()]] - `contains` [EXTRACTED]
@@ -37,4 +37,4 @@ tags:
 - [[vnd()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_1

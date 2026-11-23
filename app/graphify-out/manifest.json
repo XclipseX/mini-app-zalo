@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   "src/app.tsx": {
-    "mtime": 1795416367.5298474,
-    "seen": 1795416510.2613606,
-    "ast_hash": "9b5dcb136bc62e598441ab31005a7bcc",
+    "mtime": 1795417878.7801073,
+    "seen": 1795417906.6708312,
+    "ast_hash": "446540d023e2498eeb941687530376dd",
     "semantic_hash": ""
   },
   "src/components/bottom-nav.tsx": {
@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "src/components/product-art.tsx": {
-    "mtime": 1795417138.4354932,
-    "seen": 1795417686.3318298,
-    "ast_hash": "feedd68029c2e449c80323ec1b42e97c",
+    "mtime": 1795417878.7733943,
+    "seen": 1795417906.6708355,
+    "ast_hash": "cdbc2e1fb33217edc9fc41f9a7629d3b",
     "semantic_hash": ""
   },
   "public/images/menu/americano.webp": {

@@ -1,17 +1,17 @@
 ---
-source_file: "src/lucian/toast.tsx"
+source_file: "src/state/member.tsx"
 type: "code"
-community: "Community 7"
-location: "L8"
+community: "Community 1"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_1
 ---
 
 # Ctx
 
 ## Connections
-- [[toast.tsx]] - `contains` [EXTRACTED]
+- [[member.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_1

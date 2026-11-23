@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[CHECKOUT_PRIVATE_KEY]] - `contains` [EXTRACTED]
 - [[HttpError]] - `imports` [EXTRACTED]
-- [[NEXT_STATUS]] - `contains` [EXTRACTED]
+- [[NEXT_STATUS_1]] - `contains` [EXTRACTED]
 - [[ORDER_STATUSES]] - `contains` [EXTRACTED]
 - [[PayMethod]] - `imports` [EXTRACTED]
 - [[QR_SECRET]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "src/services/zalo.ts"
 type: "code"
-community: "Community 7"
+community: "Community 1"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_1
 ---
 
 # getToken()
@@ -24,4 +24,4 @@ tags:
 - [[staff-orders.tsx]] - `imports` [EXTRACTED]
 - [[staff.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_1

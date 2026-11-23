@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[addStamp()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[getToken()]] - `calls` [EXTRACTED]
 - [[lookupMember()]] - `calls` [EXTRACTED]
 - [[mockQr()]] - `calls` [EXTRACTED]

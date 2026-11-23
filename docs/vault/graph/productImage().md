@@ -15,6 +15,7 @@ tags:
 - [[ProductArt()]] - `calls` [EXTRACTED]
 - [[ProductPage()]] - `calls` [EXTRACTED]
 - [[asset()]] - `calls` [EXTRACTED]
+- [[preloadProductImages()]] - `calls` [EXTRACTED]
 - [[product-art.tsx]] - `contains` [EXTRACTED]
 - [[product.tsx]] - `imports` [EXTRACTED]
 

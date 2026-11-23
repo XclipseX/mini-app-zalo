@@ -14,8 +14,11 @@ tags:
 ## Connections
 - [[Product]] - `imports` [EXTRACTED]
 - [[ProductArt()]] - `contains` [EXTRACTED]
+- [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[asset()]] - `contains` [EXTRACTED]
 - [[main.tsx]] - `imports_from` [EXTRACTED]
+- [[preloadProductImages()]] - `contains` [EXTRACTED]
+- [[preloaded]] - `contains` [EXTRACTED]
 - [[product-card.tsx]] - `imports_from` [EXTRACTED]
 - [[product.tsx]] - `imports_from` [EXTRACTED]
 - [[productImage()]] - `contains` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "src/app.tsx"
 type: "code"
 community: "Community 0"
-location: "L16"
+location: "L18"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -25,5 +25,6 @@ tags:
 - [[StaffPage()]] - `calls` [EXTRACTED]
 - [[ToastProvider()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `contains` [EXTRACTED]
+- [[preloadProductImages()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_0
