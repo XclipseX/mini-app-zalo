@@ -1,11 +1,11 @@
 ---
 type: community
-members: 44
+members: 41
 ---
 
 # Community 4
 
-**Members:** 44 nodes
+**Members:** 41 nodes
 
 ## Members
 - [[@fontsourcebaloo-2]] - concept - package.json
@@ -25,7 +25,6 @@ members: 44
 - [[deploy]] - code - package.json
 - [[dev]] - code - package.json
 - [[devDependencies]] - code - package.json
-- [[main.tsx]] - code - src/main.tsx
 - [[name]] - code - package.json
 - [[package.json]] - code - package.json
 - [[private]] - code - package.json
@@ -37,8 +36,6 @@ members: 44
 - [[react-router-dom@7.18.6]] - code - package.json
 - [[react@18.3.1]] - code - package.json
 - [[scripts]] - code - package.json
-- [[src_lucian_lucian]] - concept
-- [[src_theme]] - concept
 - [[start]] - code - package.json
 - [[type]] - code - package.json
 - [[typescript]] - concept - package.json
@@ -61,13 +58,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 0]]
-- 4 edges to [[_COMMUNITY_Community 7]]
-- 1 edge to [[_COMMUNITY_Community 1]]
+- 9 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[package.json]] - degree 22, connects to 2 communities
-- [[main.tsx]] - degree 9, connects to 2 communities
+- [[package.json]] - degree 22, connects to 1 community
 - [[react-router-dom]] - degree 4, connects to 1 community
+- [[@fontsourcebaloo-2]] - degree 3, connects to 1 community
+- [[@fontsourcebe-vietnam-pro]] - degree 3, connects to 1 community
 - [[qrcode]] - degree 3, connects to 1 community
-- [[zmp-sdk]] - degree 3, connects to 1 community

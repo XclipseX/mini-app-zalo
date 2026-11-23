@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "src/pages/rewards.tsx": {
-    "mtime": 1795416697.8540013,
-    "seen": 1795416755.442009,
-    "ast_hash": "e71e940b056dfeff8add773b36ce2285",
+    "mtime": 1795428288.8332126,
+    "seen": 1795428314.0822566,
+    "ast_hash": "3e5d23d0c01fdffe0c299f8c801b6c8d",
     "semantic_hash": ""
   },
   "src/services/api.ts": {
@@ -297,12 +297,6 @@
     "mtime": 1795416351.727637,
     "seen": 1795416510.2613826,
     "ast_hash": "86542d1024c383aa073846622505aafe",
-    "semantic_hash": ""
-  },
-  "src/lucian/member-card.tsx": {
-    "mtime": 1795416688.0193267,
-    "seen": 1795416755.441977,
-    "ast_hash": "d62d99bda84fe9701d2da5b02a719ef9",
     "semantic_hash": ""
   },
   "src/lucian/skeleton.tsx": {

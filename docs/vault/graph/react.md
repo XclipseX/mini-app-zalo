@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "concept"
-community: "Community 7"
+community: "Community 0"
 location: "L17"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_0
 ---
 
 # react
@@ -20,7 +20,6 @@ tags:
 - [[home.tsx]] - `imports_from` [EXTRACTED]
 - [[lucianstamp-card.tsx]] - `imports_from` [EXTRACTED]
 - [[main.tsx]] - `imports_from` [EXTRACTED]
-- [[member-card.tsx]] - `imports_from` [EXTRACTED]
 - [[member.tsx]] - `imports_from` [EXTRACTED]
 - [[menu.tsx]] - `imports_from` [EXTRACTED]
 - [[order-steps.tsx]] - `imports_from` [EXTRACTED]
@@ -41,4 +40,4 @@ tags:
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 - [[toast.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_7
+#graphify/concept #graphify/EXTRACTED #community/Community_0

@@ -1,11 +1,11 @@
 ---
 type: community
-members: 60
+members: 69
 ---
 
 # Community 0
 
-**Members:** 60 nodes
+**Members:** 69 nodes
 
 ## Members
 - [[BottomNav()]] - code - src/components/bottom-nav.tsx
@@ -16,7 +16,9 @@ members: 60
 - [[Ctx]] - code - src/lucian/toast.tsx
 - [[Ctx_1]] - code - src/state/cart.tsx
 - [[DIGITS]] - code - src/lucian/quantity-stepper.tsx
+- [[HomePage()]] - code - src/pages/home.tsx
 - [[LucianAccordion()]] - code - src/lucian/accordion.tsx
+- [[LucianAnnouncement()]] - code - src/lucian/announcement.tsx
 - [[LucianPillTabs()]] - code - src/lucian/pill-tabs.tsx
 - [[LucianQuantityStepper()]] - code - src/lucian/quantity-stepper.tsx
 - [[MenuPage()]] - code - src/pages/menu.tsx
@@ -31,6 +33,7 @@ members: 60
 - [[ProductPage()]] - code - src/pages/product.tsx
 - [[Props]] - code - src/lucian/quantity-stepper.tsx
 - [[Show]] - code - src/lucian/toast.tsx
+- [[StampCard()]] - code - src/components/stamp-card.tsx
 - [[Store]] - code - src/data/types.ts
 - [[TABS]] - code - src/components/bottom-nav.tsx
 - [[TODO điền tên Hộ kinh doanhCông ty theo GPKD và nội dung đầy đủ theo Luật…]] - rationale - src/pages/privacy.tsx
@@ -38,13 +41,17 @@ members: 60
 - [[ToastProvider()]] - code - src/lucian/toast.tsx
 - [[ToastType]] - code - src/lucian/toast.tsx
 - [[accordion.tsx]] - code - src/lucian/accordion.tsx
+- [[announcement.tsx]] - code - src/lucian/announcement.tsx
 - [[app.tsx]] - code - src/app.tsx
 - [[asset()]] - code - src/components/product-art.tsx
 - [[bottom-nav.tsx]] - code - src/components/bottom-nav.tsx
 - [[categories]] - code - src/data/menu.ts
+- [[componentsstamp-card.tsx]] - code - src/components/stamp-card.tsx
 - [[fly-to-cart.ts]] - code - src/lucian/fly-to-cart.ts
 - [[flyToCart()]] - code - src/lucian/fly-to-cart.ts
+- [[home.tsx]] - code - src/pages/home.tsx
 - [[ice]] - code - src/data/menu.ts
+- [[main.tsx]] - code - src/main.tsx
 - [[menu.ts]] - code - src/data/menu.ts
 - [[menu.tsx]] - code - src/pages/menu.tsx
 - [[pill-tabs.tsx]] - code - src/lucian/pill-tabs.tsx
@@ -57,15 +64,17 @@ members: 60
 - [[productImage()]] - code - src/components/product-art.tsx
 - [[products]] - code - src/data/menu.ts
 - [[quantity-stepper.tsx]] - code - src/lucian/quantity-stepper.tsx
+- [[react]] - concept - package.json
 - [[shot]] - code - src/data/menu.ts
 - [[slideIn()]] - code - src/lucian/pill-tabs.tsx
+- [[src_lucian_lucian]] - concept
+- [[src_theme]] - concept
 - [[statecart.tsx]] - code - src/state/cart.tsx
 - [[stores]] - code - src/data/menu.ts
 - [[sugar]] - code - src/data/menu.ts
 - [[toast.tsx]] - code - src/lucian/toast.tsx
 - [[types.ts]] - code - src/data/types.ts
 - [[useCart()]] - code - src/state/cart.tsx
-- [[useToast()]] - code - src/lucian/toast.tsx
 - [[vnd()]] - code - src/state/cart.tsx
 - [[zmp-ui]] - concept - package.json
 
@@ -77,15 +86,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 25 edges to [[_COMMUNITY_Community 7]]
-- 24 edges to [[_COMMUNITY_Community 1]]
-- 13 edges to [[_COMMUNITY_Community 9]]
-- 7 edges to [[_COMMUNITY_Community 4]]
+- 36 edges to [[_COMMUNITY_Community 1]]
+- 14 edges to [[_COMMUNITY_Community 9]]
+- 9 edges to [[_COMMUNITY_Community 4]]
 - 2 edges to [[_COMMUNITY_Community 2]]
 
 ## Top bridge nodes
-- [[app.tsx]] - degree 23, connects to 4 communities
-- [[zmp-ui]] - degree 14, connects to 4 communities
-- [[toast.tsx]] - degree 13, connects to 4 communities
-- [[statecart.tsx]] - degree 22, connects to 3 communities
-- [[MyApp()]] - degree 14, connects to 3 communities
+- [[react]] - degree 27, connects to 3 communities
+- [[zmp-ui]] - degree 14, connects to 3 communities
+- [[toast.tsx]] - degree 13, connects to 3 communities
+- [[app.tsx]] - degree 23, connects to 2 communities
+- [[statecart.tsx]] - degree 22, connects to 2 communities

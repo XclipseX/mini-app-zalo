@@ -1,12 +1,12 @@
 ---
 source_file: "src/lucian/skeleton.tsx"
 type: "code"
-community: "Community 7"
+community: "Community 1"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_1
 ---
 
 # skeleton.tsx
@@ -17,4 +17,4 @@ tags:
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
 - [[staff-orders.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_1

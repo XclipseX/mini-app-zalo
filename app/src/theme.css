@@ -145,3 +145,8 @@ input[type="radio"] { accent-color: var(--dark); width: 20px; height: 20px; }
 /* Ảnh món tỉ lệ 1:1 (ảnh gốc vuông 800×800, hiện trọn không bị cắt) */
 .pimg, .grid2 .pimg { height: auto; aspect-ratio: 1 / 1; }
 .detail-img { height: auto; aspect-ratio: 1 / 1; max-height: 70vh; }
+
+/* Thẻ mã QR thành viên (Rewards) */
+.qr-card { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.qr-card .qr { width: min(220px, 62vw); height: auto; aspect-ratio: 1; margin: 4px auto 0; }
+.qr-refresh { margin-top: 8px; }

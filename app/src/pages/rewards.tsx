@@ -1,4 +1,3 @@
-import LucianMemberCard from "../lucian/member-card";
 import LucianSkeleton from "../lucian/skeleton";
 import React, { useEffect, useState } from "react";
 import QRCode from "qrcode";
@@ -10,7 +9,7 @@ import { isStaff } from "../services/api";
 import LucianStampCard from "../lucian/stamp-card";
 
 export default function RewardsPage() {
-  const { user, member, refresh, addStampDemo } = useMember();
+  const { member, refresh, addStampDemo } = useMember();
   const [qr, setQr] = useState("");
   const navigate = useNavigate();
   const { openSnackbar } = useToast();
@@ -30,11 +29,15 @@ export default function RewardsPage() {
   return (
     <Page className="page">
       <div className="topbar"><img src="./logo-dark.png" alt="Niên" style={{ height: 22 }} /><h2>Rewards</h2></div>
-      {member ? (
-        <LucianMemberCard name={user?.name || "Thành viên"} stamps={member.stamps} qr={qr} onRefresh={refresh}
-          code={"NIÊN " + (user?.id || "0000").replace(/\D/g, "").padStart(8, "0").slice(-8).replace(/(\d{4})(\d{4})/, "$1 $2")} />
+      {member && qr ? (
+        <div className="card qr-card">
+          <img className="qr" src={qr} alt="Mã QR thành viên" />
+          <div className="muted">Đưa nhân viên quét để tích tem</div>
+          <button className="ux u052-b qr-refresh" type="button" onClick={refresh}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3L19.5 9" /><path d="M19.5 4.5V9H15" /></svg>Làm mới mã</button>
+        </div>
       ) : (
-        <LucianSkeleton label="Đang tải thẻ thành viên" rows={[["100%", 180], ["45%", 14]]} />
+        <LucianSkeleton label="Đang tải mã thành viên" rows={[["100%", 200], ["60%", 14]]} />
       )}
       <LucianStampCard stamps={member?.stamps ?? 0}
         onDemoStamp={MOCK ? async () => { await addStampDemo(); openSnackbar({ text: "+1 tem (giả lập nhân viên quét)", type: "success" }); } : undefined} />

@@ -1,19 +1,17 @@
 ---
 source_file: "src/pages/rewards.tsx"
 type: "code"
-community: "Community 7"
+community: "Community 1"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_1
 ---
 
 # rewards.tsx
 
 ## Connections
-- [[LucianMemberCard()]] - `imports` [EXTRACTED]
-- [[LucianSkeleton()]] - `imports` [EXTRACTED]
 - [[MOCK]] - `imports` [EXTRACTED]
 - [[RewardsPage()]] - `contains` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
@@ -21,7 +19,6 @@ tags:
 - [[getToken()]] - `imports` [EXTRACTED]
 - [[isStaff()]] - `imports` [EXTRACTED]
 - [[lucianstamp-card.tsx]] - `imports_from` [EXTRACTED]
-- [[member-card.tsx]] - `imports_from` [EXTRACTED]
 - [[member.tsx]] - `imports_from` [EXTRACTED]
 - [[qrcode]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
@@ -32,4 +29,4 @@ tags:
 - [[useToast()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_1
