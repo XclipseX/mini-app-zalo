@@ -10,7 +10,7 @@ const LABEL: Record<OrderStatus, string> = { pending: "Mới", making: "Đang ph
 const ACTION: Partial<Record<OrderStatus, string>> = { making: "Bắt đầu pha", ready: "Báo sẵn sàng", done: "Đã giao khách" };
 const FILTERS: { id: "active" | OrderStatus; label: string }[] = [
   { id: "active", label: "Đang xử lý" }, { id: "pending", label: "Mới" }, { id: "making", label: "Đang pha" },
-  { id: "ready", label: "Sẵn sàng" }, { id: "done", label: "Đã giao" },
+  { id: "ready", label: "Sẵn sàng" }, { id: "done", label: "Đã giao" }, { id: "cancelled", label: "Đã huỷ" },
 ];
 const time = (ms: number) => ms ? new Date(ms).toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" }) : "";
 
@@ -78,6 +78,10 @@ export default function StaffOrdersPage() {
             {next && (
               <button className="btn" style={{ marginTop: 10 }} disabled={busy === o.id} onClick={() => change(o, { status: next }, o.id + ":" + next)}>
                 {confirm === o.id + ":" + next ? "Bấm lần nữa để xác nhận" : ACTION[next]}</button>
+            )}
+            {next && (
+              <button className="btn ghost" style={{ marginTop: 10, color: "#b3261e" }} disabled={busy === o.id} onClick={() => change(o, { status: "cancelled" }, o.id + ":cancel")}>
+                {confirm === o.id + ":cancel" ? "Chắc chắn huỷ đơn?" : "Huỷ đơn"}</button>
             )}
           </div>
         );

@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/cart.tsx"
 type: "code"
-community: "Community 7"
+community: "Community 0"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_0
 ---
 
 # CartPage()
@@ -22,4 +22,4 @@ tags:
 - [[useCart()]] - `calls` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_0

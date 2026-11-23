@@ -144,8 +144,8 @@ function readMockOrders(): StaffOrder[] {
   try { const v = JSON.parse(localStorage.getItem(ORDERS_KEY) || ""); if (Array.isArray(v)) return v; } catch { /* ignore */ }
   const now = Date.now();
   return [
-    { id: "NIEN-2041", name: "Lan", phone: "0912345678", storeId: "starcity", total: 45000, items: [{ name: "Cà phê muối", qty: 1, options: { "Size": "L" }, note: "" }], status: "pending", paymentMethod: "BANK", paymentStatus: "unpaid", createdAt: now - 3 * 60000 },
-    { id: "NIEN-2040", name: "Hùng", phone: "0987654321", storeId: "starcity", total: 64000, items: [{ name: "Bạc xỉu", qty: 2, options: {}, note: "ít đá" }], status: "making", paymentMethod: "COD", paymentStatus: "unpaid", createdAt: now - 9 * 60000 },
+    { id: "NIEN-2041", name: "Lan", phone: "0912345678", storeId: "starcity", total: 55000, items: [{ name: "Cà phê Sữa Sài Gòn", qty: 1, options: { "Đường": "Vừa", "Đá": "Ít đá" }, note: "" }, { name: "Croissant bơ", qty: 1, options: {}, note: "" }], status: "pending", paymentMethod: "BANK", paymentStatus: "unpaid", createdAt: now - 3 * 60000 },
+    { id: "NIEN-2040", name: "Hùng", phone: "0987654321", storeId: "starcity", total: 90000, items: [{ name: "Latte", qty: 2, options: { "Espresso": "2 shot", "Đường": "Ít" }, note: "mang đi" }], status: "making", paymentMethod: "COD", paymentStatus: "unpaid", createdAt: now - 9 * 60000 },
   ];
 }
 function writeMockOrders(o: StaffOrder[]) { try { localStorage.setItem(ORDERS_KEY, JSON.stringify(o.slice(0, 50))); } catch { /* ignore */ } }

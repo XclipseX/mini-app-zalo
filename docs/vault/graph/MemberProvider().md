@@ -1,12 +1,12 @@
 ---
 source_file: "src/state/member.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 0"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # MemberProvider()
@@ -20,4 +20,4 @@ tags:
 - [[member.tsx]] - `contains` [EXTRACTED]
 - [[mockAddStamp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_0

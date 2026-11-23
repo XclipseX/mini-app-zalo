@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/cart.tsx"
 type: "code"
-community: "Community 7"
+community: "Community 0"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_0
 ---
 
 # checkout()
@@ -17,4 +17,4 @@ tags:
 - [[payCheckout()]] - `calls` [EXTRACTED]
 - [[requestPhoneToken()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_0

@@ -7,6 +7,7 @@ import { handle, HttpError, str } from "./http";
 import { verifyAccessToken, getPhoneNumber } from "./zalo";
 import { makeMemberQr, verifyMemberQr } from "./qr";
 import { buildCheckout, verifyCallback, PayMethod } from "./checkout";
+import { sendZbsTemplate } from "./zbs";
 
 initializeApp();
 const db = getFirestore();
@@ -15,6 +16,9 @@ setGlobalOptions({ region: "asia-southeast1" });
 const ZALO_APP_SECRET = defineSecret("ZALO_APP_SECRET");
 const QR_SECRET = defineSecret("QR_SECRET");
 const CHECKOUT_PRIVATE_KEY = defineSecret("CHECKOUT_PRIVATE_KEY");
+// ZBS Template Message báo "đơn sẵn sàng". Chưa có thì đặt giá trị "none" → bỏ qua gửi tin.
+const ZBS_ACCESS_TOKEN = defineSecret("ZBS_ACCESS_TOKEN");
+const ZBS_TEMPLATE_READY = defineSecret("ZBS_TEMPLATE_READY");
 // "true" khi đang test bằng phương thức *_SANDBOX của Checkout SDK
 const CHECKOUT_SANDBOX = process.env.CHECKOUT_SANDBOX !== "false";
 const opts = { cors: true, secrets: [ZALO_APP_SECRET, QR_SECRET] };
@@ -269,10 +273,11 @@ export const listOrders = onRequest(opts, handle(async (body) => {
 }));
 
 // 8. Đổi trạng thái đơn / xác nhận đã nhận tiền chuyển khoản (body.paid=true). Chỉ đơn cùng chi nhánh.
-export const updateOrderStatus = onRequest(opts, handle(async (body) => {
+const updateOpts = { cors: true, secrets: [ZALO_APP_SECRET, ZBS_ACCESS_TOKEN, ZBS_TEMPLATE_READY] };
+export const updateOrderStatus = onRequest(updateOpts, handle(async (body) => {
   const staff = await requireStaff(body);
   const ref = db.doc(`orders/${str(body.orderId, "orderId")}`);
-  return db.runTransaction(async (tx) => {
+  const result = await db.runTransaction(async (tx) => {
     const o = await tx.get(ref);
     if (!o.exists) throw new HttpError(404, "Đơn không tồn tại");
     if (o.get("storeId") !== staff.storeId) throw new HttpError(403, "Đơn của chi nhánh khác");
@@ -294,4 +299,15 @@ export const updateOrderStatus = onRequest(opts, handle(async (body) => {
     tx.update(ref, update);
     return { ...orderView(o), ...(update.status ? { status: update.status } : {}), ...(update.paymentStatus ? { paymentStatus: "paid" } : {}) };
   });
+  // Gửi tin ngoài transaction (tránh gửi trùng khi transaction retry); lỗi gửi không làm hỏng thao tác của nhân viên.
+  if (body.status === "ready") {
+    const notify = await sendZbsTemplate({
+      accessToken: ZBS_ACCESS_TOKEN.value(), templateId: ZBS_TEMPLATE_READY.value(), phone: result.phone,
+      // Tên tham số phải khớp template đăng ký trên ZBS.
+      data: { customer_name: result.name || "Quý khách", order_code: result.id, total: result.total },
+      trackingId: `${result.id}-ready`,
+    });
+    if (notify !== "skipped") await ref.update({ readyNotify: notify });
+  }
+  return result;
 }));

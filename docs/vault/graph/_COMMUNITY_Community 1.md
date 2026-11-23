@@ -1,11 +1,11 @@
 ---
 type: community
-members: 51
+members: 50
 ---
 
 # Community 1
 
-**Members:** 51 nodes
+**Members:** 50 nodes
 
 ## Members
 - [[ACTION]] - code - src/pages/staff-orders.tsx
@@ -18,7 +18,6 @@ members: 51
 - [[MOCK]] - code - src/services/zalo.ts
 - [[Member]] - code - src/services/api.ts
 - [[MemberCtx]] - code - src/state/member.tsx
-- [[MemberProvider()]] - code - src/state/member.tsx
 - [[NEXT_STATUS]] - code - src/services/api.ts
 - [[OrderResult]] - code - src/services/api.ts
 - [[OrderStatus]] - code - src/services/api.ts
@@ -68,13 +67,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 30 edges to [[_COMMUNITY_Community 0]]
-- 8 edges to [[_COMMUNITY_Community 7]]
+- 41 edges to [[_COMMUNITY_Community 0]]
 - 2 edges to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[api.ts]] - degree 38, connects to 2 communities
 - [[serviceszalo.ts]] - degree 15, connects to 2 communities
 - [[rewards.tsx]] - degree 13, connects to 2 communities
+- [[api.ts]] - degree 38, connects to 1 community
 - [[staff-orders.tsx]] - degree 18, connects to 1 community
 - [[member.tsx]] - degree 17, connects to 1 community

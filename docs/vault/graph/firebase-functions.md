@@ -1,12 +1,12 @@
 ---
 source_file: "functions/package.json"
 type: "concept"
-community: "Community 5"
+community: "Community 6"
 location: "L12"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_6
 ---
 
 # firebase-functions
@@ -16,5 +16,6 @@ tags:
 - [[functionspackage.json]] - `imports` [EXTRACTED]
 - [[http.ts]] - `imports_from` [EXTRACTED]
 - [[index.ts]] - `imports_from` [EXTRACTED]
+- [[zbs.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_5
+#graphify/concept #graphify/EXTRACTED #community/Community_6

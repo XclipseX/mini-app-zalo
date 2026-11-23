@@ -1,12 +1,12 @@
 ---
 source_file: "src/services/zalo.ts"
 type: "code"
-community: "Community 7"
+community: "Community 0"
 location: "L48"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_7
+  - community/Community_0
 ---
 
 # payCheckout()
@@ -17,4 +17,4 @@ tags:
 - [[pagescart.tsx]] - `imports` [EXTRACTED]
 - [[serviceszalo.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_7
+#graphify/code #graphify/EXTRACTED #community/Community_0

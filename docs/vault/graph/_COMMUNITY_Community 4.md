@@ -1,11 +1,11 @@
 ---
 type: community
-members: 36
+members: 37
 ---
 
 # Community 4
 
-**Members:** 36 nodes
+**Members:** 37 nodes
 
 ## Members
 - [[@typesqrcode]] - concept - package.json
@@ -28,6 +28,7 @@ members: 36
 - [[qrcode@1.5.4]] - code - package.json
 - [[react-dom]] - concept - package.json
 - [[react-dom@18.3.1]] - code - package.json
+- [[react-router-dom]] - concept - package.json
 - [[react-router-dom@7.18.6]] - code - package.json
 - [[react@18.3.1]] - code - package.json
 - [[scripts]] - code - package.json
@@ -58,7 +59,7 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[package.json]] - degree 20, connects to 1 community
+- [[react-router-dom]] - degree 4, connects to 1 community
 - [[qrcode]] - degree 3, connects to 1 community
 - [[react-dom]] - degree 3, connects to 1 community
 - [[zmp-sdk]] - degree 3, connects to 1 community
-- [[react@18.3.1]] - degree 2, connects to 1 community
