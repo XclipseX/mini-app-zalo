@@ -20,6 +20,7 @@ tags:
 - [[Product]] - `imports` [EXTRACTED]
 - [[Store]] - `imports` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
+- [[bottom-nav.tsx]] - `imports_from` [EXTRACTED]
 - [[itemPrice()]] - `contains` [EXTRACTED]
 - [[menu.ts]] - `imports_from` [EXTRACTED]
 - [[menu.tsx]] - `imports_from` [EXTRACTED]

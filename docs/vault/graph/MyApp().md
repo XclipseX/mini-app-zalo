@@ -1,12 +1,12 @@
 ---
 source_file: "src/app.tsx"
 type: "code"
-community: "Community 2"
+community: "Community 0"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_0
 ---
 
 # MyApp()
@@ -25,4 +25,4 @@ tags:
 - [[StaffPage()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_0

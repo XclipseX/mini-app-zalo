@@ -1,12 +1,12 @@
 ---
 source_file: "src/main.tsx"
 type: "code"
-community: "Community 2"
+community: "Community 4"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_4
 ---
 
 # main.tsx
@@ -21,4 +21,4 @@ tags:
 - [[src_theme]] - `imports_from` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_4

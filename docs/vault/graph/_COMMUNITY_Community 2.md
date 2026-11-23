@@ -1,39 +1,30 @@
 ---
 type: community
-members: 26
+members: 17
 ---
 
 # Community 2
 
-**Members:** 26 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[BottomNav()]] - code - src/components/bottom-nav.tsx
-- [[CartProvider()]] - code - src/state/cart.tsx
-- [[HomePage()]] - code - src/pages/home.tsx
-- [[LucianStampCard()]] - code - src/lucian/stamp-card.tsx
-- [[MOCK]] - code - src/services/zalo.ts
-- [[MyApp()]] - code - src/app.tsx
-- [[PrivacyPage()]] - code - src/pages/privacy.tsx
-- [[Props_1]] - code - src/lucian/stamp-card.tsx
-- [[RewardsPage()]] - code - src/pages/rewards.tsx
-- [[StampCard()]] - code - src/components/stamp-card.tsx
-- [[TODO điền tên Hộ kinh doanhCông ty theo GPKD và nội dung đầy đủ theo Luật…]] - rationale - src/pages/privacy.tsx
-- [[app.tsx]] - code - src/app.tsx
-- [[bottom-nav.tsx]] - code - src/components/bottom-nav.tsx
-- [[componentsstamp-card.tsx]] - code - src/components/stamp-card.tsx
-- [[home.tsx]] - code - src/pages/home.tsx
-- [[isStaff()]] - code - src/services/api.ts
-- [[lucianstamp-card.tsx]] - code - src/lucian/stamp-card.tsx
-- [[main.tsx]] - code - src/main.tsx
-- [[privacy.tsx]] - code - src/pages/privacy.tsx
-- [[react]] - concept - package.json
-- [[rewards.tsx]] - code - src/pages/rewards.tsx
-- [[src_lucian_lucian]] - concept
-- [[src_theme]] - concept
-- [[tabs]] - code - src/components/bottom-nav.tsx
-- [[useMember()]] - code - src/state/member.tsx
-- [[zmp-ui]] - concept - package.json
+- [[ACTION]] - code - src/pages/staff-orders.tsx
+- [[FILTERS]] - code - src/pages/staff-orders.tsx
+- [[LABEL]] - code - src/pages/staff-orders.tsx
+- [[NEXT_STATUS]] - code - src/services/api.ts
+- [[OrderStatus]] - code - src/services/api.ts
+- [[StaffOrder]] - code - src/services/api.ts
+- [[StaffOrdersPage()]] - code - src/pages/staff-orders.tsx
+- [[change()]] - code - src/pages/staff-orders.tsx
+- [[listOrders()]] - code - src/services/api.ts
+- [[load()]] - code - src/pages/staff-orders.tsx
+- [[maskPhone()]] - code - src/pages/staff-orders.tsx
+- [[readMockOrders()]] - code - src/services/api.ts
+- [[saveMockOrder()]] - code - src/services/api.ts
+- [[staff-orders.tsx]] - code - src/pages/staff-orders.tsx
+- [[time()]] - code - src/pages/staff-orders.tsx
+- [[updateOrderStatus()]] - code - src/services/api.ts
+- [[writeMockOrders()]] - code - src/services/api.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -43,14 +34,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 25 edges to [[_COMMUNITY_Community 1]]
-- 21 edges to [[_COMMUNITY_Community 0]]
-- 9 edges to [[_COMMUNITY_Community 9]]
-- 9 edges to [[_COMMUNITY_Community 4]]
+- 15 edges to [[_COMMUNITY_Community 1]]
+- 11 edges to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 9]]
 
 ## Top bridge nodes
-- [[react]] - degree 20, connects to 4 communities
-- [[zmp-ui]] - degree 14, connects to 4 communities
-- [[app.tsx]] - degree 26, connects to 3 communities
-- [[rewards.tsx]] - degree 14, connects to 3 communities
-- [[MyApp()]] - degree 12, connects to 3 communities
+- [[staff-orders.tsx]] - degree 21, connects to 2 communities
+- [[StaffOrdersPage()]] - degree 12, connects to 2 communities
+- [[saveMockOrder()]] - degree 4, connects to 2 communities
+- [[updateOrderStatus()]] - degree 7, connects to 1 community
+- [[listOrders()]] - degree 5, connects to 1 community

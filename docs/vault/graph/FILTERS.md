@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/staff-orders.tsx"
 type: "code"
-community: "Community 1"
-location: "L11"
+community: "Community 2"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_2
 ---
 
 # FILTERS
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[staff-orders.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_2

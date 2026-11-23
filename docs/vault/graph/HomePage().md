@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/home.tsx"
 type: "code"
-community: "Community 2"
+community: "Community 0"
 location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_0
 ---
 
 # HomePage()
@@ -19,4 +19,4 @@ tags:
 - [[home.tsx]] - `contains` [EXTRACTED]
 - [[useMember()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_0

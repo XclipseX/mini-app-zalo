@@ -1,12 +1,12 @@
 ---
 source_file: "src/services/api.ts"
 type: "code"
-community: "Community 1"
+community: "Community 2"
 location: "L160"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_2
 ---
 
 # updateOrderStatus()
@@ -20,4 +20,4 @@ tags:
 - [[staff-orders.tsx]] - `imports` [EXTRACTED]
 - [[writeMockOrders()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_2

@@ -1,5 +1,6 @@
 import LucianQuantityStepper from "../lucian/quantity-stepper";
-import React, { useState } from "react";
+import { flyToCart } from "../lucian/fly-to-cart";
+import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Page, useNavigate, useSnackbar } from "zmp-ui";
 import { products } from "../data/menu";
@@ -10,7 +11,10 @@ export default function ProductPage() {
   const { id } = useParams();
   const p = products.find((x) => x.id === id)!;
   const navigate = useNavigate();
-  const { add } = useCart();
+  const { add, count } = useCart();
+  const art = useRef<HTMLSpanElement>(null);
+  const cartBtn = useRef<HTMLButtonElement>(null);
+  const [adding, setAdding] = useState(false);
   const { openSnackbar } = useSnackbar();
   const [opts, setOpts] = useState<Record<string, Option>>(
     Object.fromEntries((p.optionGroups ?? []).map((g) => [g.id, g.options[g.id === "sugar" ? 1 : 0]]))
@@ -21,8 +25,12 @@ export default function ProductPage() {
 
   return (
     <Page className="page">
-      <div className="topbar"><button className="back" aria-label="Quay lại" onClick={() => navigate(-1)}>‹</button><h2>Chi tiết món</h2></div>
-      <div className="detail-img"><span style={{ background: p.color }} /></div>
+      <div className="topbar"><button className="back" aria-label="Quay lại" onClick={() => navigate(-1)}>‹</button><h2>Chi tiết món</h2>
+        <button ref={cartBtn} type="button" className="ux u442-cart lx-top" aria-label={`Giỏ hàng, ${count} món`} onClick={() => navigate("/cart")}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z" /><path d="M9 7V6a3 3 0 0 1 6 0v1" /></svg>
+          {count > 0 && <span className="u442-bd" aria-hidden="true">{count}</span>}
+        </button></div>
+      <div className="detail-img"><span ref={art} style={{ background: p.color }} /></div>
       <div style={{ padding: 16 }}>
         <h2 style={{ fontSize: 22 }}>{p.name}</h2>
         {p.enName && <div className="muted">{p.enName}</div>}
@@ -47,7 +55,14 @@ export default function ProductPage() {
         <LucianQuantityStepper value={qty} onChange={setQty} unitPrice={unit} />
       </div>
       <div className="cta">
-        <button className="btn" onClick={() => { add(p, opts, note.trim(), qty); openSnackbar({ text: "Đã thêm vào giỏ", type: "success" }); navigate(-1); }}>
+        <button className="btn" disabled={adding} onClick={() => {
+          setAdding(true);
+          flyToCart(art.current, cartBtn.current, `<span style="display:block;width:40px;height:40px;border-radius:50%;background:${p.color}"></span>`, () => {
+            add(p, opts, note.trim(), qty);
+            openSnackbar({ text: "Đã thêm vào giỏ", type: "success" });
+            setTimeout(() => navigate(-1), 650);
+          });
+        }}>
           Thêm vào giỏ · {vnd(unit * qty)}
         </button>
       </div>

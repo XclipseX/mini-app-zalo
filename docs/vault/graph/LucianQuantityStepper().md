@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[ProductPage()]] - `calls` [EXTRACTED]
-- [[product.tsx]] - `imports` [EXTRACTED]
 - [[quantity-stepper.tsx]] - `contains` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 

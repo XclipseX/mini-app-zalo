@@ -1,5 +1,6 @@
 // Nhân viên xem đơn của chi nhánh: đang pha → sẵn sàng → đã giao, xác nhận đã nhận tiền chuyển khoản.
 // Server (listOrders/updateOrderStatus) kiểm tra quyền staff + chi nhánh. MOCK: đơn lưu localStorage.
+import LucianPillTabs from "../lucian/pill-tabs";
 import React, { useEffect, useState } from "react";
 import { Page, useNavigate, useSnackbar } from "zmp-ui";
 import { listOrders, NEXT_STATUS, OrderStatus, StaffOrder, updateOrderStatus } from "../services/api";
@@ -48,13 +49,8 @@ export default function StaffOrdersPage() {
   return (
     <Page className="page">
       <div className="topbar"><img src="./logo-dark.png" alt="Niên" style={{ height: 22 }} /><h2>Đơn hàng</h2></div>
-      <div className="chips">
-        {FILTERS.map((f) => (
-          <button key={f.id} className={"chip" + (filter === f.id ? " on" : "")} onClick={() => setFilter(f.id)}>
-            {f.label}{f.id === "active" ? ` (${orders.filter((o) => NEXT_STATUS[o.status]).length})` : ""}
-          </button>
-        ))}
-      </div>
+      <LucianPillTabs label="Lọc đơn" value={filter} onChange={(id) => setFilter(id as "active" | OrderStatus)}
+        items={FILTERS.map((f) => ({ id: f.id, label: f.label + (f.id === "active" ? ` (${orders.filter((o) => NEXT_STATUS[o.status]).length})` : "") }))} />
 
       {loading && <p className="demo-note">Đang tải…</p>}
       {!loading && shown.length === 0 && <p className="demo-note">Không có đơn.</p>}

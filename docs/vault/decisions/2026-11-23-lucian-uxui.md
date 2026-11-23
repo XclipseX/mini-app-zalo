@@ -8,5 +8,9 @@ Skill `.agents/skills/lucian-uxui` (CLI tải mẫu từ lucianlabs.dev / GitHub
 - #353 Stamp-collecting coffee card → Rewards (tem từ server, đóng dấu khi tăng, đủ 10 lật mặt "1 ly miễn phí"; nút Demo chỉ ở mock).
 - #018 Rolling quantity stepper → Chi tiết món (số lăn, tổng tiền đếm dần).
 - #015 Plan radio cards → Giỏ hàng, chọn Trả tại quầy / Chuyển khoản.
+- #039 Sliding pill tabs → danh mục Menu (lưới món trượt theo hướng) + bộ lọc đơn nhân viên.
+- #041 Notched bottom tab bar → thanh tab dưới (`components/bottom-nav.tsx`), badge số món trên tab Menu.
+- #442 Add to cart → Chi tiết món: món bay vào nút giỏ, giỏ lắc, badge nảy.
+- #444 Checkout steps → màn đặt thành công: Đặt món → Quán nhận → Sẵn sàng → Nhận đồ (chỉ hiển thị).
 Token `--ux-*` trỏ về màu Niên trong `app/src/lucian/lucian.css`; giữ nguyên kích thước, đường cong, thời lượng chuyển động. Giữ dòng license ở đầu mỗi file.
 Lần sau: tìm mẫu bằng `node .agents/skills/lucian-uxui/scripts/lucian-uxui.mjs search <từ khoá>` trước khi tự viết UI mới.

@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "concept"
-community: "Community 2"
+community: "Community 0"
 location: "L17"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_0
 ---
 
 # react
@@ -20,9 +20,11 @@ tags:
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 - [[member.tsx]] - `imports_from` [EXTRACTED]
 - [[menu.tsx]] - `imports_from` [EXTRACTED]
+- [[order-steps.tsx]] - `imports_from` [EXTRACTED]
 - [[package.json]] - `imports` [EXTRACTED]
 - [[pagescart.tsx]] - `imports_from` [EXTRACTED]
 - [[payment-options.tsx]] - `imports_from` [EXTRACTED]
+- [[pill-tabs.tsx]] - `imports_from` [EXTRACTED]
 - [[privacy.tsx]] - `imports_from` [EXTRACTED]
 - [[product-card.tsx]] - `imports_from` [EXTRACTED]
 - [[product.tsx]] - `imports_from` [EXTRACTED]
@@ -33,4 +35,4 @@ tags:
 - [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_2
+#graphify/concept #graphify/EXTRACTED #community/Community_0

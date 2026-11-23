@@ -2,7 +2,7 @@
 source_file: "src/pages/cart.tsx"
 type: "code"
 community: "Community 9"
-location: "L16"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED

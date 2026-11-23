@@ -12,14 +12,16 @@ tags:
 # menu.tsx
 
 ## Connections
+- [[LucianPillTabs()]] - `imports` [EXTRACTED]
 - [[MenuPage()]] - `contains` [EXTRACTED]
-- [[ProductCard()]] - `imports` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[categories]] - `imports` [EXTRACTED]
 - [[menu.ts]] - `imports_from` [EXTRACTED]
+- [[pill-tabs.tsx]] - `imports_from` [EXTRACTED]
 - [[product-card.tsx]] - `imports_from` [EXTRACTED]
 - [[products]] - `imports` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
+- [[slideIn()]] - `imports` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 - [[useCart()]] - `imports` [EXTRACTED]
 - [[vnd()]] - `imports` [EXTRACTED]

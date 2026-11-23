@@ -2,7 +2,7 @@
 source_file: "src/pages/menu.tsx"
 type: "code"
 community: "Community 0"
-location: "L7"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,12 @@ tags:
 # MenuPage()
 
 ## Connections
+- [[LucianPillTabs()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[ProductCard()]] - `calls` [EXTRACTED]
 - [[app.tsx]] - `imports` [EXTRACTED]
 - [[menu.tsx]] - `contains` [EXTRACTED]
+- [[slideIn()]] - `calls` [EXTRACTED]
 - [[useCart()]] - `calls` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 

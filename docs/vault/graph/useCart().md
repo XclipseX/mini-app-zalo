@@ -12,9 +12,11 @@ tags:
 # useCart()
 
 ## Connections
+- [[BottomNav()]] - `calls` [EXTRACTED]
 - [[CartPage()]] - `calls` [EXTRACTED]
 - [[MenuPage()]] - `calls` [EXTRACTED]
 - [[ProductPage()]] - `calls` [EXTRACTED]
+- [[bottom-nav.tsx]] - `imports` [EXTRACTED]
 - [[menu.tsx]] - `imports` [EXTRACTED]
 - [[pagescart.tsx]] - `imports` [EXTRACTED]
 - [[product.tsx]] - `imports` [EXTRACTED]

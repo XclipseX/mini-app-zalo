@@ -15,7 +15,6 @@ tags:
 - [[HomePage()]] - `calls` [EXTRACTED]
 - [[MenuPage()]] - `calls` [EXTRACTED]
 - [[home.tsx]] - `imports` [EXTRACTED]
-- [[menu.tsx]] - `imports` [EXTRACTED]
 - [[product-card.tsx]] - `contains` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 

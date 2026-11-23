@@ -1,12 +1,12 @@
 ---
 source_file: "src/app.tsx"
 type: "code"
-community: "Community 2"
+community: "Community 0"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_0
 ---
 
 # app.tsx
@@ -39,4 +39,4 @@ tags:
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_0

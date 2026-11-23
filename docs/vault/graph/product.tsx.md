@@ -12,10 +12,11 @@ tags:
 # product.tsx
 
 ## Connections
-- [[LucianQuantityStepper()]] - `imports` [EXTRACTED]
 - [[Option]] - `imports` [EXTRACTED]
 - [[ProductPage()]] - `contains` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
+- [[fly-to-cart.ts]] - `imports_from` [EXTRACTED]
+- [[flyToCart()]] - `imports` [EXTRACTED]
 - [[menu.ts]] - `imports_from` [EXTRACTED]
 - [[products]] - `imports` [EXTRACTED]
 - [[quantity-stepper.tsx]] - `imports_from` [EXTRACTED]

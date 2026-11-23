@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[CartPage()]] - `calls` [EXTRACTED]
-- [[pagescart.tsx]] - `imports` [EXTRACTED]
 - [[payment-options.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_9

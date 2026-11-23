@@ -1,24 +1,24 @@
 # Graph Report - app  (2026-11-23)
 
 ## Corpus Check
-- 40 files · ~12,138 words
+- 43 files · ~13,414 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .css 2, .example 1)
 
 ## Summary
-- 271 nodes · 591 edges · 10 communities
+- 279 nodes · 612 edges · 10 communities
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d67405bf`
+- Built from commit: `7a2d2e85`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - state/cart.tsx
 - api.ts
-- app.tsx
+- staff-orders.tsx
 - compilerOptions
 - package.json
 - index.ts
@@ -28,28 +28,28 @@
 - Niên – Zalo Mini App (demo)
 
 ## God Nodes (most connected - your core abstractions)
-1. `react` - 20 edges
+1. `react` - 22 edges
 2. `HttpError` - 16 edges
 3. `zmp-ui` - 14 edges
 4. `vnd()` - 13 edges
-5. `MyApp()` - 12 edges
-6. `CartPage()` - 11 edges
-7. `StaffOrdersPage()` - 11 edges
+5. `CartPage()` - 12 edges
+6. `StaffOrdersPage()` - 12 edges
+7. `MyApp()` - 12 edges
 8. `StaffPage()` - 11 edges
 9. `getToken()` - 11 edges
 10. `compilerOptions` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `OrderInput` --references--> `CartItem`  [EXTRACTED]
-  src/services/api.ts → src/data/types.ts
+- `StaffOrdersPage()` --calls--> `LucianPillTabs()`  [EXTRACTED]
+  src/pages/staff-orders.tsx → src/lucian/pill-tabs.tsx
 - `MyApp()` --calls--> `CartPage()`  [EXTRACTED]
   src/app.tsx → src/pages/cart.tsx
+- `CartPage()` --calls--> `LucianPaymentOptions()`  [EXTRACTED]
+  src/pages/cart.tsx → src/lucian/payment-options.tsx
 - `CartPage()` --calls--> `useCart()`  [EXTRACTED]
   src/pages/cart.tsx → src/state/cart.tsx
 - `CartPage()` --calls--> `vnd()`  [EXTRACTED]
   src/pages/cart.tsx → src/state/cart.tsx
-- `MyApp()` --calls--> `ProductPage()`  [EXTRACTED]
-  src/app.tsx → src/pages/product.tsx
 
 ## Import Cycles
 - None detected.
@@ -57,23 +57,23 @@
 ## Communities (10 total, 0 thin omitted)
 
 ### Community 0 - "state/cart.tsx"
-Cohesion: 0.17
-Nodes (22): ProductCard(), categories, ice, products, shot, stores, sugar, CartItem (+14 more)
+Cohesion: 0.11
+Nodes (36): react, zmp-ui, MyApp(), BottomNav(), TABS, ProductCard(), StampCard(), categories (+28 more)
 
 ### Community 1 - "api.ts"
-Cohesion: 0.10
-Nodes (43): Voucher, ACTION, FILTERS, LABEL, maskPhone(), StaffOrdersPage(), change(), load() (+35 more)
+Cohesion: 0.14
+Nodes (31): Voucher, LucianStampCard(), Props, RewardsPage(), StaffPage(), addStamp(), API, checkMockQr() (+23 more)
 
-### Community 2 - "app.tsx"
-Cohesion: 0.17
-Nodes (15): react, zmp-ui, MyApp(), BottomNav(), tabs, StampCard(), LucianStampCard(), Props (+7 more)
+### Community 2 - "staff-orders.tsx"
+Cohesion: 0.18
+Nodes (16): ACTION, FILTERS, LABEL, maskPhone(), StaffOrdersPage(), change(), load(), time() (+8 more)
 
 ### Community 3 - "compilerOptions"
 Cohesion: 0.17
 Nodes (11): compilerOptions, jsx, lib, module, moduleResolution, noEmit, skipLibCheck, strict (+3 more)
 
 ### Community 4 - "package.json"
-Cohesion: 0.07
+Cohesion: 0.06
 Nodes (39): dependencies, @fontsource/baloo-2@^5.2.5, @fontsource/be-vietnam-pro@^5.2.5, qrcode@^1.5.4, react@^18.3.1, react-dom@^18.3.1, react-router-dom@^7.18.6, @types/qrcode@^1.5.5 (+31 more)
 
 ### Community 5 - "index.ts"
@@ -89,8 +89,8 @@ Cohesion: 0.18
 Nodes (10): compilerOptions, esModuleInterop, module, outDir, rootDir, skipLibCheck, sourceMap, strict (+2 more)
 
 ### Community 9 - "pages/cart.tsx"
-Cohesion: 0.33
-Nodes (9): ICONS, LucianPaymentOptions(), PayOption, CartPage(), checkout(), createOrder(), payCheckout(), requestPhoneToken() (+1 more)
+Cohesion: 0.25
+Nodes (11): LucianOrderSteps(), ICONS, LucianPaymentOptions(), PayOption, CartPage(), checkout(), createOrder(), PayMethod (+3 more)
 
 ### Community 10 - "Niên – Zalo Mini App (demo)"
 Cohesion: 0.40
@@ -99,17 +99,17 @@ Nodes (4): Chạy thử trên máy (không cần Zalo, không cần Firebase), C
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `app.tsx` to `state/cart.tsx`, `pages/cart.tsx`, `package.json`, `api.ts`?**
-  _High betweenness centrality (0.086) - this node is a cross-community bridge._
+- **Why does `react` connect `state/cart.tsx` to `pages/cart.tsx`, `staff-orders.tsx`, `package.json`, `api.ts`?**
+  _High betweenness centrality (0.093) - this node is a cross-community bridge._
+- **Should `state/cart.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.10588235294117647 - nodes in this community are weakly interconnected._
+- **Why does `zmp-ui` connect `state/cart.tsx` to `pages/cart.tsx`, `staff-orders.tsx`, `package.json`, `api.ts`?**
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **Should `api.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.09663120567375887 - nodes in this community are weakly interconnected._
-- **Why does `zmp-ui` connect `app.tsx` to `state/cart.tsx`, `pages/cart.tsx`, `package.json`, `api.ts`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
-- **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.06707317073170732 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1422475106685633 - nodes in this community are weakly interconnected._
 - **Why does `firebase-admin` connect `functions/package.json` to `index.ts`?**
-  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+- **Should `package.json` be split into smaller, more focused modules?**
+  _Cohesion score 0.06342494714587738 - nodes in this community are weakly interconnected._
 - **Should `index.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.08708272859216255 - nodes in this community are weakly interconnected._
-- **Should `functions/package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.0677361853832442 - nodes in this community are weakly interconnected._

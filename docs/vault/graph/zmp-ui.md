@@ -1,12 +1,12 @@
 ---
 source_file: "package.json"
 type: "concept"
-community: "Community 2"
+community: "Community 0"
 location: "L21"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_0
 ---
 
 # zmp-ui
@@ -27,4 +27,4 @@ tags:
 - [[staff.tsx]] - `imports_from` [EXTRACTED]
 - [[zmp-ui@1.11.15-2]] - `declares` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_2
+#graphify/concept #graphify/EXTRACTED #community/Community_0

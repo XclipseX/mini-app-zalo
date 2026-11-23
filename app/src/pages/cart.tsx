@@ -1,4 +1,5 @@
 import LucianPaymentOptions from "../lucian/payment-options";
+import LucianOrderSteps from "../lucian/order-steps";
 import React, { useState } from "react";
 import { Page, useNavigate, useSnackbar } from "zmp-ui";
 import { itemPrice, useCart, vnd } from "../state/cart";
@@ -32,8 +33,8 @@ export default function CartPage() {
     <Page className="page">
       <div className="topbar"><h2>Đặt món thành công</h2></div>
       <div className="card" style={{ textAlign: "center" }}>
-        <div style={{ fontSize: 48, lineHeight: 1.2, marginBottom: 8 }}>✅</div>
         <h3>Mã đơn {done}</h3>
+        <LucianOrderSteps steps={["Đặt món", "Quán nhận", "Sẵn sàng", "Nhận đồ"]} current={1} />
         <p className="muted">Niên sẽ nhắn tin qua Zalo khi đồ uống sẵn sàng tại {store.name}.</p>
         <p className="muted">{method === "BANK" ? "Bạn đã chọn chuyển khoản – quán sẽ xác nhận khi nhận được tiền." : "Thanh toán tại quầy khi nhận đồ."}</p>
       </div>
