@@ -6,6 +6,7 @@ import { getFirestore, FieldValue, Timestamp } from "firebase-admin/firestore";
 import { handle, HttpError, str } from "./http";
 import { verifyAccessToken, getPhoneNumber } from "./zalo";
 import { makeMemberQr, verifyMemberQr } from "./qr";
+import { buildCheckout, verifyCallback, PayMethod } from "./checkout";
 
 initializeApp();
 const db = getFirestore();
@@ -13,7 +14,11 @@ setGlobalOptions({ region: "asia-southeast1" });
 
 const ZALO_APP_SECRET = defineSecret("ZALO_APP_SECRET");
 const QR_SECRET = defineSecret("QR_SECRET");
+const CHECKOUT_PRIVATE_KEY = defineSecret("CHECKOUT_PRIVATE_KEY");
+// "true" khi đang test bằng phương thức *_SANDBOX của Checkout SDK
+const CHECKOUT_SANDBOX = process.env.CHECKOUT_SANDBOX !== "false";
 const opts = { cors: true, secrets: [ZALO_APP_SECRET, QR_SECRET] };
+const orderOpts = { cors: true, secrets: [ZALO_APP_SECRET, CHECKOUT_PRIVATE_KEY] };
 
 const pad = (n: number) => String(n).padStart(2, "0");
 // Định dạng ngày theo giờ VN (UTC+7)
@@ -80,8 +85,9 @@ export const getMember = onRequest(opts, handle(async (body) => {
 }));
 
 // 4. Tạo đơn hàng (giá tính lại ở server)
-export const createOrder = onRequest(opts, handle(async (body) => {
+export const createOrder = onRequest(orderOpts, handle(async (body) => {
   const u = await auth(body);
+  const method: PayMethod = body.method === "BANK" ? "BANK" : "COD";
   const storeId = str(body.storeId, "storeId");
   const items = body.items;
   if (!Array.isArray(items) || items.length < 1 || items.length > 30) throw new HttpError(400, "Giỏ hàng không hợp lệ");
@@ -124,19 +130,50 @@ export const createOrder = onRequest(opts, handle(async (body) => {
 
   const v = vn(new Date());
   const ymd = `${String(v.getUTCFullYear()).slice(2)}${pad(v.getUTCMonth() + 1)}${pad(v.getUTCDate())}`;
-  const data = { zaloId: u.id, name: u.name, phone, storeId, items: lines, total, status: "pending", paymentMethod: "pay_at_store", createdAt: FieldValue.serverTimestamp() };
+  const data = { zaloId: u.id, name: u.name, phone, storeId, items: lines, total, status: "pending", paymentMethod: method, paymentStatus: "unpaid", createdAt: FieldValue.serverTimestamp() };
   // Thử vài lần nếu trùng mã
   for (let i = 0; i < 5; i++) {
     const orderId = `NIEN-${ymd}-${String(Math.floor(Math.random() * 10000)).padStart(4, "0")}`;
     try {
       await db.doc(`orders/${orderId}`).create(data);
-      // TODO: tích hợp Checkout SDK - tạo mac (HMAC) cho thanh toán online
-      return { orderId, total };
+      const checkout = buildCheckout({ orderId, storeId, total, method, sandbox: CHECKOUT_SANDBOX, items: lines }, CHECKOUT_PRIVATE_KEY.value());
+      return { orderId, total, checkout };
     } catch (e: any) {
       if (e?.code !== 6) throw e; // 6 = ALREADY_EXISTS
     }
   }
   throw new HttpError(500, "Không tạo được mã đơn");
+}));
+
+// 4b. Zalo gọi về khi khách tạo đơn / đổi trạng thái thanh toán (khai báo URL trong trang Checkout SDK).
+// Không dùng handle(): Zalo cần phản hồi dạng {returnCode, returnMessage}.
+export const checkoutCallback = onRequest({ secrets: [CHECKOUT_PRIVATE_KEY] }, async (req, res) => {
+  try {
+    const { ok, data } = verifyCallback(req.body, CHECKOUT_PRIVATE_KEY.value());
+    if (!ok) { res.json({ returnCode: 0, returnMessage: "invalid mac" }); return; }
+    let extra: any = data.extradata;
+    if (typeof extra === "string") { try { extra = JSON.parse(decodeURIComponent(extra)); } catch { extra = {}; } }
+    const orderId = String(extra?.orderId || "");
+    const ref = orderId ? db.doc(`orders/${orderId}`) : null;
+    if (!ref || !(await ref.get()).exists) { res.json({ returnCode: 0, returnMessage: "order not found" }); return; }
+    const update: Record<string, unknown> = { zaloOrderId: String(data.orderId || ""), updatedAt: FieldValue.serverTimestamp() };
+    if (data.resultCode !== undefined) {
+      update.paymentStatus = Number(data.resultCode) === 1 ? "paid" : "failed";
+      update.transId = String(data.transId || "");
+    }
+    await ref.update(update);
+    res.json({ returnCode: 1, returnMessage: "success" });
+  } catch (e) {
+    console.error(e);
+    res.json({ returnCode: 0, returnMessage: "error" });
+  }
+});
+
+// Client hỏi để ẩn/hiện link "Dành cho nhân viên". Bảo mật thật vẫn nằm ở requireStaff.
+export const isStaff = onRequest(opts, handle(async (body) => {
+  const u = await auth(body);
+  const s = await db.doc(`staff/${u.id}`).get();
+  return { staff: s.exists && s.get("active") === true };
 }));
 
 // 5. Nhân viên cộng tem

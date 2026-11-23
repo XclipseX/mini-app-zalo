@@ -14,7 +14,10 @@ tags:
 ## Connections
 - [[MOCK]] - `imports` [EXTRACTED]
 - [[RewardsPage()]] - `contains` [EXTRACTED]
+- [[api.ts]] - `imports_from` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
+- [[getToken()]] - `imports` [EXTRACTED]
+- [[isStaff()]] - `imports` [EXTRACTED]
 - [[member.tsx]] - `imports_from` [EXTRACTED]
 - [[qrcode]] - `imports_from` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]

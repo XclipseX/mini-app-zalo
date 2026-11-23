@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/product-card.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 0"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # ProductCard()
@@ -19,4 +19,4 @@ tags:
 - [[product-card.tsx]] - `contains` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_0

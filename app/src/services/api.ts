@@ -1,6 +1,6 @@
 // Mọi việc ghi dữ liệu quan trọng (đơn hàng, cộng tem) đi qua server (Firebase Cloud Functions).
 // Ở chế độ MOCK, dữ liệu lưu tạm trong localStorage để xem demo.
-import { MOCK } from "./zalo";
+import { MOCK, CheckoutParams } from "./zalo";
 import { CartItem, Voucher } from "../data/types";
 
 const API = import.meta.env.VITE_API_BASE as string | undefined;
@@ -48,17 +48,21 @@ export async function getMember(accessToken = "mock"): Promise<Member> {
   return post<Member>("/getMember", { accessToken });
 }
 
-export interface OrderInput { storeId: string; items: CartItem[]; total: number; phoneToken: string; accessToken: string }
+export type PayMethod = "COD" | "BANK";
+export interface OrderInput { storeId: string; items: CartItem[]; total: number; phoneToken: string; accessToken: string; method: PayMethod }
+export interface OrderResult { orderId: string; total: number; checkout: CheckoutParams }
 
-export async function createOrder(input: OrderInput): Promise<{ orderId: string }> {
+export async function createOrder(input: OrderInput): Promise<OrderResult> {
   if (MOCK) {
     await new Promise((r) => setTimeout(r, 500));
-    return { orderId: "NIEN-" + Math.floor(1000 + Math.random() * 9000) };
+    const orderId = "NIEN-" + Math.floor(1000 + Math.random() * 9000);
+    return { orderId, total: input.total, checkout: { amount: input.total, desc: `Niên - đơn ${orderId}`, item: [], extradata: JSON.stringify({ orderId }), method: JSON.stringify({ id: input.method, isCustom: false }), mac: "mock" } };
   }
   // Server tự tính lại giá từ Firestore (không tin total từ client)
   return post("/createOrder", {
     accessToken: input.accessToken,
     phoneToken: input.phoneToken,
+    method: input.method,
     storeId: input.storeId,
     items: input.items.map((i) => ({
       productId: i.product.id, qty: i.qty, note: i.note,
@@ -78,6 +82,12 @@ export async function mockAddStamp(): Promise<Member> {
   }
   writeMock(m);
   return m;
+}
+
+/** Người dùng có phải nhân viên không (chỉ để ẩn/hiện link; server vẫn kiểm tra quyền). MOCK: luôn true để xem demo. */
+export async function isStaff(accessToken: string): Promise<boolean> {
+  if (MOCK) return true;
+  try { return (await post<{ staff: boolean }>("/isStaff", { accessToken })).staff; } catch { return false; }
 }
 
 // ===== Nhân viên (server kiểm tra quyền staff; MOCK thao tác trên member demo) =====

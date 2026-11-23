@@ -10,7 +10,7 @@ updated: 2026-11-23
 Zalo Mini App cho quán cà phê **Niên** (358 Lê Lai, Thanh Hóa). Khách hàng: cô Bích Ngọc. Gói 4 – 3.000.000đ: menu, đặt món nhận tại quán, voucher, tích 10 tem đổi 1 ly. Mục tiêu ~1 tuần code.
 
 ## Trạng thái
-Demo mock xong. Đang chờ cô (cọc, Mini App ID, giấy tờ). Firebase backend đã viết (chưa deploy) – xem [[architecture/firestore-schema]]. Màn hình nhân viên `/staff` xong (mock chạy). Việc tiếp: deploy Firebase thật, Checkout SDK. Chi tiết: [[sessions/2026-11-23]].
+Demo mock xong. Đang chờ cô (cọc, Mini App ID, giấy tờ). Firebase backend đã viết (chưa deploy) – xem [[architecture/firestore-schema]]. Màn hình nhân viên `/staff` xong (mock chạy). Checkout SDK (COD + chuyển khoản) tích hợp xong, mock chạy. Việc tiếp: deploy Firebase thật, test Checkout sandbox khi có Mini App ID. Chi tiết: [[sessions/2026-11-23]].
 Nhánh làm việc: `ccr-9c0f1ce5-f6i58o`.
 
 ## Architecture
@@ -18,6 +18,7 @@ Nhánh làm việc: `ccr-9c0f1ce5-f6i58o`.
 - Bản đồ code: `app/graphify-out/GRAPH_REPORT.md`, note từng hàm trong [[graph/graph.canvas|graph/]] (graphify export). Hub: `useCart`, `vnd`, `zalo.ts`, `api.ts` → sửa cẩn thận.
 
 ## Decisions
+- [[decisions/2026-11-23-checkout-cod-bank]]
 - [[decisions/2026-11-23-firebase-backend]]
 - [[decisions/2026-11-22-checkout-sdk-required]]
 - [[decisions/2026-11-22-proposal-workflow]]

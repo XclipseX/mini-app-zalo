@@ -1,11 +1,11 @@
 ---
 type: community
-members: 28
+members: 29
 ---
 
 # Community 6
 
-**Members:** 28 nodes
+**Members:** 29 nodes
 
 ## Members
 - [[admin]] - code - scripts/seed.mjs
@@ -18,6 +18,7 @@ members: 28
 - [[engines]] - code - functions/package.json
 - [[firebase-admin]] - concept - functions/package.json
 - [[firebase-admin@12.7.0]] - code - functions/package.json
+- [[firebase-functions]] - concept - functions/package.json
 - [[firebase-functions@6.1.0]] - code - functions/package.json
 - [[functionspackage.json]] - code - functions/package.json
 - [[here]] - code - scripts/seed.mjs
@@ -48,6 +49,5 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Community 5]]
 
 ## Top bridge nodes
-- [[functionspackage.json]] - degree 10, connects to 1 community
 - [[firebase-admin]] - degree 4, connects to 1 community
-- [[firebase-functions@6.1.0]] - degree 2, connects to 1 community
+- [[firebase-functions]] - degree 4, connects to 1 community

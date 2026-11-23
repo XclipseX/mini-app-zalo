@@ -11,6 +11,7 @@ tags:
 # ref_crypto
 
 ## Connections
+- [[checkout.ts]] - `imports_from` [EXTRACTED]
 - [[qr.ts]] - `imports_from` [EXTRACTED]
 - [[srczalo.ts]] - `imports_from` [EXTRACTED]
 

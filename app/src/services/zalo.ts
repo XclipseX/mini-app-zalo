@@ -1,6 +1,6 @@
 // Lớp bọc zmp-sdk. Khi VITE_MOCK=true (chạy trên trình duyệt) trả dữ liệu giả,
 // vì getPhoneNumber / getAccessToken chỉ chạy trong app Zalo thật.
-import { getUserInfo, getSetting, authorize, getPhoneNumber, getAccessToken, scanQRCode } from "zmp-sdk/apis";
+import { getUserInfo, getSetting, authorize, getPhoneNumber, getAccessToken, scanQRCode, Payment } from "zmp-sdk/apis";
 
 export const MOCK = import.meta.env.VITE_MOCK !== "false";
 
@@ -39,4 +39,14 @@ export async function scanQr(): Promise<string | null> {
   if (MOCK) return null;
   const { content } = await scanQRCode({});
   return content || null;
+}
+
+/** Tham số server trả về (đã ký mac) – truyền nguyên văn cho Checkout SDK. */
+export interface CheckoutParams { amount: number; desc: string; item: { id: string; amount: number }[]; extradata: string; method: string; mac: string }
+
+/** Mở Checkout SDK (COD / chuyển khoản). MOCK: bỏ qua, coi như tạo đơn thanh toán thành công. */
+export async function payCheckout(p: CheckoutParams): Promise<{ zaloOrderId: string }> {
+  if (MOCK) return { zaloOrderId: "mock-" + Date.now() };
+  const { orderId } = await Payment.createOrder({ ...p });
+  return { zaloOrderId: orderId };
 }

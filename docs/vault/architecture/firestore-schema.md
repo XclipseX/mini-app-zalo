@@ -25,7 +25,7 @@ Index composite (`app/firestore.indexes.json`): `orders` (zaloId ↑, createdAt 
 ## Functions
 
 `verifyUser`, `resolvePhone`, `getMember`, `createOrder`, `lookupMember`, `addStamp`, `redeemVoucher` (3 hàm cuối chỉ staff) — region `asia-southeast1`.
-Secrets: `ZALO_APP_SECRET`, `QR_SECRET`.
+Secrets: `ZALO_APP_SECRET`, `QR_SECRET`, `CHECKOUT_PRIVATE_KEY` (Checkout SDK). Orders có `paymentMethod` (COD/BANK), `paymentStatus` (unpaid/paid/failed), `zaloOrderId`, `transId`.
 
 QR tích điểm: `NIEN1.<zaloId>.<exp>.<hmac16>` — HMAC (QR_SECRET) cắt 16 ký tự, hiệu lực 5 phút. Nhân viên (`staff/{zaloId}` active) quét → `addStamp`.
 
@@ -36,7 +36,7 @@ Trong `app/`:
 1. `firebase login`
 2. Sửa project trong `.firebaserc` (placeholder `nien-zalo-mini-app` — **phải thay bằng project thật**) hoặc `firebase use <project>`
 3. `firebase functions:secrets:set ZALO_APP_SECRET`
-4. `firebase functions:secrets:set QR_SECRET`
+4. `firebase functions:secrets:set QR_SECRET` và `firebase functions:secrets:set CHECKOUT_PRIVATE_KEY`
 5. `firebase deploy` (rules, indexes, functions)
 6. Seed menu: `cd functions && node ../scripts/seed.mjs` (cần ADC: `gcloud auth application-default login`). Emulator: thêm `FIRESTORE_EMULATOR_HOST=localhost:8080`.
 7. Thêm nhân viên: `STAFF_ZALO_ID=<id> STAFF_NAME="..." STAFF_STORE_ID=<storeId> node ../scripts/seed.mjs` (hoặc tạo doc `staff/{zaloId}` trên console).

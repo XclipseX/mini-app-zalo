@@ -1,49 +1,47 @@
 ---
 type: community
-members: 37
+members: 35
 ---
 
 # Community 1
 
-**Members:** 37 nodes
+**Members:** 35 nodes
 
 ## Members
 - [[BottomNav()]] - code - src/components/bottom-nav.tsx
-- [[CartPage()]] - code - src/pages/cart.tsx
 - [[CartProvider()]] - code - src/state/cart.tsx
+- [[Ctx_1]] - code - src/state/member.tsx
 - [[HomePage()]] - code - src/pages/home.tsx
-- [[MenuPage()]] - code - src/pages/menu.tsx
+- [[MOCK]] - code - src/services/zalo.ts
+- [[Member]] - code - src/services/api.ts
+- [[MemberCtx]] - code - src/state/member.tsx
+- [[MemberProvider()]] - code - src/state/member.tsx
 - [[MyApp()]] - code - src/app.tsx
 - [[PrivacyPage()]] - code - src/pages/privacy.tsx
-- [[ProductCard()]] - code - src/components/product-card.tsx
-- [[ProductPage()]] - code - src/pages/product.tsx
 - [[RewardsPage()]] - code - src/pages/rewards.tsx
+- [[StaffPage()]] - code - src/pages/staff.tsx
 - [[StampCard()]] - code - src/components/stamp-card.tsx
 - [[TODO điền tên Hộ kinh doanhCông ty theo GPKD và nội dung đầy đủ theo Luật…]] - rationale - src/pages/privacy.tsx
+- [[ZaloUser]] - code - src/services/zalo.ts
 - [[app.tsx]] - code - src/app.tsx
 - [[bottom-nav.tsx]] - code - src/components/bottom-nav.tsx
-- [[categories]] - code - src/data/menu.ts
-- [[checkout()]] - code - src/pages/cart.tsx
-- [[createOrder()]] - code - src/services/api.ts
+- [[getToken()]] - code - src/services/zalo.ts
 - [[home.tsx]] - code - src/pages/home.tsx
-- [[itemPrice()]] - code - src/state/cart.tsx
+- [[isStaff()]] - code - src/services/api.ts
+- [[loadUser()]] - code - src/services/zalo.ts
 - [[main.tsx]] - code - src/main.tsx
-- [[menu.tsx]] - code - src/pages/menu.tsx
-- [[pagescart.tsx]] - code - src/pages/cart.tsx
+- [[member.tsx]] - code - src/state/member.tsx
 - [[privacy.tsx]] - code - src/pages/privacy.tsx
-- [[product-card.tsx]] - code - src/components/product-card.tsx
-- [[product.tsx]] - code - src/pages/product.tsx
-- [[products]] - code - src/data/menu.ts
 - [[react]] - concept - package.json
-- [[react-router-dom]] - concept - package.json
-- [[requestPhoneToken()]] - code - src/services/zalo.ts
 - [[rewards.tsx]] - code - src/pages/rewards.tsx
+- [[run()]] - code - src/pages/staff.tsx
+- [[scanQr()]] - code - src/services/zalo.ts
+- [[serviceszalo.ts]] - code - src/services/zalo.ts
 - [[src_theme]] - concept
+- [[staff.tsx]] - code - src/pages/staff.tsx
 - [[stamp-card.tsx]] - code - src/components/stamp-card.tsx
 - [[tabs]] - code - src/components/bottom-nav.tsx
-- [[useCart()]] - code - src/state/cart.tsx
 - [[useMember()]] - code - src/state/member.tsx
-- [[vnd()]] - code - src/state/cart.tsx
 - [[zmp-ui]] - concept - package.json
 
 ## Live Query (requires Dataview plugin)
@@ -54,13 +52,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_Community 2]]
-- 19 edges to [[_COMMUNITY_Community 0]]
+- 22 edges to [[_COMMUNITY_Community 2]]
+- 18 edges to [[_COMMUNITY_Community 0]]
+- 8 edges to [[_COMMUNITY_Community 7]]
 - 8 edges to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
 - [[react]] - degree 16, connects to 3 communities
+- [[serviceszalo.ts]] - degree 14, connects to 3 communities
+- [[zmp-ui]] - degree 13, connects to 3 communities
 - [[app.tsx]] - degree 18, connects to 2 communities
-- [[zmp-ui]] - degree 13, connects to 2 communities
-- [[pagescart.tsx]] - degree 12, connects to 2 communities
-- [[home.tsx]] - degree 12, connects to 2 communities
+- [[rewards.tsx]] - degree 13, connects to 2 communities

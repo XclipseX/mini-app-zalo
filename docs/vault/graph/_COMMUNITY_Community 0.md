@@ -1,29 +1,38 @@
 ---
 type: community
-members: 16
+members: 25
 ---
 
 # Community 0
 
-**Members:** 16 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[CartCtx]] - code - src/state/cart.tsx
 - [[CartItem]] - code - src/data/types.ts
 - [[Category]] - code - src/data/types.ts
 - [[Ctx]] - code - src/state/cart.tsx
+- [[MenuPage()]] - code - src/pages/menu.tsx
 - [[Option]] - code - src/data/types.ts
 - [[OptionGroup]] - code - src/data/types.ts
-- [[OrderInput]] - code - src/services/api.ts
 - [[Product]] - code - src/data/types.ts
+- [[ProductCard()]] - code - src/components/product-card.tsx
+- [[ProductPage()]] - code - src/pages/product.tsx
 - [[Store]] - code - src/data/types.ts
+- [[categories]] - code - src/data/menu.ts
 - [[ice]] - code - src/data/menu.ts
 - [[menu.ts]] - code - src/data/menu.ts
+- [[menu.tsx]] - code - src/pages/menu.tsx
+- [[product-card.tsx]] - code - src/components/product-card.tsx
+- [[product.tsx]] - code - src/pages/product.tsx
+- [[products]] - code - src/data/menu.ts
 - [[shot]] - code - src/data/menu.ts
 - [[statecart.tsx]] - code - src/state/cart.tsx
 - [[stores]] - code - src/data/menu.ts
 - [[sugar]] - code - src/data/menu.ts
 - [[types.ts]] - code - src/data/types.ts
+- [[useCart()]] - code - src/state/cart.tsx
+- [[vnd()]] - code - src/state/cart.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,12 +42,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 19 edges to [[_COMMUNITY_Community 1]]
+- 18 edges to [[_COMMUNITY_Community 1]]
+- 6 edges to [[_COMMUNITY_Community 7]]
 - 4 edges to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[types.ts]] - degree 12, connects to 2 communities
-- [[statecart.tsx]] - degree 19, connects to 1 community
+- [[statecart.tsx]] - degree 19, connects to 2 communities
+- [[product.tsx]] - degree 12, connects to 2 communities
 - [[menu.ts]] - degree 15, connects to 1 community
-- [[CartItem]] - degree 5, connects to 1 community
-- [[Product]] - degree 5, connects to 1 community
+- [[types.ts]] - degree 12, connects to 1 community
+- [[menu.tsx]] - degree 12, connects to 1 community

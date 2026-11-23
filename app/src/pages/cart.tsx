@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Page, useNavigate, useSnackbar } from "zmp-ui";
 import { itemPrice, useCart, vnd } from "../state/cart";
-import { requestPhoneToken } from "../services/zalo";
-import { createOrder } from "../services/api";
+import { requestPhoneToken, payCheckout } from "../services/zalo";
+import { createOrder, PayMethod } from "../services/api";
 
 export default function CartPage() {
   const { items, store, total, setQty, clear } = useCart();
@@ -10,6 +10,7 @@ export default function CartPage() {
   const { openSnackbar } = useSnackbar();
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState<string | null>(null);
+  const [method, setMethod] = useState<PayMethod>("COD");
 
   async function checkout() {
     setLoading(true);
@@ -17,8 +18,10 @@ export default function CartPage() {
       // Chỉ xin SĐT tại thời điểm đặt hàng, đúng quy định kiểm duyệt của Zalo
       const auth = await requestPhoneToken();
       if (!auth) { openSnackbar({ text: "Cần số điện thoại để quán xác nhận đơn", type: "warning" }); return; }
-      const { orderId } = await createOrder({ storeId: store.id, items, total, ...auth });
-      clear(); setDone(orderId);
+      // Server tính giá + ký mac → mở Checkout SDK (bắt buộc với app có giá + đặt mua)
+      const order = await createOrder({ storeId: store.id, items, total, method, ...auth });
+      await payCheckout(order.checkout);
+      clear(); setDone(order.orderId);
     } catch (e) {
       openSnackbar({ text: "Đặt món thất bại, vui lòng thử lại", type: "error" });
     } finally { setLoading(false); }
@@ -31,6 +34,7 @@ export default function CartPage() {
         <div style={{ fontSize: 48, lineHeight: 1.2, marginBottom: 8 }}>✅</div>
         <h3>Mã đơn {done}</h3>
         <p className="muted">Niên sẽ nhắn tin qua Zalo khi đồ uống sẵn sàng tại {store.name}.</p>
+        <p className="muted">{method === "BANK" ? "Bạn đã chọn chuyển khoản – quán sẽ xác nhận khi nhận được tiền." : "Thanh toán tại quầy khi nhận đồ."}</p>
       </div>
       <div style={{ padding: "0 14px" }}><button className="btn" onClick={() => navigate("/", { replace: true })}>Về trang chủ</button></div>
     </Page>
@@ -56,7 +60,13 @@ export default function CartPage() {
       {items.length > 0 && (
         <div className="card">
           <div className="line"><span>Tạm tính</span><b>{vnd(total)}</b></div>
-          <div className="line"><span>Thanh toán</span><span>Tại quầy (tiền mặt / chuyển khoản)</span></div>
+          <div className="label" style={{ marginTop: 8 }}>THANH TOÁN</div>
+          {([["COD", "Trả tại quầy khi nhận đồ"], ["BANK", "Chuyển khoản ngân hàng"]] as const).map(([id, label]) => (
+            <label key={id} className="line" style={{ cursor: "pointer" }}>
+              <span>{label}</span>
+              <input type="radio" name="pay" checked={method === id} onChange={() => setMethod(id)} />
+            </label>
+          ))}
           <div className="muted" style={{ marginTop: 8 }}>Khi bấm đặt món, Zalo sẽ hỏi bạn chia sẻ số điện thoại để quán xác nhận đơn.</div>
         </div>
       )}

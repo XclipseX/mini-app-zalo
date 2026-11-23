@@ -1,12 +1,12 @@
 ---
 source_file: "src/state/member.tsx"
 type: "code"
-community: "Community 2"
+community: "Community 1"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_1
 ---
 
 # Ctx
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[member.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_1

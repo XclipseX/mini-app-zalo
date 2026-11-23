@@ -2,7 +2,7 @@
 source_file: "functions/src/index.ts"
 type: "code"
 community: "Community 5"
-location: "L83"
+location: "L88"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[HttpError]] - `calls` [EXTRACTED]
 - [[auth()]] - `calls` [EXTRACTED]
+- [[buildCheckout()]] - `calls` [EXTRACTED]
 - [[getPhoneNumber()]] - `calls` [EXTRACTED]
 - [[index.ts]] - `contains` [EXTRACTED]
 - [[pad()]] - `calls` [EXTRACTED]

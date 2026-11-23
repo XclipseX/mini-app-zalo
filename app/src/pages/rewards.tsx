@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import QRCode from "qrcode";
 import { Page, useNavigate, useSnackbar } from "zmp-ui";
 import { useMember } from "../state/member";
-import { MOCK } from "../services/zalo";
+import { MOCK, getToken } from "../services/zalo";
+import { isStaff } from "../services/api";
 import StampCard from "../components/stamp-card";
 
 export default function RewardsPage() {
@@ -10,6 +11,8 @@ export default function RewardsPage() {
   const [qr, setQr] = useState("");
   const navigate = useNavigate();
   const { openSnackbar } = useSnackbar();
+  const [staff, setStaff] = useState(false);
+  useEffect(() => { getToken().then(isStaff).then(setStaff).catch(() => setStaff(false)); }, []);
   // QR do server ký (getMember → member.qr), hạn 5 phút → tự làm mới mỗi 4 phút khi đang mở trang
   useEffect(() => {
     refresh();
@@ -42,7 +45,7 @@ export default function RewardsPage() {
         <h3 style={{ fontSize: 17 }}>Lịch sử tem</h3>
         {member?.history.slice(0, 5).map((h, i) => <div key={i} className="line"><span>{h.text}</span><span className="muted">{h.date}</span></div>)}
       </div>
-      <p className="demo-note"><button className="link" onClick={() => navigate("/privacy")}>Chính sách bảo mật</button> · <button className="link" onClick={() => navigate("/staff")}>Dành cho nhân viên</button></p>
+      <p className="demo-note"><button className="link" onClick={() => navigate("/privacy")}>Chính sách bảo mật</button>{staff && <> · <button className="link" onClick={() => navigate("/staff")}>Dành cho nhân viên</button></>}</p>
     </Page>
   );
 }

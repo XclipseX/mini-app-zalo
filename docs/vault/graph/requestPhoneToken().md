@@ -1,12 +1,12 @@
 ---
 source_file: "src/services/zalo.ts"
 type: "code"
-community: "Community 1"
+community: "Community 7"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_7
 ---
 
 # requestPhoneToken()
@@ -17,4 +17,4 @@ tags:
 - [[pagescart.tsx]] - `imports` [EXTRACTED]
 - [[serviceszalo.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_7

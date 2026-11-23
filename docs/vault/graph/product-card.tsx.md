@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/product-card.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 0"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # product-card.tsx
@@ -22,4 +22,4 @@ tags:
 - [[vnd()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_0

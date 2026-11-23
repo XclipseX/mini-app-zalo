@@ -1,22 +1,24 @@
 ---
 source_file: "src/pages/cart.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 7"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_7
 ---
 
 # pages/cart.tsx
 
 ## Connections
 - [[CartPage()]] - `contains` [EXTRACTED]
+- [[PayMethod_1]] - `imports` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[createOrder()]] - `imports` [EXTRACTED]
 - [[itemPrice()]] - `imports` [EXTRACTED]
+- [[payCheckout()]] - `imports` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[requestPhoneToken()]] - `imports` [EXTRACTED]
 - [[serviceszalo.ts]] - `imports_from` [EXTRACTED]
@@ -25,4 +27,4 @@ tags:
 - [[vnd()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_7

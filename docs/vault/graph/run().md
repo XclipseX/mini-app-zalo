@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/staff.tsx"
 type: "code"
-community: "Community 2"
-location: "L20"
+community: "Community 1"
+location: "L21"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_1
 ---
 
 # run()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[StaffPage()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_1

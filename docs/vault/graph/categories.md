@@ -1,12 +1,12 @@
 ---
 source_file: "src/data/menu.ts"
 type: "code"
-community: "Community 1"
+community: "Community 0"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_0
 ---
 
 # categories
@@ -15,4 +15,4 @@ tags:
 - [[menu.ts]] - `contains` [EXTRACTED]
 - [[menu.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_0
