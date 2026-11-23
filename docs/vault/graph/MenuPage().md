@@ -15,7 +15,6 @@ tags:
 - [[LucianPillTabs()]] - `calls` [EXTRACTED]
 - [[MyApp()]] - `calls` [EXTRACTED]
 - [[ProductCard()]] - `calls` [EXTRACTED]
-- [[app.tsx]] - `imports` [EXTRACTED]
 - [[menu.tsx]] - `contains` [EXTRACTED]
 - [[slideIn()]] - `calls` [EXTRACTED]
 - [[useCart()]] - `calls` [EXTRACTED]

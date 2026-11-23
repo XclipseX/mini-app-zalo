@@ -1,3 +1,4 @@
+import { ToastProvider } from "./lucian/toast";
 import React from "react";
 import { App, ZMPRouter, AnimationRoutes, Route, SnackbarProvider } from "zmp-ui";
 import { CartProvider } from "./state/cart";
@@ -16,6 +17,7 @@ export default function MyApp() {
   return (
     <App>
       <SnackbarProvider>
+      <ToastProvider>
         <MemberProvider>
           <CartProvider>
             <ZMPRouter memoryRouter={import.meta.env.VITE_WEB_DEMO === "true"}>
@@ -33,6 +35,7 @@ export default function MyApp() {
             </ZMPRouter>
           </CartProvider>
         </MemberProvider>
+      </ToastProvider>
       </SnackbarProvider>
     </App>
   );

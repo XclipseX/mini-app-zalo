@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/staff-orders.tsx"
 type: "code"
-community: "Community 2"
-location: "L21"
+community: "Community 1"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_1
 ---
 
 # StaffOrdersPage()
@@ -23,6 +23,7 @@ tags:
 - [[staff-orders.tsx]] - `contains` [EXTRACTED]
 - [[time()]] - `calls` [EXTRACTED]
 - [[updateOrderStatus()]] - `calls` [EXTRACTED]
+- [[useToast()]] - `calls` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_1

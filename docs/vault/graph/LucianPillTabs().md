@@ -16,6 +16,5 @@ tags:
 - [[StaffOrdersPage()]] - `calls` [EXTRACTED]
 - [[menu.tsx]] - `imports` [EXTRACTED]
 - [[pill-tabs.tsx]] - `contains` [EXTRACTED]
-- [[staff-orders.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_0

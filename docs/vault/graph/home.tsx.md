@@ -1,20 +1,20 @@
 ---
 source_file: "src/pages/home.tsx"
 type: "code"
-community: "Community 0"
+community: "Community 9"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_9
 ---
 
 # home.tsx
 
 ## Connections
 - [[HomePage()]] - `contains` [EXTRACTED]
-- [[ProductCard()]] - `imports` [EXTRACTED]
-- [[StampCard()]] - `imports` [EXTRACTED]
+- [[LucianAnnouncement()]] - `imports` [EXTRACTED]
+- [[announcement.tsx]] - `imports_from` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[componentsstamp-card.tsx]] - `imports_from` [EXTRACTED]
 - [[member.tsx]] - `imports_from` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[useMember()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_9

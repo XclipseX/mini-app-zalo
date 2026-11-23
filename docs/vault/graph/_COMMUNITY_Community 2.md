@@ -1,30 +1,21 @@
 ---
 type: community
-members: 17
+members: 8
 ---
 
 # Community 2
 
-**Members:** 17 nodes
+**Members:** 8 nodes
 
 ## Members
-- [[ACTION]] - code - src/pages/staff-orders.tsx
-- [[FILTERS]] - code - src/pages/staff-orders.tsx
-- [[LABEL]] - code - src/pages/staff-orders.tsx
-- [[NEXT_STATUS]] - code - src/services/api.ts
-- [[OrderStatus]] - code - src/services/api.ts
-- [[StaffOrder]] - code - src/services/api.ts
-- [[StaffOrdersPage()]] - code - src/pages/staff-orders.tsx
-- [[change()]] - code - src/pages/staff-orders.tsx
-- [[listOrders()]] - code - src/services/api.ts
-- [[load()]] - code - src/pages/staff-orders.tsx
-- [[maskPhone()]] - code - src/pages/staff-orders.tsx
-- [[readMockOrders()]] - code - src/services/api.ts
-- [[saveMockOrder()]] - code - src/services/api.ts
-- [[staff-orders.tsx]] - code - src/pages/staff-orders.tsx
-- [[time()]] - code - src/pages/staff-orders.tsx
-- [[updateOrderStatus()]] - code - src/services/api.ts
-- [[writeMockOrders()]] - code - src/services/api.ts
+- [[bar()]] - code - src/lucian/toast.tsx
+- [[createHost()]] - code - src/lucian/toast.tsx
+- [[dismiss()]] - code - src/lucian/toast.tsx
+- [[layout()]] - code - src/lucian/toast.tsx
+- [[setOpen()]] - code - src/lucian/toast.tsx
+- [[show()]] - code - src/lucian/toast.tsx
+- [[swipe()]] - code - src/lucian/toast.tsx
+- [[timer()]] - code - src/lucian/toast.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,13 +25,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_Community 1]]
-- 11 edges to [[_COMMUNITY_Community 0]]
-- 1 edge to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 9]]
 
 ## Top bridge nodes
-- [[staff-orders.tsx]] - degree 21, connects to 2 communities
-- [[StaffOrdersPage()]] - degree 12, connects to 2 communities
-- [[saveMockOrder()]] - degree 4, connects to 2 communities
-- [[updateOrderStatus()]] - degree 7, connects to 1 community
-- [[listOrders()]] - degree 5, connects to 1 community
+- [[createHost()]] - degree 9, connects to 1 community

@@ -13,8 +13,7 @@ tags:
 
 ## Connections
 - [[CartPage()]] - `contains` [EXTRACTED]
-- [[LucianOrderSteps()]] - `imports` [EXTRACTED]
-- [[PayMethod_1]] - `imports` [EXTRACTED]
+- [[PayMethod]] - `imports` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[createOrder()]] - `imports` [EXTRACTED]
@@ -26,7 +25,9 @@ tags:
 - [[requestPhoneToken()]] - `imports` [EXTRACTED]
 - [[serviceszalo.ts]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
+- [[toast.tsx]] - `imports_from` [EXTRACTED]
 - [[useCart()]] - `imports` [EXTRACTED]
+- [[useToast()]] - `imports` [EXTRACTED]
 - [[vnd()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 

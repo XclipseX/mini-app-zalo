@@ -15,7 +15,6 @@ export default function LucianStampCard({ stamps, onDemoStamp }: Props) {
   const grid = useRef<HTMLDivElement>(null);
   const stp = useRef<SVGSVGElement>(null);
   const slots = useRef<HTMLDivElement[]>([]);
-  const shown = useRef(stamps);
   const [count, setCount] = useState(stamps);
   const [done, setDone] = useState(false);
 
@@ -39,7 +38,8 @@ export default function LucianStampCard({ stamps, onDemoStamp }: Props) {
     const timers: number[] = [];
     const anims: Animation[] = [];
     const rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const from = shown.current;
+    // Bắt đầu từ số ô đã thật sự có dấu (lần bấm trước có thể đã bị huỷ giữa chừng)
+    const from = slots.current.filter((sl) => sl.querySelector(".u353-ink")!.classList.contains("is-on")).length;
     const target = stamps < from ? 10 : stamps; // giảm = vừa đủ 10 và server đã reset
     const stampAt = (i: number, delay: number) => {
       timers.push(window.setTimeout(() => {
@@ -64,8 +64,7 @@ export default function LucianStampCard({ stamps, onDemoStamp }: Props) {
       }, delay));
     };
     for (let i = from, d = 0; i < target; i++, d += 650) stampAt(i, d);
-    shown.current = stamps;
-    return () => { timers.forEach(clearTimeout); anims.forEach((a) => a.cancel()); };
+    return () => { timers.forEach(clearTimeout); anims.forEach((a) => a.cancel()); if (stp.current) stp.current.style.opacity = "0"; };
   }, [stamps]);
 
   // Bấm "Thẻ mới" sau khi nhận ly miễn phí → hiện lại số tem hiện tại

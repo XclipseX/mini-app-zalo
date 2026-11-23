@@ -2,7 +2,8 @@ import LucianQuantityStepper from "../lucian/quantity-stepper";
 import { flyToCart } from "../lucian/fly-to-cart";
 import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Page, useNavigate, useSnackbar } from "zmp-ui";
+import { Page, useNavigate } from "zmp-ui";
+import { useToast } from "../lucian/toast";
 import { products } from "../data/menu";
 import { Option } from "../data/types";
 import { useCart, vnd } from "../state/cart";
@@ -15,7 +16,7 @@ export default function ProductPage() {
   const art = useRef<HTMLSpanElement>(null);
   const cartBtn = useRef<HTMLButtonElement>(null);
   const [adding, setAdding] = useState(false);
-  const { openSnackbar } = useSnackbar();
+  const { openSnackbar } = useToast();
   const [opts, setOpts] = useState<Record<string, Option>>(
     Object.fromEntries((p.optionGroups ?? []).map((g) => [g.id, g.options[g.id === "sugar" ? 1 : 0]]))
   );

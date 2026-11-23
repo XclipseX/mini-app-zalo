@@ -1,51 +1,63 @@
 ---
 type: community
-members: 38
+members: 50
 ---
 
 # Community 1
 
-**Members:** 38 nodes
+**Members:** 50 nodes
 
 ## Members
+- [[ACTION]] - code - src/pages/staff-orders.tsx
 - [[API]] - code - src/services/api.ts
 - [[CheckoutParams]] - code - src/services/zalo.ts
 - [[Ctx_1]] - code - src/state/member.tsx
+- [[FILTERS]] - code - src/pages/staff-orders.tsx
+- [[LABEL]] - code - src/pages/staff-orders.tsx
 - [[LookupResult]] - code - src/services/api.ts
-- [[LucianStampCard()]] - code - src/lucian/stamp-card.tsx
 - [[MOCK]] - code - src/services/zalo.ts
 - [[Member]] - code - src/services/api.ts
 - [[MemberCtx]] - code - src/state/member.tsx
 - [[MemberProvider()]] - code - src/state/member.tsx
+- [[NEXT_STATUS]] - code - src/services/api.ts
+- [[OrderInput]] - code - src/services/api.ts
 - [[OrderResult]] - code - src/services/api.ts
-- [[Props_1]] - code - src/lucian/stamp-card.tsx
-- [[RewardsPage()]] - code - src/pages/rewards.tsx
+- [[OrderStatus]] - code - src/services/api.ts
+- [[PayMethod]] - code - src/services/api.ts
+- [[StaffOrder]] - code - src/services/api.ts
+- [[StaffOrdersPage()]] - code - src/pages/staff-orders.tsx
 - [[StaffPage()]] - code - src/pages/staff.tsx
 - [[Voucher]] - code - src/data/types.ts
 - [[ZaloUser]] - code - src/services/zalo.ts
 - [[addStamp()]] - code - src/services/api.ts
 - [[api.ts]] - code - src/services/api.ts
+- [[change()]] - code - src/pages/staff-orders.tsx
 - [[checkMockQr()]] - code - src/services/api.ts
 - [[defaultMember]] - code - src/services/api.ts
 - [[getMember()]] - code - src/services/api.ts
 - [[getToken()]] - code - src/services/zalo.ts
-- [[isStaff()]] - code - src/services/api.ts
+- [[listOrders()]] - code - src/services/api.ts
+- [[load()]] - code - src/pages/staff-orders.tsx
 - [[loadUser()]] - code - src/services/zalo.ts
 - [[lookupMember()]] - code - src/services/api.ts
-- [[lucianstamp-card.tsx]] - code - src/lucian/stamp-card.tsx
+- [[maskPhone()]] - code - src/pages/staff-orders.tsx
 - [[member.tsx]] - code - src/state/member.tsx
 - [[mockAddStamp()]] - code - src/services/api.ts
 - [[mockQr()]] - code - src/services/api.ts
 - [[post()]] - code - src/services/api.ts
 - [[readMock()]] - code - src/services/api.ts
+- [[readMockOrders()]] - code - src/services/api.ts
 - [[redeemVoucher()]] - code - src/services/api.ts
-- [[rewards.tsx]] - code - src/pages/rewards.tsx
 - [[run()]] - code - src/pages/staff.tsx
+- [[saveMockOrder()]] - code - src/services/api.ts
 - [[scanQr()]] - code - src/services/zalo.ts
 - [[serviceszalo.ts]] - code - src/services/zalo.ts
+- [[staff-orders.tsx]] - code - src/pages/staff-orders.tsx
 - [[staff.tsx]] - code - src/pages/staff.tsx
-- [[useMember()]] - code - src/state/member.tsx
+- [[time()]] - code - src/pages/staff-orders.tsx
+- [[updateOrderStatus()]] - code - src/services/api.ts
 - [[writeMock()]] - code - src/services/api.ts
+- [[writeMockOrders()]] - code - src/services/api.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -55,14 +67,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Community 0]]
-- 15 edges to [[_COMMUNITY_Community 2]]
-- 7 edges to [[_COMMUNITY_Community 9]]
-- 2 edges to [[_COMMUNITY_Community 4]]
+- 37 edges to [[_COMMUNITY_Community 9]]
+- 9 edges to [[_COMMUNITY_Community 0]]
+- 3 edges to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[api.ts]] - degree 38, connects to 3 communities
-- [[serviceszalo.ts]] - degree 15, connects to 3 communities
-- [[rewards.tsx]] - degree 14, connects to 2 communities
-- [[post()]] - degree 7, connects to 2 communities
-- [[member.tsx]] - degree 17, connects to 1 community
+- [[staff-orders.tsx]] - degree 22, connects to 3 communities
+- [[api.ts]] - degree 38, connects to 2 communities
+- [[staff.tsx]] - degree 18, connects to 2 communities
+- [[serviceszalo.ts]] - degree 15, connects to 2 communities
+- [[StaffOrdersPage()]] - degree 13, connects to 2 communities

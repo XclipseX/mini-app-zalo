@@ -1,12 +1,12 @@
 ---
 source_file: "src/pages/privacy.tsx"
 type: "rationale"
-community: "Community 0"
-location: "L4"
+community: "Community 9"
+location: "L5"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_9
 ---
 
 # TODO: điền tên Hộ kinh doanh/Công ty theo GPKD và nội dung đầy đủ theo Luật…
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[privacy.tsx]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_0
+#graphify/rationale #graphify/EXTRACTED #community/Community_9

@@ -1,12 +1,12 @@
 ---
 source_file: "src/lucian/stamp-card.tsx"
 type: "code"
-community: "Community 1"
+community: "Community 9"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_1
+  - community/Community_9
 ---
 
 # lucian/stamp-card.tsx
@@ -17,4 +17,4 @@ tags:
 - [[react]] - `imports_from` [EXTRACTED]
 - [[rewards.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_1
+#graphify/code #graphify/EXTRACTED #community/Community_9

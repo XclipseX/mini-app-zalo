@@ -1,12 +1,12 @@
 {
   "0": "state/cart.tsx",
   "1": "api.ts",
-  "2": "staff-orders.tsx",
+  "2": "createHost",
   "3": "compilerOptions",
   "4": "package.json",
   "5": "index.ts",
   "6": "functions/package.json",
   "8": "compilerOptions",
-  "9": "pages/cart.tsx",
+  "9": "app.tsx",
   "10": "Niên – Zalo Mini App (demo)"
 }

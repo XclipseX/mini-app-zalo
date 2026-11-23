@@ -23,8 +23,10 @@ tags:
 - [[react]] - `imports_from` [EXTRACTED]
 - [[react-router-dom]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]
+- [[toast.tsx]] - `imports_from` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]
 - [[useCart()]] - `imports` [EXTRACTED]
+- [[useToast()]] - `imports` [EXTRACTED]
 - [[vnd()]] - `imports` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 

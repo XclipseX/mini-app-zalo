@@ -12,5 +12,10 @@ Skill `.agents/skills/lucian-uxui` (CLI tải mẫu từ lucianlabs.dev / GitHub
 - #041 Notched bottom tab bar → thanh tab dưới (`components/bottom-nav.tsx`), badge số món trên tab Menu.
 - #442 Add to cart → Chi tiết món: món bay vào nút giỏ, giỏ lắc, badge nảy.
 - #444 Checkout steps → màn đặt thành công: Đặt món → Quán nhận → Sẵn sàng → Nhận đồ (chỉ hiển thị).
+- #073 Rolling announcement banner → Home (chỉ dải thông báo, nút × đóng).
+- #424 FAQ accordion → trang Chính sách bảo mật.
+- #435 Toast notifications → thay snackbar zmp-ui toàn app (`useToast()`, cùng API openSnackbar).
+- Chưa dùng: #052 flip membership card (Rewards đã có thẻ tem lật), #439 skeleton (chờ nối Firebase).
+- Thanh tab #041 đã hạ thấp: bong bóng 46px nhô ~7px.
 Token `--ux-*` trỏ về màu Niên trong `app/src/lucian/lucian.css`; giữ nguyên kích thước, đường cong, thời lượng chuyển động. Giữ dòng license ở đầu mỗi file.
 Lần sau: tìm mẫu bằng `node .agents/skills/lucian-uxui/scripts/lucian-uxui.mjs search <từ khoá>` trước khi tự viết UI mới.

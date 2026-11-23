@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[CartPage()]] - `calls` [EXTRACTED]
 - [[order-steps.tsx]] - `contains` [EXTRACTED]
-- [[pagescart.tsx]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_9

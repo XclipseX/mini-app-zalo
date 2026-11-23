@@ -1,12 +1,12 @@
 ---
 source_file: "src/services/api.ts"
 type: "code"
-community: "Community 2"
+community: "Community 1"
 location: "L151"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_2
+  - community/Community_1
 ---
 
 # writeMockOrders()
@@ -16,4 +16,4 @@ tags:
 - [[saveMockOrder()]] - `calls` [EXTRACTED]
 - [[updateOrderStatus()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_2
+#graphify/code #graphify/EXTRACTED #community/Community_1

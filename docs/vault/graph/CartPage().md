@@ -2,7 +2,7 @@
 source_file: "src/pages/cart.tsx"
 type: "code"
 community: "Community 9"
-location: "L9"
+location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -23,6 +23,7 @@ tags:
 - [[payCheckout()]] - `calls` [EXTRACTED]
 - [[requestPhoneToken()]] - `calls` [EXTRACTED]
 - [[useCart()]] - `calls` [EXTRACTED]
+- [[useToast()]] - `calls` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_9

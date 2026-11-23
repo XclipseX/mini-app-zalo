@@ -1,3 +1,4 @@
+import LucianAnnouncement from "../lucian/announcement";
 import React from "react";
 import { Page, useNavigate } from "zmp-ui";
 import { products } from "../data/menu";
@@ -30,6 +31,11 @@ export default function HomePage() {
         <p>Trọn vẹn hương vị theo năm tháng</p>
       </div>
 
+      <LucianAnnouncement items={[
+        ["Đặt trước, nhận tại quầy", "Không phải xếp hàng chờ"],
+        ["Tích 10 tem đổi 1 ly", "Đưa mã QR khi thanh toán"],
+        ["Niên – Star City", "358 Lê Lai, Thanh Hóa"],
+      ]} />
       <div className="section"><h3>Phổ biến</h3><button className="link" onClick={() => navigate("/menu")}>Xem tất cả ›</button></div>
       <div className="hscroll">{products.filter((p) => p.popular).map((p) => <ProductCard key={p.id} p={p} />)}</div>
 

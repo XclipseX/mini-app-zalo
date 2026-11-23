@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import QRCode from "qrcode";
-import { Page, useNavigate, useSnackbar } from "zmp-ui";
+import { Page, useNavigate } from "zmp-ui";
+import { useToast } from "../lucian/toast";
 import { useMember } from "../state/member";
 import { MOCK, getToken } from "../services/zalo";
 import { isStaff } from "../services/api";
@@ -10,7 +11,7 @@ export default function RewardsPage() {
   const { member, refresh, addStampDemo } = useMember();
   const [qr, setQr] = useState("");
   const navigate = useNavigate();
-  const { openSnackbar } = useSnackbar();
+  const { openSnackbar } = useToast();
   const [staff, setStaff] = useState(false);
   useEffect(() => { getToken().then(isStaff).then(setStaff).catch(() => setStaff(false)); }, []);
   // QR do server ký (getMember → member.qr), hạn 5 phút → tự làm mới mỗi 4 phút khi đang mở trang

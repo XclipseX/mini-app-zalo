@@ -2,7 +2,8 @@
 // Server (listOrders/updateOrderStatus) kiểm tra quyền staff + chi nhánh. MOCK: đơn lưu localStorage.
 import LucianPillTabs from "../lucian/pill-tabs";
 import React, { useEffect, useState } from "react";
-import { Page, useNavigate, useSnackbar } from "zmp-ui";
+import { Page, useNavigate } from "zmp-ui";
+import { useToast } from "../lucian/toast";
 import { listOrders, NEXT_STATUS, OrderStatus, StaffOrder, updateOrderStatus } from "../services/api";
 import { getToken } from "../services/zalo";
 import { vnd } from "../state/cart";
@@ -20,7 +21,7 @@ const maskPhone = (p: string) => (p.length >= 7 ? p.slice(0, 4) + "***" + p.slic
 
 export default function StaffOrdersPage() {
   const navigate = useNavigate();
-  const { openSnackbar } = useSnackbar();
+  const { openSnackbar } = useToast();
   const [orders, setOrders] = useState<StaffOrder[]>([]);
   const [filter, setFilter] = useState<"active" | OrderStatus>("active");
   const [busy, setBusy] = useState<string | null>(null);

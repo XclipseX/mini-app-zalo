@@ -1,7 +1,8 @@
 import LucianPaymentOptions from "../lucian/payment-options";
 import LucianOrderSteps from "../lucian/order-steps";
 import React, { useState } from "react";
-import { Page, useNavigate, useSnackbar } from "zmp-ui";
+import { Page, useNavigate } from "zmp-ui";
+import { useToast } from "../lucian/toast";
 import { itemPrice, useCart, vnd } from "../state/cart";
 import { requestPhoneToken, payCheckout } from "../services/zalo";
 import { createOrder, PayMethod } from "../services/api";
@@ -9,7 +10,7 @@ import { createOrder, PayMethod } from "../services/api";
 export default function CartPage() {
   const { items, store, total, setQty, clear } = useCart();
   const navigate = useNavigate();
-  const { openSnackbar } = useSnackbar();
+  const { openSnackbar } = useToast();
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState<string | null>(null);
   const [method, setMethod] = useState<PayMethod>("COD");

@@ -1,14 +1,15 @@
 // Màn hình nhân viên: quét QR thành viên → cộng tem / dùng voucher.
 // Quyền staff kiểm tra ở server (collection staff/{zaloId}, active=true). MOCK: dùng QR giả của member demo.
 import React, { useState } from "react";
-import { Page, useNavigate, useSnackbar } from "zmp-ui";
+import { Page, useNavigate } from "zmp-ui";
+import { useToast } from "../lucian/toast";
 import { addStamp, lookupMember, LookupResult, mockQr, redeemVoucher } from "../services/api";
 import { getToken, MOCK, scanQr } from "../services/zalo";
 import { useMember } from "../state/member";
 
 export default function StaffPage() {
   const navigate = useNavigate();
-  const { openSnackbar } = useSnackbar();
+  const { openSnackbar } = useToast();
   const { refresh } = useMember();
   const [qr, setQr] = useState("");
   const [info, setInfo] = useState<LookupResult | null>(null);
