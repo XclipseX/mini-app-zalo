@@ -48,5 +48,8 @@ export function verifyCallback(body: any, privateKey: string) {
   const raw = d.resultCode !== undefined
     ? `appId=${d.appId}&amount=${d.amount}&description=${d.description}&orderId=${d.orderId}&message=${d.message}&resultCode=${d.resultCode}&transId=${d.transId}`
     : `appId=${d.appId}&orderId=${d.orderId}&method=${d.method}`;
-  return { ok: !!mac && sameMac(hmac(privateKey, raw), mac), data: d };
+  // Dạng overallMac (theo báo cáo nghiên cứu): mọi khoá của data sắp xếp abc, nối "k=v&".
+  const sorted = Object.keys(d).sort().map((k) => `${k}=${enc(d[k])}`).join("&");
+  const ok = !!mac && (sameMac(hmac(privateKey, raw), mac) || sameMac(hmac(privateKey, sorted), mac));
+  return { ok, data: d };
 }

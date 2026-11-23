@@ -155,10 +155,13 @@ export const checkoutCallback = onRequest({ secrets: [CHECKOUT_PRIVATE_KEY] }, a
     if (typeof extra === "string") { try { extra = JSON.parse(decodeURIComponent(extra)); } catch { extra = {}; } }
     const orderId = String(extra?.orderId || "");
     const ref = orderId ? db.doc(`orders/${orderId}`) : null;
-    if (!ref || !(await ref.get()).exists) { res.json({ returnCode: 0, returnMessage: "order not found" }); return; }
+    const snap = ref ? await ref.get() : null;
+    if (!ref || !snap?.exists) { res.json({ returnCode: 0, returnMessage: "order not found" }); return; }
     const update: Record<string, unknown> = { zaloOrderId: String(data.orderId || ""), updatedAt: FieldValue.serverTimestamp() };
     if (data.resultCode !== undefined) {
-      update.paymentStatus = Number(data.resultCode) === 1 ? "paid" : "failed";
+      if (snap.get("paymentStatus") === "paid") { res.json({ returnCode: 1, returnMessage: "already paid" }); return; }
+      const amountOk = data.amount === undefined || Number(data.amount) === Number(snap.get("total"));
+      update.paymentStatus = Number(data.resultCode) !== 1 ? "failed" : amountOk ? "paid" : "amount_mismatch";
       update.transId = String(data.transId || "");
     }
     await ref.update(update);
