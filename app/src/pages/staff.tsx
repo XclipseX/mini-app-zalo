@@ -12,6 +12,7 @@ export default function StaffPage() {
   const { refresh } = useMember();
   const [qr, setQr] = useState("");
   const [info, setInfo] = useState<LookupResult | null>(null);
+  const [confirmId, setConfirmId] = useState<string | null>(null);
   const [count, setCount] = useState(1);
   const [busy, setBusy] = useState(false);
 
@@ -83,7 +84,8 @@ export default function StaffPage() {
                 <div className="tag">{v.badge}</div>
                 <div className="body" style={{ flex: 1 }}><b>{v.title}</b><br /><span className="muted">HSD: {v.expires}</span></div>
                 <button className="link" style={{ padding: "0 12px" }} disabled={busy}
-                  onClick={() => { if (window.confirm(`Dùng voucher "${v.title}" cho khách?`)) doRedeem(v.id, v.title); }}>Dùng</button>
+                  onClick={() => { if (confirmId === v.id) { setConfirmId(null); doRedeem(v.id, v.title); } else setConfirmId(v.id); }}>
+                  {confirmId === v.id ? "Xác nhận?" : "Dùng"}</button>
               </div>
             ))}
           </div>
