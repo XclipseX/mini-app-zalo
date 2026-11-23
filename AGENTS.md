@@ -20,6 +20,10 @@ Mục tiêu: **đọc ít, đọc đúng chỗ** để tiết kiệm token. Tr�
 2. Ghi `docs/vault/sessions/<YYYY-MM-DD>.md`: đã làm gì, quyết định gì, việc tiếp theo. Quyết định mới → `docs/vault/decisions/`.
 3. Commit + push (phiên cloud sẽ bị xoá).
 
+## Quy ước UI
+- Thao tác một tay: nút chính ở nửa dưới màn hình, ưu tiên bên trái; không đặt nút ở góc trên phải (cụm nút Zalo). Xem `docs/vault/decisions/2026-11-23-mot-tay.md`.
+- Tìm mẫu Lucian (`.agents/skills/lucian-uxui`) trước khi tự viết UI mới.
+
 ## Quy ước với user
 - Không tự viết/sửa proposal khi user chưa bảo. Gửi file .docx, không gửi PDF.
 - Skills dự án: `.agents/skills/` (Claude đọc qua `.claude/skills`).

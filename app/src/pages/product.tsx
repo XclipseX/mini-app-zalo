@@ -26,11 +26,7 @@ export default function ProductPage() {
 
   return (
     <Page className="page">
-      <div className="topbar"><button className="back" aria-label="Quay lại" onClick={() => navigate(-1)}>‹</button><h2>Chi tiết món</h2>
-        <button ref={cartBtn} type="button" className="ux u442-cart lx-top" aria-label={`Giỏ hàng, ${count} món`} onClick={() => navigate("/cart")}>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z" /><path d="M9 7V6a3 3 0 0 1 6 0v1" /></svg>
-          {count > 0 && <span className="u442-bd" aria-hidden="true">{count}</span>}
-        </button></div>
+      <div className="topbar"><button className="back" aria-label="Quay lại" onClick={() => navigate(-1)}>‹</button><h2>Chi tiết món</h2></div>
       <div className="detail-img"><span ref={art} style={{ background: p.color }} /></div>
       <div style={{ padding: 16 }}>
         <h2 style={{ fontSize: 22 }}>{p.name}</h2>
@@ -55,7 +51,12 @@ export default function ProductPage() {
         <div className="opt-title">Số lượng</div>
         <LucianQuantityStepper value={qty} onChange={setQty} unitPrice={unit} />
       </div>
-      <div className="cta">
+      <div className="cta lx-cta-row">
+        {/* Nút giỏ ở dưới, bên trái: dễ chạm bằng ngón cái khi cầm máy một tay */}
+        <button ref={cartBtn} type="button" className="ux u442-cart lx-bottom" aria-label={`Xem giỏ hàng, ${count} món`} onClick={() => navigate("/cart")}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.2l2.1 10.3a1.6 1.6 0 0 0 1.6 1.3h7.6a1.6 1.6 0 0 0 1.6-1.2L20 8H6.2" /><circle cx="9.5" cy="19.5" r="1.4" /><circle cx="16.5" cy="19.5" r="1.4" /></svg>
+          {count > 0 && <span className="u442-bd" aria-hidden="true">{count}</span>}
+        </button>
         <button className="btn" disabled={adding} onClick={() => {
           setAdding(true);
           flyToCart(art.current, cartBtn.current, `<span style="display:block;width:40px;height:40px;border-radius:50%;background:${p.color}"></span>`, () => {

@@ -1,17 +1,17 @@
 # Graph Report - app  (2026-11-23)
 
 ## Corpus Check
-- 48 files · ~15,777 words
+- 48 files · ~15,900 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 7 file(s) not represented in the graph (top: (none) 3, .css 2, .example 1)
 
 ## Summary
-- 302 nodes · 672 edges · 10 communities
+- 302 nodes · 671 edges · 10 communities
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d14a6810`
+- Built from commit: `3ca907fd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,24 +32,24 @@
 2. `HttpError` - 16 edges
 3. `StaffOrdersPage()` - 14 edges
 4. `zmp-ui` - 14 edges
-5. `vnd()` - 13 edges
-6. `MyApp()` - 13 edges
+5. `MyApp()` - 13 edges
+6. `vnd()` - 13 edges
 7. `CartPage()` - 13 edges
 8. `StaffPage()` - 12 edges
-9. `getToken()` - 11 edges
-10. `useToast()` - 11 edges
+9. `useToast()` - 11 edges
+10. `getToken()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `ProductPage()` --calls--> `useToast()`  [EXTRACTED]
+  src/pages/product.tsx → src/lucian/toast.tsx
+- `OrderInput` --references--> `CartItem`  [EXTRACTED]
+  src/services/api.ts → src/data/types.ts
+- `MyApp()` --calls--> `CartPage()`  [EXTRACTED]
+  src/app.tsx → src/pages/cart.tsx
 - `MyApp()` --calls--> `RewardsPage()`  [EXTRACTED]
   src/app.tsx → src/pages/rewards.tsx
-- `RewardsPage()` --calls--> `LucianStampCard()`  [EXTRACTED]
-  src/pages/rewards.tsx → src/lucian/stamp-card.tsx
-- `RewardsPage()` --indirect_call--> `isStaff()`  [INFERRED]
-  src/pages/rewards.tsx → src/services/api.ts
 - `MyApp()` --calls--> `StaffOrdersPage()`  [EXTRACTED]
   src/app.tsx → src/pages/staff-orders.tsx
-- `StaffOrdersPage()` --calls--> `LucianPillTabs()`  [EXTRACTED]
-  src/pages/staff-orders.tsx → src/lucian/pill-tabs.tsx
 
 ## Import Cycles
 - None detected.
@@ -102,9 +102,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `react` connect `state/cart.tsx` to `api.ts`, `createHost`, `package.json`, `pages/cart.tsx`?**
   _High betweenness centrality (0.114) - this node is a cross-community bridge._
 - **Should `state/cart.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.08649912331969609 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08591466978375219 - nodes in this community are weakly interconnected._
 - **Why does `zmp-ui` connect `state/cart.tsx` to `pages/cart.tsx`, `package.json`, `api.ts`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Should `api.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.08524590163934426 - nodes in this community are weakly interconnected._
 - **Why does `firebase-admin` connect `functions/package.json` to `index.ts`?**

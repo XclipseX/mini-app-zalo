@@ -12,7 +12,6 @@ tags:
 # menu.tsx
 
 ## Connections
-- [[LucianPillTabs()]] - `imports` [EXTRACTED]
 - [[MenuPage()]] - `contains` [EXTRACTED]
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[categories]] - `imports` [EXTRACTED]

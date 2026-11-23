@@ -465,3 +465,13 @@
 .lx-sk .u439-c{width:100%;display:block;padding:16px;gap:0}
 .lx-sk .bone{display:block;border-radius:7px;margin-top:10px}
 .lx-sk .bone:first-child{margin-top:0}
+
+/* Nút giỏ ở thanh dưới trang chi tiết món (#442) – vùng ngón cái */
+.lx-cta-row{display:flex;gap:10px;align-items:center}
+.lx-cta-row .btn{flex:1}
+.u442-cart.lx-bottom{position:relative;right:auto;top:auto;flex:none;width:52px;height:52px}
+.u442-cart.lx-bottom svg{width:24px;height:24px}
+/* Dải thông báo #073: chạm cả dải để sang tin kế, vuốt ngang để đóng, nút × bên trái */
+.lx-ann .u073-bar{cursor:pointer;touch-action:pan-y;padding:0 12px 0 4px;transition:transform .3s var(--ux-ease),opacity .3s}
+.lx-ann .u073-x{order:-1}
+.lx-ann .u073-segs{margin-left:2px}

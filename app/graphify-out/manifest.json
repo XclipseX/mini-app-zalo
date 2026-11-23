@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "src/pages/menu.tsx": {
-    "mtime": 1795415948.5998256,
-    "seen": 1795415997.4127421,
-    "ast_hash": "bf2d0d2a2a0c6804be86d0e33f9037dd",
+    "mtime": 1795417001.0838392,
+    "seen": 1795417046.3049164,
+    "ast_hash": "bb43da9359dbdd6a6e019c8c4dfc70c3",
     "semantic_hash": ""
   },
   "src/pages/privacy.tsx": {
@@ -78,9 +78,9 @@
     "semantic_hash": ""
   },
   "src/pages/product.tsx": {
-    "mtime": 1795416367.528026,
-    "seen": 1795416510.2613916,
-    "ast_hash": "efdd0b118960eda84c5e2dfc8a4a202d",
+    "mtime": 1795417001.0834644,
+    "seen": 1795417046.3049192,
+    "ast_hash": "8c3f58b4c44a705828ebbefe4097d438",
     "semantic_hash": ""
   },
   "src/pages/rewards.tsx": {
@@ -288,9 +288,9 @@
     "semantic_hash": ""
   },
   "src/lucian/announcement.tsx": {
-    "mtime": 1795416324.7188938,
-    "seen": 1795416510.2613733,
-    "ast_hash": "f78abf7c88bdec7a03e84c7f1cc0f836",
+    "mtime": 1795417001.0869339,
+    "seen": 1795417046.3048997,
+    "ast_hash": "b716791c137fe33bb98a519ff1941d9d",
     "semantic_hash": ""
   },
   "src/lucian/toast.tsx": {
