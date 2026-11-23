@@ -16,7 +16,7 @@ updated: 2026-11-23
 - [[notes/chuong-trinh-tich-tem]] (hub) · [[notes/highlands-rewards]]
 
 ## Dự án
-- [[notes/nien]]
+- [[notes/nien]] · [[notes/ipos-tich-hop]]
 
 ## Sources
 - [[sources/bao-cao-highlands-zalo-mini-app]] · [[sources/bao-cao-gemini-zalo-mini-app-2026]] · [[sources/brand-guideline-nien]]

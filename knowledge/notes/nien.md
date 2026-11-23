@@ -15,6 +15,7 @@ updated: 2026-11-23
 - Brand: "Hàng xóm của bạn", màu Dark Green + Terracotta + Soft Vanilla.
 - Backend đã chọn: Firebase.
 - Chặn phát hành: cần GPKD/HKD + giấy ATTP của quán [cần bổ sung: cô chưa trả lời].
+- Giai đoạn 2: nối iPOS – [[notes/ipos-tich-hop]].
 - Code memory riêng ở `docs/vault/` (obsidian-memory).
 
 ## Related notes
