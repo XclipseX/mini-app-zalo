@@ -45,7 +45,7 @@ export default function RewardsPage() {
         <h3 style={{ fontSize: 17 }}>Lịch sử tem</h3>
         {member?.history.slice(0, 5).map((h, i) => <div key={i} className="line"><span>{h.text}</span><span className="muted">{h.date}</span></div>)}
       </div>
-      <p className="demo-note"><button className="link" onClick={() => navigate("/privacy")}>Chính sách bảo mật</button>{staff && <> · <button className="link" onClick={() => navigate("/staff")}>Dành cho nhân viên</button></>}</p>
+      <p className="demo-note footer-links"><button className="link" onClick={() => navigate("/privacy")}>Chính sách bảo mật</button>{staff && <><button className="link" onClick={() => navigate("/staff")}>Dành cho nhân viên</button></>}</p>
     </Page>
   );
 }

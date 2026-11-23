@@ -42,10 +42,17 @@ export default function CartPage() {
 
   return (
     <Page className="page">
-      <div className="topbar"><button className="back" onClick={() => navigate(-1)}>‹</button><h2>Giỏ hàng</h2></div>
+      <div className="topbar"><button className="back" aria-label="Quay lại" onClick={() => navigate(-1)}>‹</button><h2>Giỏ hàng</h2></div>
       <div className="store"><div className="label">NHẬN TẠI QUÁN</div><b>{store.name}</b>{store.address}</div>
       <div className="card" style={{ marginTop: 14 }}>
-        {items.length === 0 && <div className="muted">Giỏ hàng trống.</div>}
+        {items.length === 0 && (
+          <div className="empty">
+            <div className="icon">☕</div>
+            <b>Giỏ hàng đang trống</b>
+            <div className="muted">Chọn vài món ở Menu rồi quay lại đây nhé.</div>
+            <button className="btn" onClick={() => navigate("/menu")}>Xem menu</button>
+          </div>
+        )}
         {items.map((i) => (
           <div key={i.key} className="line">
             <div>
@@ -53,7 +60,7 @@ export default function CartPage() {
               <div className="muted">{Object.values(i.options).map((o) => o.label).join(" · ")}{i.note && ` · ${i.note}`}</div>
               <span className="price">{vnd(itemPrice(i))}</span>
             </div>
-            <div className="qty"><button onClick={() => setQty(i.key, i.qty - 1)}>−</button><b>{i.qty}</b><button onClick={() => setQty(i.key, i.qty + 1)}>+</button></div>
+            <div className="qty"><button aria-label="Giảm số lượng" onClick={() => setQty(i.key, i.qty - 1)}>−</button><b>{i.qty}</b><button aria-label="Tăng số lượng" onClick={() => setQty(i.key, i.qty + 1)}>+</button></div>
           </div>
         ))}
       </div>
@@ -67,6 +74,7 @@ export default function CartPage() {
               <input type="radio" name="pay" checked={method === id} onChange={() => setMethod(id)} />
             </label>
           ))}
+          <div className="muted" style={{ marginTop: 8 }}>🎟️ Voucher được áp dụng tại quầy khi nhân viên quét mã thành viên của bạn.</div>
           <div className="muted" style={{ marginTop: 8 }}>Khi bấm đặt món, Zalo sẽ hỏi bạn chia sẻ số điện thoại để quán xác nhận đơn.</div>
         </div>
       )}

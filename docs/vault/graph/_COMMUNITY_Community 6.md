@@ -1,14 +1,13 @@
 ---
 type: community
-members: 34
+members: 28
 ---
 
 # Community 6
 
-**Members:** 34 nodes
+**Members:** 28 nodes
 
 ## Members
-- [[TODO OA access token hết hạn ~25h → cần luồng refresh_token…]] - rationale - functions/src/zbs.ts
 - [[admin]] - code - scripts/seed.mjs
 - [[build_1]] - code - functions/package.json
 - [[data]] - code - scripts/seed.mjs
@@ -19,7 +18,6 @@ members: 34
 - [[engines]] - code - functions/package.json
 - [[firebase-admin]] - concept - functions/package.json
 - [[firebase-admin@12.7.0]] - code - functions/package.json
-- [[firebase-functions]] - concept - functions/package.json
 - [[firebase-functions@6.1.0]] - code - functions/package.json
 - [[functionspackage.json]] - code - functions/package.json
 - [[here]] - code - scripts/seed.mjs
@@ -35,13 +33,9 @@ members: 34
 - [[require]] - code - scripts/seed.mjs
 - [[scripts_1]] - code - functions/package.json
 - [[seed.mjs]] - code - scripts/seed.mjs
-- [[sendZbsTemplate()]] - code - functions/src/zbs.ts
-- [[toZaloPhone()]] - code - functions/src/zbs.ts
 - [[typescript_1]] - concept - functions/package.json
 - [[typescript@5.6.3]] - code - functions/package.json
-- [[unset()]] - code - functions/src/zbs.ts
 - [[writeAll()]] - code - scripts/seed.mjs
-- [[zbs.ts]] - code - functions/src/zbs.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -51,10 +45,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Community 5]]
+- 3 edges to [[_COMMUNITY_Community 5]]
 
 ## Top bridge nodes
-- [[zbs.ts]] - degree 6, connects to 1 community
-- [[sendZbsTemplate()]] - degree 5, connects to 1 community
-- [[firebase-functions]] - degree 5, connects to 1 community
+- [[functionspackage.json]] - degree 10, connects to 1 community
 - [[firebase-admin]] - degree 4, connects to 1 community
+- [[firebase-functions@6.1.0]] - degree 2, connects to 1 community

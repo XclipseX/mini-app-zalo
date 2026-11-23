@@ -6,7 +6,7 @@ export default function PrivacyPage() {
   const navigate = useNavigate();
   return (
     <Page className="page">
-      <div className="topbar"><button className="back" onClick={() => navigate(-1)}>‹</button><h2>Chính sách bảo mật</h2></div>
+      <div className="topbar"><button className="back" aria-label="Quay lại" onClick={() => navigate(-1)}>‹</button><h2>Chính sách bảo mật</h2></div>
       <div className="card" style={{ fontSize: 14, lineHeight: 1.6 }}>
         <b>Chính sách bảo mật của Mini App "Niên"</b>
         <p>Đơn vị sở hữu: [Tên HKD/Công ty theo GPKD] – 358 Lê Lai, Thanh Hóa – Hotline 19001068.</p>

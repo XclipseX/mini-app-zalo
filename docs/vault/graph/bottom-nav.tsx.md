@@ -1,12 +1,12 @@
 ---
 source_file: "src/components/bottom-nav.tsx"
 type: "code"
-community: "Community 0"
+community: "Community 2"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_2
 ---
 
 # bottom-nav.tsx
@@ -19,4 +19,4 @@ tags:
 - [[tabs]] - `contains` [EXTRACTED]
 - [[zmp-ui]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_2

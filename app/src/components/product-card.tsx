@@ -8,7 +8,7 @@ export default function ProductCard({ p }: { p: Product }) {
   return (
     <button className="pcard" onClick={() => navigate(`/product/${p.id}`)}>
       <div className="pimg">{p.image ? <img src={p.image} alt={p.name} loading="lazy" /> : <span style={{ background: p.color }} />}</div>
-      <div className="info">{p.name}<br /><span className="price">{vnd(p.price)}</span></div>
+      <div className="info"><span className="name">{p.name}</span><span className="price">{vnd(p.price)}</span></div>
     </button>
   );
 }

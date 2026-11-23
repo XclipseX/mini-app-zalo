@@ -12,6 +12,8 @@ tags:
 # package.json
 
 ## Connections
+- [[@fontsourcebaloo-2]] - `imports` [EXTRACTED]
+- [[@fontsourcebe-vietnam-pro]] - `imports` [EXTRACTED]
 - [[@typesqrcode]] - `imports` [EXTRACTED]
 - [[@typesreact]] - `imports` [EXTRACTED]
 - [[@typesreact-dom]] - `imports` [EXTRACTED]

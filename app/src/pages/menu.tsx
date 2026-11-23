@@ -10,7 +10,13 @@ export default function MenuPage() {
   const navigate = useNavigate();
   return (
     <Page className="page">
-      <div className="topbar"><h2>Menu</h2></div>
+      <div className="topbar">
+        <h2>Menu</h2>
+        <button className="cart-btn" aria-label={`Giỏ hàng, ${count} món`} onClick={() => navigate("/cart")}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M6 7h12l-1 13H7zM9 7a3 3 0 0 1 6 0" /></svg>
+          {count > 0 && <span className="badge">{count}</span>}
+        </button>
+      </div>
       <div className="store">
         <div className="label">CỬA HÀNG NHẬN ĐƠN</div>
         <b>{store.name}</b>{store.address}

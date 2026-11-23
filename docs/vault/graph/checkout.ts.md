@@ -1,18 +1,18 @@
 ---
 source_file: "functions/src/checkout.ts"
 type: "code"
-community: "Community 5"
+community: "Community 7"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_7
 ---
 
 # checkout.ts
 
 ## Connections
-- [[PayMethod_1]] - `contains` [EXTRACTED]
+- [[PayMethod]] - `contains` [EXTRACTED]
 - [[buildCheckout()]] - `contains` [EXTRACTED]
 - [[enc()]] - `contains` [EXTRACTED]
 - [[hmac()]] - `contains` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[sameMac()]] - `contains` [EXTRACTED]
 - [[verifyCallback()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_7

@@ -1,12 +1,12 @@
 ---
 source_file: "src/state/cart.tsx"
 type: "code"
-community: "Community 0"
+community: "Community 9"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_9
 ---
 
 # itemPrice()
@@ -17,4 +17,4 @@ tags:
 - [[pagescart.tsx]] - `imports` [EXTRACTED]
 - [[statecart.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_9

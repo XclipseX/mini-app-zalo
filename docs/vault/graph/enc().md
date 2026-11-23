@@ -1,12 +1,12 @@
 ---
 source_file: "functions/src/checkout.ts"
 type: "code"
-community: "Community 5"
+community: "Community 7"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_7
 ---
 
 # enc()
@@ -16,4 +16,4 @@ tags:
 - [[orderMacData()]] - `calls` [EXTRACTED]
 - [[verifyCallback()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_7

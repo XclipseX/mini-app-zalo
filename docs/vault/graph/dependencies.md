@@ -12,6 +12,8 @@ tags:
 # dependencies
 
 ## Connections
+- [[@fontsourcebaloo-2@5.2.5]] - `contains` [EXTRACTED]
+- [[@fontsourcebe-vietnam-pro@5.2.5]] - `contains` [EXTRACTED]
 - [[@typesqrcode@1.5.5]] - `contains` [EXTRACTED]
 - [[package.json]] - `contains` [EXTRACTED]
 - [[qrcode@1.5.4]] - `contains` [EXTRACTED]

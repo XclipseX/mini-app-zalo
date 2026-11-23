@@ -2,7 +2,7 @@
 source_file: "src/pages/staff-orders.tsx"
 type: "code"
 community: "Community 1"
-location: "L17"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,6 +18,7 @@ tags:
 - [[getToken()]] - `calls` [EXTRACTED]
 - [[listOrders()]] - `calls` [EXTRACTED]
 - [[load()]] - `contains` [EXTRACTED]
+- [[maskPhone()]] - `calls` [EXTRACTED]
 - [[staff-orders.tsx]] - `contains` [EXTRACTED]
 - [[time()]] - `calls` [EXTRACTED]
 - [[updateOrderStatus()]] - `calls` [EXTRACTED]

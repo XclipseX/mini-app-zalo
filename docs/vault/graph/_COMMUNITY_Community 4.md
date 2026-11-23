@@ -1,13 +1,17 @@
 ---
 type: community
-members: 37
+members: 41
 ---
 
 # Community 4
 
-**Members:** 37 nodes
+**Members:** 41 nodes
 
 ## Members
+- [[@fontsourcebaloo-2]] - concept - package.json
+- [[@fontsourcebaloo-2@5.2.5]] - code - package.json
+- [[@fontsourcebe-vietnam-pro]] - concept - package.json
+- [[@fontsourcebe-vietnam-pro@5.2.5]] - code - package.json
 - [[@typesqrcode]] - concept - package.json
 - [[@typesqrcode@1.5.5]] - code - package.json
 - [[@typesreact]] - concept - package.json
@@ -54,12 +58,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 1]]
+- 9 edges to [[_COMMUNITY_Community 2]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 1]]
 
 ## Top bridge nodes
-- [[package.json]] - degree 20, connects to 1 community
-- [[react-router-dom]] - degree 4, connects to 1 community
+- [[react-router-dom]] - degree 4, connects to 2 communities
+- [[package.json]] - degree 22, connects to 1 community
+- [[@fontsourcebaloo-2]] - degree 3, connects to 1 community
+- [[@fontsourcebe-vietnam-pro]] - degree 3, connects to 1 community
 - [[qrcode]] - degree 3, connects to 1 community
-- [[react-dom]] - degree 3, connects to 1 community
-- [[zmp-sdk]] - degree 3, connects to 1 community

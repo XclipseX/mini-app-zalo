@@ -14,6 +14,9 @@ const FILTERS: { id: "active" | OrderStatus; label: string }[] = [
 ];
 const time = (ms: number) => ms ? new Date(ms).toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" }) : "";
 
+/** 0912345678 → 0912***678 (nhân viên vẫn gọi được khi cần qua chi tiết đơn ở server) */
+const maskPhone = (p: string) => (p.length >= 7 ? p.slice(0, 4) + "***" + p.slice(-3) : p);
+
 export default function StaffOrdersPage() {
   const navigate = useNavigate();
   const { openSnackbar } = useSnackbar();
@@ -62,7 +65,7 @@ export default function StaffOrdersPage() {
         return (
           <div key={o.id} className="card">
             <div className="line"><b>{o.id}</b><span>{time(o.createdAt)} · <b>{LABEL[o.status]}</b></span></div>
-            <div className="line"><span>{o.name || "Khách"}{o.phone ? ` · ${o.phone}` : ""}</span></div>
+            <div className="line"><span>{o.name || "Khách"}{o.phone ? ` · ${maskPhone(o.phone)}` : ""}</span></div>
             {o.items.map((i, k) => (
               <div key={k} className="line" style={{ display: "block" }}>
                 <b>{i.qty}× {i.name}</b>
@@ -71,6 +74,7 @@ export default function StaffOrdersPage() {
               </div>
             ))}
             <div className="line"><span>{o.paymentMethod === "BANK" ? "Chuyển khoản" : "Trả tại quầy"} · {o.paymentStatus === "paid" ? "đã thanh toán" : "chưa thanh toán"}</span><b>{vnd(o.total)}</b></div>
+            <div className="actions">
             {bankUnpaid && o.status !== "cancelled" && (
               <button className="btn ghost" style={{ marginTop: 10 }} disabled={busy === o.id} onClick={() => change(o, { paid: true }, o.id + ":paid")}>
                 {confirm === o.id + ":paid" ? "Chắc chắn đã nhận tiền?" : "Xác nhận đã nhận chuyển khoản"}</button>
@@ -83,6 +87,7 @@ export default function StaffOrdersPage() {
               <button className="btn ghost" style={{ marginTop: 10, color: "#b3261e" }} disabled={busy === o.id} onClick={() => change(o, { status: "cancelled" }, o.id + ":cancel")}>
                 {confirm === o.id + ":cancel" ? "Chắc chắn huỷ đơn?" : "Huỷ đơn"}</button>
             )}
+            </div>
           </div>
         );
       })}

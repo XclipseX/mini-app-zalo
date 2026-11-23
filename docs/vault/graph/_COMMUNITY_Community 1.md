@@ -1,11 +1,11 @@
 ---
 type: community
-members: 50
+members: 48
 ---
 
 # Community 1
 
-**Members:** 50 nodes
+**Members:** 48 nodes
 
 ## Members
 - [[ACTION]] - code - src/pages/staff-orders.tsx
@@ -18,10 +18,10 @@ members: 50
 - [[MOCK]] - code - src/services/zalo.ts
 - [[Member]] - code - src/services/api.ts
 - [[MemberCtx]] - code - src/state/member.tsx
+- [[MemberProvider()]] - code - src/state/member.tsx
 - [[NEXT_STATUS]] - code - src/services/api.ts
 - [[OrderResult]] - code - src/services/api.ts
 - [[OrderStatus]] - code - src/services/api.ts
-- [[RewardsPage()]] - code - src/pages/rewards.tsx
 - [[StaffOrder]] - code - src/services/api.ts
 - [[StaffOrdersPage()]] - code - src/pages/staff-orders.tsx
 - [[StaffPage()]] - code - src/pages/staff.tsx
@@ -34,11 +34,11 @@ members: 50
 - [[defaultMember]] - code - src/services/api.ts
 - [[getMember()]] - code - src/services/api.ts
 - [[getToken()]] - code - src/services/zalo.ts
-- [[isStaff()]] - code - src/services/api.ts
 - [[listOrders()]] - code - src/services/api.ts
 - [[load()]] - code - src/pages/staff-orders.tsx
 - [[loadUser()]] - code - src/services/zalo.ts
 - [[lookupMember()]] - code - src/services/api.ts
+- [[maskPhone()]] - code - src/pages/staff-orders.tsx
 - [[member.tsx]] - code - src/state/member.tsx
 - [[mockAddStamp()]] - code - src/services/api.ts
 - [[mockQr()]] - code - src/services/api.ts
@@ -46,7 +46,6 @@ members: 50
 - [[readMock()]] - code - src/services/api.ts
 - [[readMockOrders()]] - code - src/services/api.ts
 - [[redeemVoucher()]] - code - src/services/api.ts
-- [[rewards.tsx]] - code - src/pages/rewards.tsx
 - [[run()]] - code - src/pages/staff.tsx
 - [[saveMockOrder()]] - code - src/services/api.ts
 - [[scanQr()]] - code - src/services/zalo.ts
@@ -55,7 +54,6 @@ members: 50
 - [[staff.tsx]] - code - src/pages/staff.tsx
 - [[time()]] - code - src/pages/staff-orders.tsx
 - [[updateOrderStatus()]] - code - src/services/api.ts
-- [[useMember()]] - code - src/state/member.tsx
 - [[writeMock()]] - code - src/services/api.ts
 - [[writeMockOrders()]] - code - src/services/api.ts
 
@@ -67,12 +65,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 41 edges to [[_COMMUNITY_Community 0]]
-- 2 edges to [[_COMMUNITY_Community 4]]
+- 25 edges to [[_COMMUNITY_Community 2]]
+- 8 edges to [[_COMMUNITY_Community 9]]
+- 7 edges to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 4]]
 
 ## Top bridge nodes
-- [[serviceszalo.ts]] - degree 15, connects to 2 communities
-- [[rewards.tsx]] - degree 13, connects to 2 communities
-- [[api.ts]] - degree 38, connects to 1 community
-- [[staff-orders.tsx]] - degree 18, connects to 1 community
+- [[api.ts]] - degree 38, connects to 3 communities
+- [[serviceszalo.ts]] - degree 15, connects to 3 communities
+- [[staff-orders.tsx]] - degree 19, connects to 2 communities
+- [[StaffOrdersPage()]] - degree 11, connects to 2 communities
 - [[member.tsx]] - degree 17, connects to 1 community

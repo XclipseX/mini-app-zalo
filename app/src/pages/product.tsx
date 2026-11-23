@@ -20,7 +20,7 @@ export default function ProductPage() {
 
   return (
     <Page className="page">
-      <div className="topbar"><button className="back" onClick={() => navigate(-1)}>‹</button><h2>Chi tiết món</h2></div>
+      <div className="topbar"><button className="back" aria-label="Quay lại" onClick={() => navigate(-1)}>‹</button><h2>Chi tiết món</h2></div>
       <div className="detail-img"><span style={{ background: p.color }} /></div>
       <div style={{ padding: 16 }}>
         <h2 style={{ fontSize: 22 }}>{p.name}</h2>
@@ -40,10 +40,11 @@ export default function ProductPage() {
           </div>
         ))}
         <div className="opt-title">Ghi chú</div>
-        <textarea rows={2} placeholder="Ví dụ: ít ngọt, mang về..." value={note} onChange={(e) => setNote(e.target.value)} />
+        <textarea rows={2} maxLength={120} placeholder="Ví dụ: ít ngọt, mang về..." value={note} onChange={(e) => setNote(e.target.value)} aria-label="Ghi chú cho món" />
+        <div className="counter">{note.length}/120</div>
         <div className="row" style={{ marginTop: 16 }}>
           <span className="opt-title" style={{ margin: 0 }}>Số lượng</span>
-          <div className="qty"><button onClick={() => setQty(Math.max(1, qty - 1))}>−</button><b>{qty}</b><button onClick={() => setQty(qty + 1)}>+</button></div>
+          <div className="qty"><button aria-label="Giảm số lượng" onClick={() => setQty(Math.max(1, qty - 1))}>−</button><b>{qty}</b><button aria-label="Tăng số lượng" onClick={() => setQty(qty + 1)}>+</button></div>
         </div>
       </div>
       <div className="cta">

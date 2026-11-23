@@ -23,6 +23,7 @@ tags:
 - [[app.tsx]] - `imports_from` [EXTRACTED]
 - [[getToken()]] - `imports` [EXTRACTED]
 - [[listOrders()]] - `imports` [EXTRACTED]
+- [[maskPhone()]] - `contains` [EXTRACTED]
 - [[react]] - `imports_from` [EXTRACTED]
 - [[serviceszalo.ts]] - `imports_from` [EXTRACTED]
 - [[statecart.tsx]] - `imports_from` [EXTRACTED]

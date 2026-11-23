@@ -1,12 +1,12 @@
 ---
 source_file: "functions/src/checkout.ts"
 type: "code"
-community: "Community 5"
+community: "Community 7"
 location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_5
+  - community/Community_7
 ---
 
 # verifyCallback()
@@ -19,4 +19,4 @@ tags:
 - [[index.ts]] - `imports` [EXTRACTED]
 - [[sameMac()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_5
+#graphify/code #graphify/EXTRACTED #community/Community_7

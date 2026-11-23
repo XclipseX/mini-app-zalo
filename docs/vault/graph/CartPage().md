@@ -1,18 +1,19 @@
 ---
 source_file: "src/pages/cart.tsx"
 type: "code"
-community: "Community 0"
+community: "Community 9"
 location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_0
+  - community/Community_9
 ---
 
 # CartPage()
 
 ## Connections
 - [[MyApp()]] - `calls` [EXTRACTED]
+- [[app.tsx]] - `imports` [EXTRACTED]
 - [[checkout()]] - `contains` [EXTRACTED]
 - [[createOrder()]] - `calls` [EXTRACTED]
 - [[itemPrice()]] - `calls` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[useCart()]] - `calls` [EXTRACTED]
 - [[vnd()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_0
+#graphify/code #graphify/EXTRACTED #community/Community_9
